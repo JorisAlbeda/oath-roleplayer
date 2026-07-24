@@ -19,7 +19,7 @@ the project — not seat-specific.
 2. Take as given: the Oath sworn, each player's colour, Role, and
    whether they're Human- or AI-controlled.
 3. Create `Game/Mechanics/oath-board-state.md`: Round 0, Visions Drawn
-   0, the given Oath, Current Player Turn set to the Chancellor's
+   0, World Deck Search cost: 2 Supply, the given Oath, Current Player Turn set to the Chancellor's
    colour, one Player row per colour with Role, Controlled-by, and
    Number of Supplies (7 for everyone) filled in. Name stays
    blank for AI seats until their own Setup decides it; fill it in now
