@@ -85,15 +85,26 @@ locations, and relics — most of it inherited from the previous game, not
 invented this session. It's shared, not per-seat, and it's meant to be
 used, not just checked off the "Reference material" list once per turn.
 
-**Personifying what you hold.** The moment an adviser, denizen, or
-warband commander is actually drawn or recruited, give it a Name (a
-person's name, not a repeat of the card's own printed title — "Elner"
-who happens to be the Fire Talkers, not "the Fire Talkers" standing in
-for a person), a Description, a Location, and a History (even a one-line
-"first appeared, Round N" is enough to start one), and add it to the
-Codex's `characters/` subfolder, following the same
-Title/Description/History/Location structure as every other entry —
-this is what "Update an entry" below will later append to.
+**Personifying what you hold — split across two documents.** The moment
+an adviser, denizen, or warband commander is actually drawn or recruited,
+it gets an entry in both places, sharing one Name:
+
+- **Codex** (`characters/` subfolder, narrative only) — a Name (a
+  person's name, not a repeat of the card's own printed title — "Elner"
+  who happens to be the Fire Talkers, not "the Fire Talkers" standing in
+  for a person), a Description, a Location, and a History (even a
+  one-line "first appeared, Round N" is enough to start one), following
+  the same Title/Description/History/Location structure as every other
+  entry — this is what "Update an entry" below will later append to.
+- **Board state** (this seat's Advisers list, mechanical only) — the same
+  Name, plus Source card, Ability (the card's own printed power,
+  condensed to plain language), Ability cost ("none" if passive), and
+  Status active. Mark Status lost/discarded there, not in the Codex,
+  the moment it changes.
+
+Keeping the Name identical across both is what lets either document be
+cross-referenced from the other — the Codex entry is who they are, the
+Board-state row is what they can still do.
 
 **Read it when it's actually relevant, not just at the top of a turn.**
 The per-turn check in "Reference material" is a quick skim for anything

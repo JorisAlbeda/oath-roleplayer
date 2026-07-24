@@ -22,6 +22,14 @@ the same turn._
      - Number of Secrets
      - Number of Favors
      - Banners
+     - Advisers (one per personified adviser/denizen/commander this seat
+       holds — mechanical half only; the narrative half is the matching
+       Codex `characters/` entry):
+       - Name (must match this adviser's Codex entry exactly)
+       - Source card
+       - Ability
+       - Ability cost
+       - Status (active / lost / discarded)
 
 2. Characters (shared narrative truth)
    - Players:
@@ -105,7 +113,9 @@ the same turn._
      whose outcome isn't known yet — see Bot-Rules, "Legal turn
      endings," for how a paused turn resumes
    - If a new adviser/denizen/commander is drawn or recruited this turn,
-     add it to the Codex's characters subfolder now
+     personify it now: Name, Description, Location, History to the
+     Codex's characters subfolder; Name (matching), Source card, Ability,
+     Ability cost, Status active to a new Adviser row in Board state
    - Supply gate: state the exact Supply number left. More than 2? Add
      another action and recheck, unless none is affordable — then say so
 
@@ -121,8 +131,10 @@ the same turn._
    - Decide, in the same pass: Location, Region, Name, Pronouns,
      Motivation, Flaw, Bond with a previous character (if one exists),
      starting adviser
-   - Personify the starting adviser into the Codex's characters subfolder
-     immediately — it's already "drawn," same as any other
+   - Personify the starting adviser immediately, same split as Action 1 —
+     Codex's characters subfolder for the narrative half, a Board-state
+     Adviser row for the mechanical half — it's already "drawn," same as
+     any other
    - Update Board state (Location, Region, Name) and Characters (full
      entry: Name, Pronouns, Role, Colour, Location, Physical description,
      Personality description, Bonds)
@@ -167,7 +179,8 @@ the same turn._
 
 7. End turn
    - Write a diary entry about the turn (Chronicle-quality prose, per the specificity
-     standard in Bot-Rules) and update Board state, Logic log, own
+     standard in Bot-Rules) and update Board state (including any
+     Adviser's Status, if it changed this segment), Logic log, own
      Diary, and Chronicle
    - In response, print the diary entry followed by Player
      Instructions for the physical board

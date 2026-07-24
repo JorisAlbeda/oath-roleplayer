@@ -36,7 +36,11 @@ World Briefing.
    human points it out.
 5. Update, each read fresh immediately before appending:
    - `Game/Mechanics/oath-board-state.md` (mechanical results, including
-     Supply actually spent so far)
+     Supply actually spent so far; if `oath-play-turn` personified a new
+     adviser this segment, its Adviser row — Name, Source card, Ability,
+     Ability cost, Status active — belongs here too; if an existing
+     adviser was lost or discarded this segment, update its Status here,
+     not in the Codex)
    - `Game/Mechanics/oath-logic-log.md` (actions taken this segment; this is
      a public file so keep any cards secret — use 'Vision' rather than a
      specific Vision, 'Card' rather than a specific card name, to avoid
@@ -46,7 +50,9 @@ World Briefing.
      written in-character)
    - `Game/Story/oath-chronicle.md` (the shared narrative beat; 1-2
      in-character sentences)
-6. Codex upkeep, per Bot-Rules "Codex — using it in play":
+6. Codex upkeep, per Bot-Rules "Codex — using it in play" (narrative
+   only — Ability, Ability cost, and Status live in Board state, per
+   step 5 above, not here):
    - If `oath-play-turn` personified a new adviser, denizen, or warband
      commander this segment, confirm its Codex entry (Name, Description,
      Location, History) is reflected alongside this narration.

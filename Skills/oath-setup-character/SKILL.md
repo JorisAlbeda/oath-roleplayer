@@ -52,15 +52,18 @@ documents.
 5. Decide, in the same pass: Location, Region, Name, Pronouns,
    Motivation, Flaw, a Bond with a previous character if one plausibly
    exists, and which starting adviser you're taking.
-6. Personify the starting adviser immediately — add it to the Codex's
-   `characters/` subfolder (Name, Description, Location, History),
-   following the structure of the existing character files.
+6. Personify the starting adviser immediately, split per Bot-Rules
+   "Codex — using it in play": Name, Description, Location, History to
+   the Codex's `characters/` subfolder, following the structure of the
+   existing character files.
 7. Add a full entry to `Game/Story/oath-characters.md`: Name, Pronouns,
    Role, Colour, Location, Physical description, Personality
    description, Bonds. Read the file fresh immediately before
    appending, per the append-only convention.
 8. Update `Game/Mechanics/oath-board-state.md` with this seat's
-   Location, Region, and Name. Read the file fresh immediately before
+   Location, Region, and Name, and a new Adviser row for the starting
+   adviser — the same Name as step 6, plus Source card, Ability, Ability
+   cost, and Status active. Read the file fresh immediately before
    appending, per the append-only convention.
 
 ## Response

@@ -67,8 +67,11 @@ updated. Never read another seat's Diary, Messengers, or World Briefing.
    if needed" isn't, and this rule has been skipped past enough times
    that it needs to be one.
 8. If a new adviser, denizen, or warband commander is drawn or
-   recruited this turn, personify it now and add it to the Codex's
-   `characters/` subfolder, per Bot-Rules "Codex — using it in play."
+   recruited this turn, personify it now in both places, per Bot-Rules
+   "Codex — using it in play": Name/Description/Location/History to the
+   Codex's `characters/` subfolder, and the same Name plus Source
+   card/Ability/Ability cost/Status active to a new Adviser row in this
+   seat's own Board state.
 9. Hand off to `oath-end-turn` to narrate this segment and update the
    shared logs and this seat's Diary — this happens automatically as
    part of the same response, not a separate call the human has to make.

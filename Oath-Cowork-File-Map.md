@@ -21,7 +21,10 @@ exists.
 
 ## Shared documents (all seats read and append to these)
 
-- `Game/Mechanics/oath-board-state.md` — Board state
+- `Game/Mechanics/oath-board-state.md` — Board state, including each
+  seat's Advisers (Name, Source card, Ability, Ability cost, Status) —
+  the mechanical half of a personified adviser/denizen/commander; the
+  narrative half is the matching Codex `characters/` entry, same Name
 - `Game/Story/oath-characters.md` — Characters (all seats' public entries)
 - `Game/Mechanics/oath-logic-log.md` — Logic log
 - `Game/Story/oath-chronicle.md` — Chronicle
