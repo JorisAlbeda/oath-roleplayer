@@ -1,12 +1,11 @@
-# Oath Experiment 6 - World Codex: File Map
+# Oath Roleplayer - World Codex: File Map
 
 _Three Cowork chats, one per AI seat — not six. Each seat's own bot
 reads all shared documents plus its own private ones; it never reads
 another seat's private documents. The Human seat has no chat of its
 own and no private documents._
 
-All live game files sit in a `Game/` subfolder of this Experiment 6
-folder. `oath-game-setup` creates that subfolder and its structure once,
+All live game files sit in a `Game/` subfolder of this Oath Roleplayer folder. `oath-game-setup` creates that subfolder and its structure once,
 at the start of a new game — every other skill assumes it already
 exists.
 
@@ -62,10 +61,8 @@ exists.
   by **colour** rather than seat/Name since it outlives any one
   character and needs to be findable before this game's own
   `oath-setup-character` decides the next Name. Not prefixed `oath-`, unlike
-  everything else here, matching Experiment 3's own Legacy naming.
-  Append-only _across games_, not just within one — each new game's
-  `oath-leave-legacy` adds one more `## <Character Name>` entry at the
-  end rather than starting a new file. A portrait image may sit
+  everything else here. Each new game's
+  `oath-leave-legacy` wipes the page and starts anew. A portrait image may sit
   alongside it in the same folder, named after the colour (e.g.
   `Purple.png`) — a visual reference for whoever held that colour
   previously, checked by the next game's `oath-setup-character` but

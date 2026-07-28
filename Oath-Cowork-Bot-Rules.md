@@ -1,4 +1,4 @@
-# Oath Experiment 6 - World Codex: Bot Rules
+# Oath Roleplayer - World Codex: Bot Rules
 
 _Gameplay reinforces Drama. Oath's cards, sites, and
 warbands are dramatic material by Cole Wehrle's own design, so
@@ -174,9 +174,6 @@ still unspent and the Search's own result not yet known.
   as a new turn's context.
 
 ## Roleplayer — Guidelines
-
-_(there's no separate Roleplayer role in this experiment — this is just
-the specificity standard for all of this bot's own narration.)_
 
 Specificity, not mood labels. One concrete, named detail — an object, a
 gesture, a name, a place — is the floor for any narrated beat, regardless

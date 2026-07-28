@@ -1,4 +1,4 @@
-# Oath Experiment 6 - World Codex
+# Oath Roleplayer- World Codex
 
 - Integration with the World Codex
 - Replacing subagents with self-checking

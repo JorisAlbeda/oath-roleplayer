@@ -1,4 +1,4 @@
-# Oath Experiment 6 - World Codex: Data & Actions Spec
+# Oath Roleplayer - World Codex: Data & Actions Spec
 
 _One bot, two responsibilities — every Action below is written for a single
 integrated agent that reasons about mechanics and writes narrative in
@@ -147,7 +147,7 @@ the same turn._
      description
 
 4. Continue conversation (Pass Converse
-   dialogue) — cross-seat, unchanged in kind from Experiment 3
+   dialogue) — cross-seat
    - Check Converse dialogue
    - Add one reply line
    - Repeat for the other character until one concludes, or the human
