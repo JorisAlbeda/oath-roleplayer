@@ -68,6 +68,10 @@ the same turn._
      - Physical description
      - Personality description
      - Bonds
+     - Acquaintances (lighter than Bonds — name, one-line relationship,
+       what they might know or want; established at character creation,
+       per Bot-Rules, "Character creation — background flavor and
+       starting social circle")
 
 4. Logic log
    - Turns:
@@ -155,12 +159,14 @@ the same turn._
      whose outcome isn't known yet — see Bot-Rules, "Legal turn
      endings," for how a paused turn resumes
    - If a new adviser/denizen/commander is drawn or recruited this turn,
-     personify it now: Name, Description, Location, History, and Voice
-     to the Codex's characters subfolder; Name (matching), Source card,
-     Ability, Ability cost, Status active to a new Adviser row in Player
-     state — see `Oath-Cascade-Map.md` for the fuller cascade. If it came
-     off a site's own Denizens list in Board state's Map, remove it from
-     there — it's now this seat's Adviser, not the site's
+     add its Adviser row in Player state now regardless of facing — Name,
+     Source card, Ability, Ability cost, Status active. If taken faceup,
+     also personify it in the Codex now (Name, Description, Location,
+     History, Voice), same Name as the Adviser row; if taken facedown,
+     the Codex entry waits until it's Revealed — see `Oath-Cascade-Map.md`
+     for the fuller cascade either way. If it came off a site's own
+     Denizens list in Board state's Map, remove it from there either
+     way — it's now this seat's Adviser, not the site's
    - Supply gate: state the exact Supply number left. More than 2? Add
      another action and recheck, unless none is affordable — then say so
 
@@ -173,16 +179,24 @@ the same turn._
    - Check the Codex for this seat's starting Location or adviser, if
      either already has an entry, and let it shape the character below
      the same way Legacy does
+   - Background Flavor: sketch 2-3 short, concrete background options
+     grounded in Legacy/Codex/Timeline, then choose or blend one — per
+     Bot-Rules, "Character creation — background flavor and starting
+     social circle"
    - Decide, in the same pass: Location, Region, Name, Pronouns,
-     Motivation, Flaw, Bond with a previous character (if one exists),
-     starting adviser
-   - Personify the starting adviser immediately, same split as Action 1 —
+     Motivation, Flaw, and Bond with a previous character (if one
+     exists) — all derived from the background just chosen, not decided
+     independently of it — and which starting adviser you're taking
+   - Starting Social Circle: alongside the Bond, establish 1-2 minor
+     Acquaintances tied to this character's Location or background
+   - Personify the starting adviser immediately — starting advisers are
+     taken faceup, so this happens immediately, same split as Action 1 —
      Codex's characters subfolder (including Voice) for the narrative
      half, a Player-state Adviser row for the mechanical half — it's
      already "drawn," same as any other
    - Update Player state (Location, Region, Name) and Characters (full
      entry: Name, Pronouns, Role, Colour, Location, Physical description,
-     Personality description, Bonds)
+     Personality description, Bonds, Acquaintances)
 
 3. Log turn (Pass the human's own actions and
    description) — for the Human seat only, since it has no bot of its

@@ -46,7 +46,11 @@ exists.
   Advisers (Name, Source card, Ability, Ability cost, Status) — the
   mechanical half of a personified adviser/denizen/commander; the
   narrative half is the matching Codex `characters/` entry, same Name
-- `Game/Story/oath-characters.md` — Characters (all seats' public entries)
+- `Game/Story/oath-characters.md` — Characters (all seats' public
+  entries), including a lighter Acquaintances field alongside Bonds
+  (name, one-line relationship, what they might know or want),
+  established at character creation per Bot-Rules, "Character creation
+  — background flavor and starting social circle"
 - `Game/Mechanics/oath-logic-log.md` — Logic log
 - `Game/Story/oath-chronicle.md` — Chronicle, plus a `## Live threads`
   header at the top (2-3 narrative-only tensions, overwritten as they

@@ -80,16 +80,26 @@ Messengers, or World Briefing.
    if needed" isn't, and this rule has been skipped past enough times
    that it needs to be one.
 9. If a new adviser, denizen, or warband commander is drawn or
-   recruited this turn, personify it now in both places, per Bot-Rules
-   "Codex — using it in play" and "Voice — staying in character":
-   Name/Description/Location/History/Voice to the Codex's `characters/`
-   subfolder, and the same Name plus Source card/Ability/Ability
-   cost/Status active to a new Adviser row in this seat's own Player
-   state — see `Oath-Cascade-Map.md`'s "Denizen recruited or Mustered"
-   entry. If it came off a site's own Denizens list in Board state's
-   Map, remove it from there too — it can't be both the site's and this
-   seat's at once.
-10. Hand off to `oath-end-turn` to narrate this segment and update the
+   recruited this turn, add its Adviser row in this seat's own Player
+   state now regardless of facing — Name, Source card, Ability, Ability
+   cost, Status active. If it's taken **faceup**, also personify it in
+   the Codex now, per Bot-Rules "Codex — using it in play" and "Voice —
+   staying in character": Name/Description/Location/History/Voice to
+   the Codex's `characters/` subfolder, same Name as the Adviser row —
+   see `Oath-Cascade-Map.md`'s "Denizen recruited or Mustered" entry. If
+   it's taken **facedown**, skip the Codex entry for now — per
+   Bot-Rules, "A card taken facedown stays unpersonified until
+   Revealed," it isn't owed one until step 10 below catches it, whether
+   that's later this same segment or a future turn. If it came off a
+   site's own Denizens list in Board state's Map, remove it from there
+   too either way — it can't be both the site's and this seat's at once.
+10. If this segment includes Revealing a previously-facedown Adviser
+    (already sitting in this seat's own Player state with no Codex entry
+    yet), personify it now in full — Description, Location, History,
+    Voice — per `Oath-Cascade-Map.md`'s "Adviser Revealed" entry. Same
+    depth as step 9's faceup case, just triggered by Reveal instead of
+    recruitment.
+11. Hand off to `oath-end-turn` to narrate this segment and update the
     shared logs and this seat's Diary — this happens automatically as
     part of the same response, not a separate call the human has to make.
 

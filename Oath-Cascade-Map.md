@@ -31,9 +31,19 @@ cascade can retroactively make an earlier step illegal.
 **Denizen recruited or Mustered — Moderate**
 Touches: Board state's Map (remove the Denizen from its site's list),
 Player state (a new Adviser row: Name, Source card, Ability, Ability
-cost, Status active), Codex (`characters/` entry: Name, Description,
-Location, History, Voice). All three share one Name. See Bot-Rules,
+cost, Status active). If taken faceup, also touches Codex
+(`characters/` entry: Name, Description, Location, History, Voice) in
+the same pass — all three share one Name. If taken facedown, the Codex
+entry waits — see "Adviser Revealed" below. See Bot-Rules,
 "Codex — using it in play" and "Voice — staying in character."
+
+**Adviser Revealed — Low**
+Touches: Codex only — the `characters/` entry (Name, Description,
+Location, History, Voice) that a facedown Adviser didn't get at
+recruitment. Its Player-state row already exists and needs no change;
+this just catches the Codex up to match a card that's now public. See
+Bot-Rules, "Codex — using it in play," "A card taken facedown stays
+unpersonified until Revealed."
 
 **Adviser Status changes — lost or discarded — Low**
 Touches: Player state's Adviser row only. The Codex entry is untouched

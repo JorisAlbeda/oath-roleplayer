@@ -46,11 +46,11 @@ Messengers, or World Briefing.
    out.
 6. Update, each read fresh immediately before appending:
    - `Game/Mechanics/oath-player-state.md` (mechanical results, including
-     Supply actually spent so far; if `oath-play-turn` personified a new
+     Supply actually spent so far; if `oath-play-turn` recruited a new
      adviser this segment, its Adviser row — Name, Source card, Ability,
-     Ability cost, Status active — belongs here too; if an existing
-     adviser was lost or discarded this segment, update its Status here,
-     not in the Codex)
+     Ability cost, Status active — belongs here too, regardless of
+     facing; if an existing adviser was lost or discarded this segment,
+     update its Status here, not in the Codex)
    - `Game/Mechanics/oath-board-state.md` (any Map changes this segment
      made, per Bot-Rules "Map upkeep": a denizen removed from a site's own
      Denizens list once Mustered or recruited to an Adviser row above; an
@@ -71,10 +71,13 @@ Messengers, or World Briefing.
 7. Codex upkeep, per Bot-Rules "Codex — using it in play" (narrative
    only — Ability, Ability cost, and Status live in Player state, per
    step 6 above, not here):
-   - If `oath-play-turn` personified a new adviser, denizen, or warband
-     commander this segment, confirm its Codex entry (Name, Description,
-     Location, History, Voice) is reflected alongside this narration —
-     see `Oath-Cascade-Map.md`.
+   - If `oath-play-turn` recruited a new adviser, denizen, or warband
+     commander **faceup** this segment, or Revealed a previously-facedown
+     one, confirm its Codex entry (Name, Description, Location, History,
+     Voice) is reflected alongside this narration — see
+     `Oath-Cascade-Map.md`'s "Denizen recruited or Mustered" and "Adviser
+     Revealed" entries. If it was taken facedown and not Revealed this
+     segment, there's nothing to reflect yet — that's expected, not a gap.
    - If this segment's events actually changed something about an existing
      entry (a relic changing hands, a location transformed, an event's
      consequences finally landing), append a note to that entry's History,

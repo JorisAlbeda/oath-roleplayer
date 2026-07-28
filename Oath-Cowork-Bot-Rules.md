@@ -70,6 +70,11 @@ block on these:**
   character is speaking or acting on-screen anyway).
 - A location's Codex entry has no Regional voice notes yet — proceed
   without them.
+- A facedown Adviser has no Codex entry at all yet — that's expected,
+  not a gap (see "Codex — using it in play," "A card taken facedown
+  stays unpersonified until Revealed"); narrate around it without
+  inventing detail, and personify it in full only once it's actually
+  Revealed.
 
 The distinction that matters: Required data missing means stop and name
 it. Recommended data missing means proceed and name the assumption
@@ -125,6 +130,44 @@ The description must be from the in-world character. Mechanical detail — exact
 reasoning, bank sources like secrets and favors — belongs in Board state and Logic log, never
 here.
 
+## Character creation — background flavor and starting social circle
+
+`oath-setup-character` doesn't decide Motivation, Flaw, and Bond in the
+abstract — it grounds them in a concrete background first, then derives
+the rest from it.
+
+**Background Flavor.** Before deciding anything else, sketch 2-3 short
+background options — two or three sentences each, specific and sensory,
+implying a particular life rather than stating a trait ("spent three
+winters as a debt-collector's second before buying out their own
+contract" reads as a life; "hardworking and resourceful" doesn't). Draw
+these from whatever Legacy, Codex, and Timeline material this seat's own
+Setup already surfaced — an heirloom, a debt, an inherited reputation,
+the world's current era — the same grounding material already in play,
+just made concrete before the trait-level decisions instead of only
+alongside them. Choose one, or blend two, as this character's actual
+background. Not stored as its own field — it feeds Physical description,
+Personality description, and the decisions below, and is worth printing
+in Setup's own Response so the human sees where the rest came from.
+
+**Deriving from it, not alongside it.** Motivation, Flaw, and Bond
+should visibly grow out of the chosen background, not be picked
+independently and merely made compatible with it afterward. If the
+background doesn't suggest an obvious Bond, that's fine — not forcing
+one is better than inventing a connection the background doesn't
+support.
+
+**Starting Social Circle.** Alongside the Bond (if one exists),
+establish 1-2 minor Acquaintances at creation — lighter than a Bond,
+tied to the character's starting Location or chosen background: a name,
+a one-line relationship, and what they might know or want. Recorded in
+Characters alongside Bonds, not in the Codex — an Acquaintance only
+earns a Codex entry later, if something makes them worth remembering
+there, per "Codex — using it in play" below. This exists so Messengers,
+Converse, and Diary have somewhere to start from in Round 1, instead of
+waiting for the first Converse to generate any relationship material at
+all.
+
 ## Codex — using it in play
 
 The Codex holds in-world detail on buildings, characters, events,
@@ -132,11 +175,11 @@ locations, and relics — most of it inherited from the previous game, not
 invented this session. It's shared, not per-seat, and it's meant to be
 used, not just checked off the "Reference material" list once per turn.
 
-**Personifying what you hold — split across two documents.** The moment
-an adviser, denizen, or warband commander is actually drawn or recruited,
-it gets an entry in both places, sharing one Name (see
-`Oath-Cascade-Map.md`'s "Denizen recruited or Mustered" entry for the
-fuller cascade):
+**Personifying what you hold — split across two documents, and only
+once it's faceup.** The moment an adviser, denizen, or warband commander
+is actually drawn or recruited **faceup**, it gets an entry in both
+places, sharing one Name (see `Oath-Cascade-Map.md`'s "Denizen recruited
+or Mustered" entry for the fuller cascade):
 
 - **Codex** (`characters/` subfolder, narrative only) — a Name (a
   person's name, not a repeat of the card's own printed title — "Elner"
@@ -156,6 +199,20 @@ fuller cascade):
 Keeping the Name identical across both is what lets either document be
 cross-referenced from the other — the Codex entry is who they are, the
 Player-state row is what they can still do.
+
+**A card taken facedown stays unpersonified until Revealed.** An Adviser
+taken facedown still gets its Player-state row in full the moment it's
+recruited — Name, Source card, Ability, Ability cost, Status active —
+that row is shared regardless of facing, per the existing simplification
+that Player state doesn't model hidden information. But it gets no
+Codex entry yet: no Description, History, or Voice. The moment it's
+actually Revealed — a real Oath action, not a narrative choice —
+personify it in full, the same depth as any faceup recruit, per
+`Oath-Cascade-Map.md`'s "Adviser Revealed" entry. If it's lost or
+discarded while still facedown, having never been Revealed, it never
+gets a Codex entry at all — that's the point: narrative effort lands
+only on Advisers that actually became visible, not on every card that
+passes through a seat's hand.
 
 **A site's own Denizens, before they're anyone's Adviser.** Until a
 denizen is actually Mustered or otherwise recruited, it belongs to a

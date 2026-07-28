@@ -31,20 +31,26 @@ Human seat.
 3. Update `Game/Mechanics/oath-player-state.md` with the mechanical
    results (Location, Region, Supply/Secrets/Favors gained or spent,
    Banners, Adviser rows). If the human recruited a new denizen, adviser,
-   or commander this turn, personify it the same way `oath-play-turn`
-   does — Name/Description/Location/History/Voice to the Codex's
-   `characters/` subfolder, matching Name to a new Adviser row here —
-   see `Oath-Cascade-Map.md`. Read the file fresh immediately before
-   appending.
-4. Update `Game/Mechanics/oath-board-state.md` with any Map changes the
+   or commander this turn, add its Adviser row here regardless of
+   facing. If taken faceup, also personify it in the Codex now, the
+   same way `oath-play-turn` does — Name/Description/Location/History/
+   Voice to the Codex's `characters/` subfolder, matching Name — per
+   `Oath-Cascade-Map.md`'s "Denizen recruited or Mustered" entry. If
+   taken facedown, skip the Codex entry for now. Read the file fresh
+   immediately before appending.
+4. If the human's turn included Revealing a previously-facedown Adviser,
+   personify it now in full (Description, Location, History, Voice), per
+   `Oath-Cascade-Map.md`'s "Adviser Revealed" entry. Read the Codex
+   fresh immediately before writing.
+5. Update `Game/Mechanics/oath-board-state.md` with any Map changes the
    reported turn made, per Bot-Rules "Map upkeep" — a denizen removed
    from a site's own Denizens list once Mustered or recruited, Ruled by
    or Number of warbands changing, Content or Relics changing, an
    edifice flipping. Most turns won't touch the Map at all. Read the
    file fresh immediately before appending.
-5. Add an entry to `Game/Mechanics/oath-logic-log.md` describing the
+6. Add an entry to `Game/Mechanics/oath-logic-log.md` describing the
    actions taken. Read the file fresh immediately before appending.
-6. Add a narrated beat to `Game/Story/oath-chronicle.md`, grounded in
+7. Add a narrated beat to `Game/Story/oath-chronicle.md`, grounded in
    the human's own description, same specificity standard as any other
    Chronicle entry. Read the file fresh immediately before appending.
 
