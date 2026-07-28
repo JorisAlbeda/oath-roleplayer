@@ -8,7 +8,7 @@ description: Closes out a cross-seat dialogue and folds its outcome into the sha
 Action 5 of `Oath-Cowork-Spec.md`. Paths from `Oath-Cowork-File-Map.md`.
 Guidance in `Oath-Cowork-Bot-Rules.md`, "Voice — staying in character."
 Check `Oath-Cascade-Map.md` for the "Bond shifts in Converse" and
-"conversation surfaces something Codex-worthy" entries.
+"A conversation surfaces something Codex-worthy" entries.
 
 ## The boundary
 

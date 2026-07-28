@@ -135,7 +135,7 @@ used, not just checked off the "Reference material" list once per turn.
 **Personifying what you hold — split across two documents.** The moment
 an adviser, denizen, or warband commander is actually drawn or recruited,
 it gets an entry in both places, sharing one Name (see
-`Oath-Cascade-Map.md`'s "Denizen recruited/Mustered" entry for the
+`Oath-Cascade-Map.md`'s "Denizen recruited or Mustered" entry for the
 fuller cascade):
 
 - **Codex** (`characters/` subfolder, narrative only) — a Name (a
@@ -292,9 +292,10 @@ educated / scholarly / mixed), one or two verbal habits (a specific
 tic, not a mood — "trails off mid-sentence," "answers a question with
 another question"), an emotional default, and a speech rhythm (clipped /
 flowing / measured / rambling). Written once, at personification —
-`oath-play-turn` step 8 or `oath-setup-character`'s own personify step —
-and revised only when the character's voice genuinely shifts as a
-deliberate story beat, the same discipline as History.
+`oath-play-turn` step 9, `oath-setup-character`'s own personify step, or
+`oath-log-turn` step 3 for the human seat's own recruits — and revised
+only when the character's voice genuinely shifts as a deliberate story
+beat, the same discipline as History.
 
 **Why it exists.** Nothing currently stops this character's Diary
 entries, Converse lines, and Chronicle beats from drifting apart session

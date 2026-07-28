@@ -85,7 +85,7 @@ Messengers, or World Briefing.
    Name/Description/Location/History/Voice to the Codex's `characters/`
    subfolder, and the same Name plus Source card/Ability/Ability
    cost/Status active to a new Adviser row in this seat's own Player
-   state — see `Oath-Cascade-Map.md`'s "Denizen recruited/Mustered"
+   state — see `Oath-Cascade-Map.md`'s "Denizen recruited or Mustered"
    entry. If it came off a site's own Denizens list in Board state's
    Map, remove it from there too — it can't be both the site's and this
    seat's at once.

@@ -40,12 +40,14 @@ Touches: Player state's Adviser row only. The Codex entry is untouched
 — its Description and History stay as they are; only what this
 character can still *do* changed, not who they *are*.
 
-**Edifice flips — Moderate**
-Touches: Board state's Map (that site's Name if it changes, Ability,
-and Relics, overwritten in place, same entry), and usually a Chronicle
-beat. Touches the Codex `locations/` entry only if that entry's own
-Description references the site's current state closely enough that
-leaving it as-is would read as wrong.
+**Edifice flips — Low**
+Touches: Board state's Map only (that site's Name if it changes,
+Ability, and Relics, overwritten in place, same entry) — no different
+from any other Map upkeep edit. Only touches the Codex `locations/`
+entry if that entry's own Description references the site's current
+state closely enough that leaving it as-is would read as wrong; that
+conditional touch doesn't bump the size, the same way the Chronicle
+beat every segment gets regardless doesn't.
 
 **Relic peeked at or taken — Low, but shared-wide**
 Touches: Board state's Map's Relics field for that site, updated once,
