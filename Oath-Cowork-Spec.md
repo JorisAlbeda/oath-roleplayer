@@ -19,7 +19,7 @@ the same turn._
        are ruled by Bandits, never "none"; only one faction rules a
        site at a time)
      - Number of warbands
-     - Relic cost (e.g. three favor placed, two secrets burned)
+     - Relic cost (e.g. three favors placed, two secrets burned)
      - Content (if relevant — most sites won't have this)
      - Number of defence dice
      - Relics (Name and Description once anyone has peeked at it;

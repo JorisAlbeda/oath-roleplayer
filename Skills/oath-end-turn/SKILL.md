@@ -35,7 +35,7 @@ Messengers, or World Briefing.
    exact leak has happened repeatedly — catch it here, not after the
    human points it out.
 5. Update, each read fresh immediately before appending:
-   - `Game/Mechanics/oath-players-state.md` (mechanical results, including
+   - `Game/Mechanics/oath-player-state.md` (mechanical results, including
      Supply actually spent so far; if `oath-play-turn` personified a new
      adviser this segment, its Adviser row — Name, Source card, Ability,
      Ability cost, Status active — belongs here too; if an existing

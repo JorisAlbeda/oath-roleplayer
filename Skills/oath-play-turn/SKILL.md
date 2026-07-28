@@ -15,7 +15,7 @@ not two separate calls.
 ## The boundary
 
 Read `Game/Mechanics/oath-board-state.md`,
-`Game/Mechanics/oath-players-state.md`,
+`Game/Mechanics/oath-player-state.md`,
 `Game/Mechanics/oath-logic-log.md` (entries since this seat's own last
 turn), `Game/Story/oath-characters.md`, the Codex (whatever's relevant to
 where this segment happens — it's not a chronological log, so there's no

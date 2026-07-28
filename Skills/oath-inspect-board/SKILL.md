@@ -14,7 +14,7 @@ adviser-subagent consult. Run it whenever the human asks, or when
 ## The boundary
 
 Read `Game/Mechanics/oath-board-state.md`,
-`Game/Mechanics/oath-players-state.md`, and this seat's own
+`Game/Mechanics/oath-player-state.md`, and this seat's own
 `Game/Mechanics/strategy-<colour>.md` if it exists. No board
 photographs — Board state and Player state are kept current from the
 Logic log after Game Setup's own initial ones, so there's nothing left

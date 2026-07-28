@@ -12,7 +12,7 @@ how their turn enters the shared documents.
 ## The boundary
 
 Read `Game/Mechanics/oath-board-state.md`,
-`Game/Mechanics/oath-players-state.md`, and
+`Game/Mechanics/oath-player-state.md`, and
 `Game/Mechanics/oath-logic-log.md`. The human's own description is the
 narrative source — there's no private Diary to check for the
 Human seat.
@@ -20,7 +20,7 @@ Human seat.
 ## Steps
 
 1. Take the human's own description of their turn as given.
-2. Update `Game/Mechanics/oath-players-state.md` with the mechanical
+2. Update `Game/Mechanics/oath-player-state.md` with the mechanical
    results (Location, Region, Supply/Secrets/Favors gained or spent,
    Banners, Adviser rows). Read the file fresh immediately before
    appending.

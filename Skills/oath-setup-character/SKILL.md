@@ -15,7 +15,7 @@ Supply/Secrets/Favors/Banners are already set by Game Setup.
 Read this seat's own `Game/Setup/oath-world-briefing-<seat>.md`,
 `Game/Story/Legacy/legacy-<colour>.md` if it exists, the Codex,
 `Game/Story/Codex/timeline.md`, `Game/Mechanics/oath-board-state.md`,
-`Game/Mechanics/oath-players-state.md`, and this seat's own
+`Game/Mechanics/oath-player-state.md`, and this seat's own
 starting-adviser photo. Board state's Map already holds the whole
 board from Game Setup's own photographs — no need to re-photograph it
 here. Never read another seat's World Briefing, Legacy, or private
@@ -63,7 +63,7 @@ documents.
    Role, Colour, Location, Physical description, Personality
    description, Bonds. Read the file fresh immediately before
    appending, per the append-only convention.
-8. Update `Game/Mechanics/oath-players-state.md` with this seat's
+8. Update `Game/Mechanics/oath-player-state.md` with this seat's
    Location, Region, and Name, and a new Adviser row for the starting
    adviser — the same Name as step 6, plus Source card, Ability, Ability
    cost, and Status active. If this starting adviser was listed under a

@@ -22,14 +22,25 @@ exists.
 
 - `Game/Mechanics/oath-board-state.md` — Board state: Round, Visions
   Drawn, Oath, Current Player Turn, World Deck Search cost, and the
-  Map — one entry per Region, one sub-entry per Site within it (Name,
-  Ability, Ruled by, Number of warbands, Relic cost, Content, Number of
-  defence dice, Relics, and that site's own Denizens: Name, Suit,
-  Ability cost, Ability — present at the site until Mustered or
-  otherwise taken by a seat). Filled in full from board photographs
-  once, during `oath-game-setup` — the only time the whole board is
-  ever photographed; kept current afterward from the Logic log alone.
-- `Game/Mechanics/oath-players-state.md` — Player state: one row per
+  Map. Filled in full from board photographs once, during
+  `oath-game-setup` — the only time the whole board is ever
+  photographed; kept current afterward from the Logic log alone. The
+  Map holds one entry per Region, one sub-entry per Site within it:
+  - Name
+  - Ability
+  - Ruled by
+  - Number of warbands
+  - Relic cost
+  - Content (if relevant)
+  - Number of defence dice
+  - Relics (Name and Description once peeked at, otherwise "unknown")
+  - Denizens (present at the site until Mustered or otherwise taken by
+    a seat), each with:
+    - Name
+    - Suit
+    - Ability cost
+    - Ability
+- `Game/Mechanics/oath-player-state.md` — Player state: one row per
   colour (Role, Controlled by, Location, Region, Number of Supplies,
   Number of Secrets, Number of Favors, Banners), each with its own
   Advisers (Name, Source card, Ability, Ability cost, Status) — the

@@ -116,28 +116,6 @@ personified until someone takes it. The moment it's recruited, remove
 it from the site's Denizens list and personify it as above (Codex entry
 plus a Player-state Adviser row); it can't be in both places at once.
 
-## Map upkeep
-
-Board state's Map is the text stand-in for the physical board itself —
-keep it as current as the Logic log, not just at Game Setup. Update the
-relevant site's entry, read fresh immediately before editing, whenever
-a segment actually changes it:
-
-- **Ruled by / Number of warbands** — after a Campaign changes who
-  holds a site, or warbands are added or removed there by any action.
-- **Denizens** — remove one the moment it's Mustered or recruited (see
-  above); add one if a new card is dealt to the site.
-- **Relics** — move from "unknown" to Name and Description the moment
-  anyone peeks at it, for every seat, not just whoever peeked; remove
-  it from the site if it's taken.
-- **Content** — update if Secrets or Favors sitting at the site are
-  added to or taken from.
-- **An edifice flipping** — overwrite that site's Name (if it changes),
-  Ability, and Relics in place; same site entry, new facing.
-
-Most segments won't touch the Map at all — don't force an edit where
-nothing actually changed.
-
 **Read it when it's actually relevant, not just at the top of a turn.**
 The per-turn check in "Reference material" is a quick skim for anything
 already relevant to where this segment is happening — the Codex isn't a
@@ -165,6 +143,28 @@ the existing Title/Description/History/Location structure used
 throughout the Codex, and file it in the matching subfolder (`buildings`,
 `characters`, `events`, `locations`, `relics`), named consistently with
 what's already there. Most turns won't add one — don't force it.
+
+## Map upkeep
+
+Board state's Map is the text stand-in for the physical board itself —
+keep it as current as the Logic log, not just at Game Setup. Update the
+relevant site's entry, read fresh immediately before editing, whenever
+a segment actually changes it:
+
+- **Ruled by / Number of warbands** — after a Campaign changes who
+  holds a site, or warbands are added or removed there by any action.
+- **Denizens** — remove one the moment it's Mustered or recruited (see
+  above); add one if a new card is dealt to the site.
+- **Relics** — move from "unknown" to Name and Description the moment
+  anyone peeks at it, for every seat, not just whoever peeked; remove
+  it from the site if it's taken.
+- **Content** — update if Secrets or Favors sitting at the site are
+  added to or taken from.
+- **An edifice flipping** — overwrite that site's Name (if it changes),
+  Ability, and Relics in place; same site entry, new facing.
+
+Most segments won't touch the Map at all — don't force an edit where
+nothing actually changed.
 
 ## Legal turn endings, and why
 

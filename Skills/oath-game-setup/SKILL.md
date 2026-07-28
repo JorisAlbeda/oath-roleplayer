@@ -29,7 +29,7 @@ the project — not seat-specific.
    any), Number of defence dice, Relics (Name and Description if
    already peeked at in the photograph, otherwise "unknown"), and that
    site's own Denizens (Name, Suit, Ability cost, Ability).
-4. Create `Game/Mechanics/oath-players-state.md`: one Player row per
+4. Create `Game/Mechanics/oath-player-state.md`: one Player row per
    colour with Role, Controlled-by, and Number of Supplies (7 for
    everyone) filled in. Name stays blank for AI seats until their own
    Setup decides it; fill it in now for the Human seat if known.
