@@ -157,7 +157,7 @@ background doesn't suggest an obvious Bond, that's fine — not forcing
 one is better than inventing a connection the background doesn't
 support.
 
-**Starting Social Circle.** Alongside the Bond (if one exists),
+**Starting Social Circle.** Independent of whether a Bond exists,
 establish 1-2 minor Acquaintances at creation — lighter than a Bond,
 tied to the character's starting Location or chosen background: a name,
 a one-line relationship, and what they might know or want. Recorded in
@@ -200,19 +200,33 @@ Keeping the Name identical across both is what lets either document be
 cross-referenced from the other — the Codex entry is who they are, the
 Player-state row is what they can still do.
 
-**A card taken facedown stays unpersonified until Revealed.** An Adviser
-taken facedown still gets its Player-state row in full the moment it's
-recruited — Name, Source card, Ability, Ability cost, Status active —
-that row is shared regardless of facing, per the existing simplification
-that Player state doesn't model hidden information. But it gets no
-Codex entry yet: no Description, History, or Voice. The moment it's
-actually Revealed — a real Oath action, not a narrative choice —
-personify it in full, the same depth as any faceup recruit, per
-`Oath-Cascade-Map.md`'s "Adviser Revealed" entry. If it's lost or
-discarded while still facedown, having never been Revealed, it never
-gets a Codex entry at all — that's the point: narrative effort lands
-only on Advisers that actually became visible, not on every card that
-passes through a seat's hand.
+**A card taken facedown stays unpersonified until Revealed — but its
+mechanical identity is not actually hidden from other seats' bots.** An
+Adviser taken facedown still gets its Player-state row in full the
+moment it's recruited — Name, Source card, Ability, Ability cost,
+Status active — because Player state is one shared file every seat's
+bot reads in full before deciding anything (see "Reference material").
+This is a deliberate tradeoff, not a carried-over precedent: nothing
+before this system modeled facedown play at all, so there was no
+existing simplification to appeal to. The choice made here is that only
+the narrative layer is gated on Reveal — no Description, History, or
+Voice until then — while the mechanical layer (Name, Ability) sits in
+the open the moment it's recruited, visible to every other seat's bot in
+the same context it reads before its own turn. A human player facing a
+facedown Adviser at the physical table still gets real fog-of-war; the
+bots controlling the other seats do not, and won't until the row itself
+is made private (a placeholder plus a per-seat detail file) or removed.
+Accepted for now on the read that bots tend to under-use even their own
+faceup Advisers' detail, let alone lean on a rival's facedown one, but
+if an opponent's bot is ever observed acting on a facedown Adviser's
+Name or Ability before it's Revealed, that's this tradeoff showing, not
+a bug. The moment it's actually Revealed — a real Oath action, not a
+narrative choice — personify it in full, the same depth as any faceup
+recruit, per `Oath-Cascade-Map.md`'s "Adviser Revealed" entry. If it's
+lost or discarded while still facedown, having never been Revealed, it
+never gets a Codex entry at all — that's the point: narrative effort
+lands only on Advisers that actually became visible, not on every card
+that passes through a seat's hand.
 
 **A site's own Denizens, before they're anyone's Adviser.** Until a
 denizen is actually Mustered or otherwise recruited, it belongs to a
@@ -350,9 +364,12 @@ tic, not a mood — "trails off mid-sentence," "answers a question with
 another question"), an emotional default, and a speech rhythm (clipped /
 flowing / measured / rambling). Written once, at personification —
 `oath-play-turn` step 9, `oath-setup-character`'s own personify step, or
-`oath-log-turn` step 3 for the human seat's own recruits — and revised
-only when the character's voice genuinely shifts as a deliberate story
-beat, the same discipline as History.
+`oath-log-turn` step 3 for the human seat's own recruits — or, for an
+Adviser that was taken facedown, deferred to whichever segment actually
+Reveals it: `oath-play-turn` step 10, `oath-log-turn` step 4, or
+`oath-end-turn` step 7's Codex upkeep. Revised only when the character's
+voice genuinely shifts as a deliberate story beat, the same discipline
+as History.
 
 **Why it exists.** Nothing currently stops this character's Diary
 entries, Converse lines, and Chronicle beats from drifting apart session

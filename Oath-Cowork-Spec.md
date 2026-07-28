@@ -164,9 +164,12 @@ the same turn._
      also personify it in the Codex now (Name, Description, Location,
      History, Voice), same Name as the Adviser row; if taken facedown,
      the Codex entry waits until it's Revealed — see `Oath-Cascade-Map.md`
-     for the fuller cascade either way. If it came off a site's own
-     Denizens list in Board state's Map, remove it from there either
-     way — it's now this seat's Adviser, not the site's
+     for the fuller cascade either way. If this segment instead Reveals a
+     previously-facedown Adviser, personify it in full now, the same
+     depth as any faceup recruit — see `Oath-Cascade-Map.md`'s "Adviser
+     Revealed" entry. If it came off a site's own Denizens list in Board
+     state's Map, remove it from there either way — it's now this seat's
+     Adviser, not the site's
    - Supply gate: state the exact Supply number left. More than 2? Add
      another action and recheck, unless none is affordable — then say so
 
@@ -204,8 +207,12 @@ the same turn._
    - Required-tier pre-flight check (per Bot-Rules) against this seat's
      own row and whatever site was touched, before recording anything
    - Update Player state (Location, Supply/Secrets/Favors, Banners,
-     Adviser rows) and Board state (any Map changes the reported turn
-     made) per what was reported, and Logic log
+     Adviser rows, added regardless of facing; faceup recruits also get a
+     Codex entry now, facedown ones wait until Revealed) and Board state
+     (any Map changes the reported turn made) per what was reported, and
+     Logic log. If the human's own turn Reveals a previously-facedown
+     Adviser, personify it in full now — see `Oath-Cascade-Map.md`'s
+     "Adviser Revealed" entry
    - Update Chronicle with a narrated beat from the human's own
      description
 

@@ -67,10 +67,10 @@ documents.
    exists, and which starting adviser you're taking — with Motivation,
    Flaw, and Bond visibly derived from the background just chosen, not
    picked independently of it.
-7. Starting Social Circle, per the same Bot-Rules section: alongside the
-   Bond above, if any, establish 1-2 minor Acquaintances tied to this
-   character's Location or the background just chosen — a name, a
-   one-line relationship, and what they might know or want.
+7. Starting Social Circle, per the same Bot-Rules section: independent
+   of whether the Bond above exists, establish 1-2 minor Acquaintances
+   tied to this character's Location or the background just chosen — a
+   name, a one-line relationship, and what they might know or want.
 8. Personify the starting adviser immediately — starting advisers are
    taken faceup, so this happens now, split per Bot-Rules "Codex — using
    it in play": Name, Description, Location, History, and Voice (per
