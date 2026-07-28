@@ -48,7 +48,10 @@ exists.
   narrative half is the matching Codex `characters/` entry, same Name
 - `Game/Story/oath-characters.md` — Characters (all seats' public entries)
 - `Game/Mechanics/oath-logic-log.md` — Logic log
-- `Game/Story/oath-chronicle.md` — Chronicle
+- `Game/Story/oath-chronicle.md` — Chronicle, plus a `## Live threads`
+  header at the top (2-3 narrative-only tensions, overwritten as they
+  resolve or emerge) — the one part of this file that isn't append-only,
+  per Bot-Rules "Live threads — narrative-only tension tracking"
 - `Game/Story/Conversation logs/oath-conversation-<nameA>-<nameB>-R<round>-<n>.md`
   — one file per Converse dialogue, created on first use, named after
   the two characters and the round it started in (e.g.
@@ -57,10 +60,13 @@ exists.
 - `Game/Story/Codex` — in-world detail on buildings, characters, events,
   locations, and relics, one file per entry in the matching subfolder
   (`buildings/`, `characters/`, `events/`, `locations/`, `relics/`),
-  each following a Title/Description/History/Location structure. Mostly
-  inherited from the previous game, extended during this one — read per
-  Bot-Rules "Codex — using it in play," appended to (new History) or
-  added to (new entries) the same way
+  each following a Title/Description/History/Location structure.
+  `characters/` entries carry a fifth field, Voice, per Bot-Rules
+  "Voice — staying in character"; `locations/` entries may optionally
+  carry Regional voice notes, added the first time a scene actually
+  happens there. Mostly inherited from the previous game, extended
+  during this one — read per Bot-Rules "Codex — using it in play,"
+  appended to (new History) or added to (new entries) the same way
 - `Game/Story/Codex/timeline.md` — long-form world history across games,
   dated by era of the Old Oak, occasionally with editorial commentary.
   Human-maintained and read-only for every seat's bot — no skill writes

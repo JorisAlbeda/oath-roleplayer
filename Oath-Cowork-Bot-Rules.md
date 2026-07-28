@@ -19,7 +19,13 @@ the Logic log alone after Game Setup's own initial board photographs —
 no further board photographs are taken or needed for the rest of the
 game. Read the Rules, Site Reference, and action summary in this
 project's connected folder as needed for legality — nothing here
-relaxes what counts as a legal Player Instruction.
+relaxes what counts as a legal Player Instruction. Read
+`Oath-Cascade-Map.md` too, whenever this segment is about to touch more
+than one document — it names what else the same event should touch,
+and how big that ripple usually is.
+
+Once you've read all of the above, run the Pre-flight check below
+before deciding anything.
 
 **Concretely: before finalizing, state plainly whether this segment is
 routine (Travel, Muster, Trade, Rest) or includes something non-routine**
@@ -29,6 +35,45 @@ checked in the Rules/Site Reference before finalizing — don't finalize
 on memory alone. "As needed" has quietly become "never" before, once
 narration and Codex upkeep were competing for the same bot's attention;
 a stated yes/no is checkable, "as needed" on its own isn't.
+
+## Pre-flight check — required vs recommended
+
+Before deciding anything, check that what you just read is actually
+complete enough to decide from — the same way the Supply gate below
+demands a stated number instead of a felt one, applied here to the data
+itself, not just the decision.
+
+**Required — state the exact gap and stop, don't proceed on a guess:**
+
+- This seat's own row in Player state has Location, Region, Supplies,
+  Secrets, Favors, and Banners filled in.
+- The Map entry for wherever this segment is actually happening has at
+  least Ruled by and Number of warbands recorded.
+- Every existing Adviser row in Player state has a Status.
+- At Game Setup only: Oath, Current Player Turn, and every seat's Role
+  and Controlled-by are set.
+
+If any of these is missing, say so plainly and stop — don't infer a
+site's control or an Adviser's standing from narrative memory. A stated
+gap is checkable, a silent assumption isn't.
+
+**Recommended — proceed, and name the assumption you're making, never
+block on these:**
+
+- This seat's own Strategy file doesn't exist yet (`oath-inspect-board`
+  creates one lazily on its first run — proceed without one until then).
+- A site's Content or Relics field reads "none" or "unknown" — both are
+  legitimate states, not gaps.
+- A Codex character entry has no Voice yet (see "Voice — staying in
+  character" below) — narrate this turn from its Description and
+  History alone, and add Voice now if this is the natural moment (the
+  character is speaking or acting on-screen anyway).
+- A location's Codex entry has no Regional voice notes yet — proceed
+  without them.
+
+The distinction that matters: Required data missing means stop and name
+it. Recommended data missing means proceed and name the assumption
+instead — never let an optional gap stall an otherwise-legal turn.
 
 ## Play turn — one bot, one pass
 
@@ -89,15 +134,19 @@ used, not just checked off the "Reference material" list once per turn.
 
 **Personifying what you hold — split across two documents.** The moment
 an adviser, denizen, or warband commander is actually drawn or recruited,
-it gets an entry in both places, sharing one Name:
+it gets an entry in both places, sharing one Name (see
+`Oath-Cascade-Map.md`'s "Denizen recruited/Mustered" entry for the
+fuller cascade):
 
 - **Codex** (`characters/` subfolder, narrative only) — a Name (a
   person's name, not a repeat of the card's own printed title — "Elner"
   who happens to be the Fire Talkers, not "the Fire Talkers" standing in
-  for a person), a Description, a Location, and a History (even a
-  one-line "first appeared, Round N" is enough to start one), following
-  the same Title/Description/History/Location structure as every other
-  entry — this is what "Update an entry" below will later append to.
+  for a person), a Description, a Location, a History (even a
+  one-line "first appeared, Round N" is enough to start one), and a
+  Voice (see "Voice — staying in character" below) — the same
+  Title/Description/History/Location structure as every other entry,
+  plus Voice as a fifth field unique to `characters/` entries — this is
+  what "Update an entry" below will later append to.
 - **Player state** (this seat's Advisers list, mechanical only) — the same
   Name, plus Source card, Ability (the card's own printed power,
   condensed to plain language), Ability cost ("none" if passive), and
@@ -164,7 +213,9 @@ a segment actually changes it:
   Ability, and Relics in place; same site entry, new facing.
 
 Most segments won't touch the Map at all — don't force an edit where
-nothing actually changed.
+nothing actually changed. See `Oath-Cascade-Map.md` for the fuller
+picture of what else a given change usually touches beyond the Map
+itself.
 
 ## Legal turn endings, and why
 
@@ -233,6 +284,47 @@ site's own character, an action's flavor are all material to draw the
 scene from, not obstacles to narrate around. See "Codex — using it in
 play" for when and how to pull from it.
 
+## Voice — staying in character
+
+Every personified adviser, denizen, or commander carries a Voice
+alongside its Codex Description and History: vocabulary level (simple /
+educated / scholarly / mixed), one or two verbal habits (a specific
+tic, not a mood — "trails off mid-sentence," "answers a question with
+another question"), an emotional default, and a speech rhythm (clipped /
+flowing / measured / rambling). Written once, at personification —
+`oath-play-turn` step 8 or `oath-setup-character`'s own personify step —
+and revised only when the character's voice genuinely shifts as a
+deliberate story beat, the same discipline as History.
+
+**Why it exists.** Nothing currently stops this character's Diary
+entries, Converse lines, and Chronicle beats from drifting apart session
+to session, or bot to bot, since nothing but memory anchors how they
+actually talk. Voice is that anchor.
+
+**Read it before writing a line, not after.** Before finalizing any
+dialogue or narration in this character's own words — a Diary entry, a
+Converse line, a quoted remark inside Chronicle — check their Codex
+Voice first, the same way "Codex — using it in play" already asks for a
+Location or Relic. Let vocabulary level and verbal habits actually show
+up, not just emotional default.
+
+**Voice check, alongside the language check.** `oath-end-turn`'s
+existing language check catches mechanical vocabulary leaking into
+narration. Run a second, equally concrete check right after it: does
+this line match the stored Voice, or has it quietly drifted toward
+generic prose? Both checks gate the same moment — don't move on to
+writing Player state, Logic log, Diary, or Chronicle until both pass
+clean.
+
+**Regional voice, as a lighter shared layer.** The first time a scene
+actually happens somewhere with no established texture yet, its Codex
+`locations/` entry may carry an optional Regional voice notes paragraph
+— a proverb or two, a conversational habit, nothing like a full culture
+write-up — that any character from there can draw on alongside their
+own individual Voice. Most locations won't have one; add it only when a
+scene actually calls for it, the same restraint as any other Codex
+addition.
+
 ## Converse
 
 A character can start a
@@ -266,6 +358,37 @@ This can be:
 
 Be very clear about it.
 
+## Live threads — narrative-only tension tracking
+
+A short, refreshed list — 2-3 entries at most — of in-world threads
+simmering in the background: a rival's grudge, a rumor spreading through
+a Region, a suspicion one character has about another. Lives at the top
+of `Game/Story/oath-chronicle.md`, headed `## Live threads`, overwritten
+as threads resolve or new ones emerge — the one part of Chronicle that
+isn't append-only; the rest of the file still is.
+
+**What it's for.** Purely texture: material for a Diary entry, a
+Messenger note, or a Converse opening line to draw on, the same way a
+Codex Location or Relic already grounds a scene. It exists because a
+world that only ever reacts to the player's own moves reads thinner
+than one with something already simmering when they arrive.
+
+**What it is never for.** Live threads never change what's legal, never
+justify a mechanically worse action, and never invent a new rule or
+effect Oath itself doesn't have. If a thread would need an actual game
+effect to pay off, it isn't a Live thread — it's either a real Oath
+mechanic already on the board, or it stays flavor forever.
+
+**Upkeep.** `oath-end-turn` checks, opportunistically, whether this
+segment resolves an existing thread or introduces a plausible new one —
+most segments won't touch it either way. `oath-inspect-board` gives it a
+separate skim alongside the strategy check, entirely apart from the
+strategy itself: does anything on the list feel stale enough to retire?
+Neither skill should let this list influence the strategy or the turn's
+own decision — if it starts to, that's a sign a thread has drifted out
+of "flavor" territory and either belongs in the Codex as a real Event,
+or should be dropped.
+
 ## Bookkeeping discipline
 
 Legal Player Instructions are a hard floor regardless of how integrated
@@ -286,4 +409,6 @@ it — never rely on an earlier read from this conversation, even one from
 a few turns ago. This was validated as a real failure mode during
 Playtest 2 (a player appended to a stale in-context copy of a log
 and landed the entry in the wrong place) and applies here with the same
-force.
+force. Chronicle's one exception is its own `## Live threads` header at
+the top — overwritten as threads resolve or emerge, per "Live threads"
+above; the rest of the file stays append-only.

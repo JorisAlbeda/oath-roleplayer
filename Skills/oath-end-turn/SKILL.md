@@ -6,10 +6,13 @@ description: Narrates the segment oath-play-turn just decided and updates the sh
 # Oath — End turn (narrate and log)
 
 Action 7 of `Oath-Cowork-Spec.md`. Guidance in `Oath-Cowork-Bot-Rules.md` — read
-"Diary — structure" and "Roleplayer — Guidelines" before writing. Paths from
-`Oath-Cowork-File-Map.md`. Always follows `oath-play-turn` in the same
-response — assumes a course of action has already been decided and finalized
-there; never called with nothing decided yet.
+"Diary — structure," "Roleplayer — Guidelines," "Voice — staying in
+character," and "Live threads — narrative-only tension tracking" before
+writing. Paths from `Oath-Cowork-File-Map.md`. Check `Oath-Cascade-Map.md`
+if this segment ends up touching more than the documents named below.
+Always follows `oath-play-turn` in the same response — assumes a course
+of action has already been decided and finalized there; never called
+with nothing decided yet.
 
 ## The boundary
 
@@ -21,8 +24,9 @@ Messengers, or World Briefing.
 
 1. Before narrating, check the Codex for any Location, Building, Relic, or
    Event this segment actually touches, per Bot-Rules, "Codex — using it in
-   play." Let its established detail inform the narration below — this is
-   one of the main places that pays off.
+   play," and this character's own Voice, per "Voice — staying in
+   character." Let their established detail inform the narration below —
+   this is one of the main places that pays off.
 2. Narrate the segment `oath-play-turn` just finalized, at Chronicle quality,
    per the specificity standard in Bot-Rules, "Roleplayer — Guidelines,"
    including the resumed portion's own beat if this was a resume.
@@ -30,11 +34,17 @@ Messengers, or World Briefing.
    mechanical vocabulary — Supply, Secret, Favor, a card's own printed
    name, "traded," "played," "revealed" — and rewrite that sentence in the
    character's own in-world terms.
-4. Gate: don't move on to writing Board state, Logic log, Diary, or
-   Chronicle until step 3 passes clean. This step exists because this
-   exact leak has happened repeatedly — catch it here, not after the
-   human points it out.
-5. Update, each read fresh immediately before appending:
+4. Voice check, right after: does the draft actually match this
+   character's stored Voice (vocabulary level, verbal habits), or has it
+   drifted toward generic prose per Bot-Rules, "Voice — staying in
+   character"? Fix any line that doesn't sound like this character
+   specifically.
+5. Gate: don't move on to writing Player state, Board state, Logic log,
+   Diary, or Chronicle until steps 3 and 4 both pass clean. This step
+   exists because the mechanical-vocabulary leak in particular has
+   happened repeatedly — catch it here, not after the human points it
+   out.
+6. Update, each read fresh immediately before appending:
    - `Game/Mechanics/oath-player-state.md` (mechanical results, including
      Supply actually spent so far; if `oath-play-turn` personified a new
      adviser this segment, its Adviser row — Name, Source card, Ability,
@@ -58,12 +68,13 @@ Messengers, or World Briefing.
      written in-character)
    - `Game/Story/oath-chronicle.md` (the shared narrative beat; 1-2
      in-character sentences)
-6. Codex upkeep, per Bot-Rules "Codex — using it in play" (narrative
-   only — Ability, Ability cost, and Status live in Board state, per
-   step 5 above, not here):
+7. Codex upkeep, per Bot-Rules "Codex — using it in play" (narrative
+   only — Ability, Ability cost, and Status live in Player state, per
+   step 6 above, not here):
    - If `oath-play-turn` personified a new adviser, denizen, or warband
      commander this segment, confirm its Codex entry (Name, Description,
-     Location, History) is reflected alongside this narration.
+     Location, History, Voice) is reflected alongside this narration —
+     see `Oath-Cascade-Map.md`.
    - If this segment's events actually changed something about an existing
      entry (a relic changing hands, a location transformed, an event's
      consequences finally landing), append a note to that entry's History,
@@ -73,7 +84,12 @@ Messengers, or World Briefing.
      Relic that surfaced — create one now in the matching subfolder,
      following the existing Title/Description/History/Location structure.
      Most segments won't add one; don't force it.
-7. If this segment ends on Converse, hand off to `oath-continue-conversation`
+8. Opportunistically check whether this segment resolves an existing Live
+   thread or plausibly introduces a new one, per Bot-Rules, "Live threads
+   — narrative-only tension tracking." Update Chronicle's `## Live
+   threads` header if so — most segments won't touch it either way, and
+   it never changes what's legal or what was just decided above.
+9. If this segment ends on Converse, hand off to `oath-continue-conversation`
    for the opening line once the response below is printed, then return
    control to `oath-play-turn` once the conversation concludes — which is
    itself a resume, per `oath-play-turn`'s own resume check.
@@ -100,6 +116,6 @@ reporting it back here will continue this same turn. Don't print
 anything implying the turn is complete.
 
 If this segment paused on Converse, print through the opening beat the
-same way, then hand off per step 7 above.
+same way, then hand off per step 9 above.
 
 Nothing else needs to print.

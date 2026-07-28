@@ -6,12 +6,14 @@ description: Adds one reply line to an in-progress cross-seat dialogue (Action 4
 # Oath — Continue conversation
 
 Action 4 of `Oath-Cowork-Spec.md`. Paths from `Oath-Cowork-File-Map.md`.
+Guidance in `Oath-Cowork-Bot-Rules.md`, "Voice — staying in character."
 
 ## The boundary
 
-Read only this seat's own `Game/Story/oath-characters.md` entry, the
-Codex, the Converse dialogue file, and this seat's own Diary for voice
-consistency. Never another seat's Diary, Messengers, or
+Read only this seat's own `Game/Story/oath-characters.md` entry, this
+character's own Codex entry (including Voice) and any Regional voice
+notes on their location, the Converse dialogue file, and this seat's own
+Diary for continuity. Never another seat's Diary, Messengers, or
 World Briefing, and never Board state or Logic log.
 
 ## Steps
@@ -23,8 +25,12 @@ World Briefing, and never Board state or Logic log.
 3. Check the Codex for anything the conversation actually touches — a
    shared Location, a Relic being discussed, a past Event referenced —
    per Bot-Rules, "Codex — using it in play." Let its established detail
-   ground this reply rather than leaving it generic.
-4. Add exactly one reply, in this character's voice, same specificity
+   ground this reply rather than leaving it generic. Check this
+   character's own Voice too, per "Voice — staying in character" — if
+   it doesn't exist yet on an older Codex entry, add it now, this is as
+   natural a moment as any.
+4. Add exactly one reply, checked against this character's stored Voice
+   (vocabulary level, verbal habits, speech rhythm), same specificity
    standard as any other narration (Bot-Rules.md, "Roleplayer —
    Guidelines"). This is one line in an ongoing back-and-forth, not a
    full scene. Append it as the next line at the very end of the file.

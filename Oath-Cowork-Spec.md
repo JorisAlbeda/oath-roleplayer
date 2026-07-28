@@ -79,6 +79,10 @@ the same turn._
 
 6. Chronicle
    - Shared narrative: for the player
+   - A `## Live threads` header at the top (2-3 in-world tensions,
+     narrative-only, overwritten as they resolve or emerge) — the one
+     part of this file that isn't append-only, per Bot-Rules, "Live
+     threads — narrative-only tension tracking"
 
 7. Messengers (One per character)
    - New messages
@@ -113,6 +117,13 @@ the same turn._
 12. Codex (Shared; one file per entry, in a `buildings`/`characters`/
     `events`/`locations`/`relics` subfolder matching its category)
     - Title, Description, History, Location
+    - `characters/` entries carry a fifth field, Voice (vocabulary
+      level, one or two verbal habits, emotional default, speech
+      rhythm) — written once at personification, per Bot-Rules,
+      "Voice — staying in character"
+    - `locations/` entries may optionally carry Regional voice notes (a
+      proverb or two, a conversational habit) — added the first time a
+      scene actually happens there, not upfront
     - Mostly inherited from the previous game; read and extended during
       this one per Bot-Rules, "Codex — using it in play"
 
@@ -128,6 +139,9 @@ the same turn._
 ## Actions
 
 1. Play turn (one bot, one pass)
+   - Pre-flight check, per Bot-Rules, "Pre-flight check — required vs
+     recommended" — required data missing means stop and name the gap;
+     recommended data missing means proceed and name the assumption
    - Scan Player state for Banners and role changes before anything else
    - Check Board state, Player state, Logic log (entries since this
      seat's own last turn), Characters, the Codex (whatever's relevant
@@ -141,11 +155,12 @@ the same turn._
      whose outcome isn't known yet — see Bot-Rules, "Legal turn
      endings," for how a paused turn resumes
    - If a new adviser/denizen/commander is drawn or recruited this turn,
-     personify it now: Name, Description, Location, History to the
-     Codex's characters subfolder; Name (matching), Source card, Ability,
-     Ability cost, Status active to a new Adviser row in Player state. If
-     it came off a site's own Denizens list in Board state's Map, remove
-     it from there — it's now this seat's Adviser, not the site's
+     personify it now: Name, Description, Location, History, and Voice
+     to the Codex's characters subfolder; Name (matching), Source card,
+     Ability, Ability cost, Status active to a new Adviser row in Player
+     state — see `Oath-Cascade-Map.md` for the fuller cascade. If it came
+     off a site's own Denizens list in Board state's Map, remove it from
+     there — it's now this seat's Adviser, not the site's
    - Supply gate: state the exact Supply number left. More than 2? Add
      another action and recheck, unless none is affordable — then say so
 
@@ -162,9 +177,9 @@ the same turn._
      Motivation, Flaw, Bond with a previous character (if one exists),
      starting adviser
    - Personify the starting adviser immediately, same split as Action 1 —
-     Codex's characters subfolder for the narrative half, a Player-state
-     Adviser row for the mechanical half — it's already "drawn," same as
-     any other
+     Codex's characters subfolder (including Voice) for the narrative
+     half, a Player-state Adviser row for the mechanical half — it's
+     already "drawn," same as any other
    - Update Player state (Location, Region, Name) and Characters (full
      entry: Name, Pronouns, Role, Colour, Location, Physical description,
      Personality description, Bonds)
@@ -172,6 +187,8 @@ the same turn._
 3. Log turn (Pass the human's own actions and
    description) — for the Human seat only, since it has no bot of its
    own to run Action 1
+   - Required-tier pre-flight check (per Bot-Rules) against this seat's
+     own row and whatever site was touched, before recording anything
    - Update Player state (Location, Supply/Secrets/Favors, Banners,
      Adviser rows) and Board state (any Map changes the reported turn
      made) per what was reported, and Logic log
@@ -180,14 +197,15 @@ the same turn._
 
 4. Continue conversation (Pass Converse
    dialogue) — cross-seat
-   - Check Converse dialogue
+   - Check Converse dialogue and this character's Codex Voice (per
+     Bot-Rules, "Voice — staying in character")
    - Add one reply line
    - Repeat for the other character until one concludes, or the human
      calls Conclude conversation directly
 
 5. Conclude conversation (Pass Converse
    dialogue)
-   - Add closing line
+   - Add closing line, checked against Voice the same way
    - Summarize outcome in both characters' Diary
    - If witnessed, add a story beat to Chronicle
    - If the relationship shifted, update Bonds in Characters
@@ -212,9 +230,15 @@ the same turn._
    - Do not create Strategy files for anyone — `oath-inspect-board`
      creates one lazily for a seat's own colour on its first run
    - Do not create Diary or Messengers files for the Human seat
+   - Before finishing, run the Required tier of Bot-Rules' pre-flight
+     check against what was just created
    - Runs once per game, before any seat's own Setup
 
 7. End turn
+   - Language check, then a voice check right after it (per Bot-Rules,
+     "Voice — staying in character") — does this segment's narration
+     match the character's stored Voice, not just avoid mechanical
+     vocabulary? Don't move on until both pass clean
    - Write a diary entry about the turn (Chronicle-quality prose, per the
      specificity standard in Bot-Rules) and update Player state
      (including any Adviser's Status, if it changed this segment), Board
@@ -222,6 +246,8 @@ the same turn._
      site, an edifice flipping with its new Ability and Relics, Ruled
      by/warbands/Content/Relics changing), Logic log, own Diary, and
      Chronicle
+   - Opportunistically check whether this segment resolves or introduces
+     a Live thread (per Bot-Rules) — most segments won't touch it
    - In response, print the diary entry followed by Player
      Instructions for the physical board
 
@@ -229,3 +255,7 @@ the same turn._
    - Read Board state and Player state.
    - Check your strategy file (strategy-<colour>.md file in the Game/Mechanics folder) if you have one. Check the strategy's viability against the current situation.
    - Finally, make two observations about the board (one sentence each) and devise a (new) strategy you'll follow for winning the game. Let each strategy consist of three bullet points with one sentence each. Write the observations and the strategy to your strategy file (create it if it does not exist yet).
+   - Separately, give the Chronicle's Live threads list a skim (per
+     Bot-Rules) — does anything on it feel stale enough to retire? This
+     is a distinct check from the strategy above and must not influence
+     it either way.

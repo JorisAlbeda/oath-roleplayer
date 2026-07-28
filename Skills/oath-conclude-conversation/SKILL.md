@@ -6,17 +6,22 @@ description: Closes out a cross-seat dialogue and folds its outcome into the sha
 # Oath — Conclude conversation
 
 Action 5 of `Oath-Cowork-Spec.md`. Paths from `Oath-Cowork-File-Map.md`.
+Guidance in `Oath-Cowork-Bot-Rules.md`, "Voice — staying in character."
+Check `Oath-Cascade-Map.md` for the "Bond shifts in Converse" and
+"conversation surfaces something Codex-worthy" entries.
 
 ## The boundary
 
 Read the Converse dialogue file, both participants' Diary
-entries, the Codex, and `Game/Story/oath-characters.md`. Never Board state,
-Logic log, or another seat's Messengers/World Briefing.
+entries, the Codex (including both characters' Voice), and
+`Game/Story/oath-characters.md`. Never Board state, Logic log, or
+another seat's Messengers/World Briefing.
 
 ## Steps
 
 1. Take the Converse dialogue file as given. Add a closing line if the
-   last line didn't already end it — appended after it, never inserted
+   last line didn't already end it — checked against that character's
+   own Voice, same as any other line — appended after it, never inserted
    earlier in the file. Same specificity standard as any other line.
 2. Summarize the outcome in **both** participants' own Diaries —
    not just whoever initiated. Link to the Converse dialogue file itself
@@ -34,7 +39,8 @@ Logic log, or another seat's Messengers/World Briefing.
    append a note to that entry's History, read fresh immediately
    beforehand. If the conversation surfaced something new and significant
    enough to be worth its own entry, create one in the matching subfolder.
-   Most conversations won't touch the Codex at all.
+   Most conversations won't touch the Codex at all — see
+   `Oath-Cascade-Map.md` either way.
 6. If this conversation was reached mid-turn (a seat ended their turn on
    Converse), return control to that seat's oath-play-turn so it can
    finish resolving the turn.

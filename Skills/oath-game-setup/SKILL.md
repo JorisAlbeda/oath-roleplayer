@@ -6,8 +6,11 @@ description: One-time game initialization (Action 6 in Oath-Cowork-Spec.md). Use
 # Oath — Game Setup
 
 Action 6 of `Oath-Cowork-Spec.md`. Paths from `Oath-Cowork-File-Map.md`.
-Runs once per game, in whichever chat the human is using to bootstrap
-the project — not seat-specific.
+Guidance in `Oath-Cowork-Bot-Rules.md`, "Pre-flight check — required vs
+recommended," and in `Oath-Cascade-Map.md` if any step below ends up
+touching more than the documents it names. Runs once per game, in
+whichever chat the human is using to bootstrap the project — not
+seat-specific.
 
 ## Steps
 
@@ -34,7 +37,10 @@ the project — not seat-specific.
    everyone) filled in. Name stays blank for AI seats until their own
    Setup decides it; fill it in now for the Human seat if known.
 5. Create empty `Game/Story/oath-characters.md`,
-   `Game/Mechanics/oath-logic-log.md`, and `Game/Story/oath-chronicle.md`.
+   `Game/Mechanics/oath-logic-log.md`, and `Game/Story/oath-chronicle.md`
+   — the Chronicle starts with an empty `## Live threads` header at the
+   top (per Bot-Rules, "Live threads — narrative-only tension tracking"),
+   nothing under it yet.
 6. For each AI-controlled seat, create an empty
    `Game/Story/Diaries/oath-diary-<seat>.md`, and
    `Game/Story/Messengers/oath-messengers-<seat>.md`.
@@ -49,6 +55,11 @@ the project — not seat-specific.
    Strategy files for anyone here either — `oath-inspect-board` creates
    a seat's own `Game/Mechanics/strategy-<colour>.md` lazily on its
    first run.
+9. Before finishing, run the Required tier of the pre-flight check
+   (Bot-Rules) against what was just created: Oath, Current Player Turn,
+   and every seat's Role/Controlled-by set in Player state; every Map
+   entry has at least Ruled by and Number of warbands. If anything's
+   missing, say so plainly rather than handing off an incomplete board.
 
 ## Response
 
