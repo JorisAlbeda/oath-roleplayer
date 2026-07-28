@@ -12,12 +12,14 @@ Only the human crosses that boundary, by relaying between chats.
 
 ## Reference material
 
-Read Board state, Logic log (entries since your own last turn),
-Characters, the Codex, your own Diary, and Messengers before
-deciding anything. Check board/mat photographs if updated. Read the
-Rules, Site Reference, and action summary in this project's connected
-folder as needed for legality — nothing here relaxes what counts as a
-legal Player Instruction.
+Read Board state, Player state, Logic log (entries since your own last
+turn), Characters, the Codex, your own Diary, and Messengers before
+deciding anything. Board state and Player state are kept current from
+the Logic log alone after Game Setup's own initial board photographs —
+no further board photographs are taken or needed for the rest of the
+game. Read the Rules, Site Reference, and action summary in this
+project's connected folder as needed for legality — nothing here
+relaxes what counts as a legal Player Instruction.
 
 **Concretely: before finalizing, state plainly whether this segment is
 routine (Travel, Muster, Trade, Rest) or includes something non-routine**
@@ -96,7 +98,7 @@ it gets an entry in both places, sharing one Name:
   one-line "first appeared, Round N" is enough to start one), following
   the same Title/Description/History/Location structure as every other
   entry — this is what "Update an entry" below will later append to.
-- **Board state** (this seat's Advisers list, mechanical only) — the same
+- **Player state** (this seat's Advisers list, mechanical only) — the same
   Name, plus Source card, Ability (the card's own printed power,
   condensed to plain language), Ability cost ("none" if passive), and
   Status active. Mark Status lost/discarded there, not in the Codex,
@@ -104,7 +106,37 @@ it gets an entry in both places, sharing one Name:
 
 Keeping the Name identical across both is what lets either document be
 cross-referenced from the other — the Codex entry is who they are, the
-Board-state row is what they can still do.
+Player-state row is what they can still do.
+
+**A site's own Denizens, before they're anyone's Adviser.** Until a
+denizen is actually Mustered or otherwise recruited, it belongs to a
+site, not a seat: recorded in Board state's Map, under that site, as
+Name/Suit/Ability cost/Ability — no Codex entry yet, since it isn't
+personified until someone takes it. The moment it's recruited, remove
+it from the site's Denizens list and personify it as above (Codex entry
+plus a Player-state Adviser row); it can't be in both places at once.
+
+## Map upkeep
+
+Board state's Map is the text stand-in for the physical board itself —
+keep it as current as the Logic log, not just at Game Setup. Update the
+relevant site's entry, read fresh immediately before editing, whenever
+a segment actually changes it:
+
+- **Ruled by / Number of warbands** — after a Campaign changes who
+  holds a site, or warbands are added or removed there by any action.
+- **Denizens** — remove one the moment it's Mustered or recruited (see
+  above); add one if a new card is dealt to the site.
+- **Relics** — move from "unknown" to Name and Description the moment
+  anyone peeks at it, for every seat, not just whoever peeked; remove
+  it from the site if it's taken.
+- **Content** — update if Secrets or Favors sitting at the site are
+  added to or taken from.
+- **An edifice flipping** — overwrite that site's Name (if it changes),
+  Ability, and Relics in place; same site entry, new facing.
+
+Most segments won't touch the Map at all — don't force an edit where
+nothing actually changed.
 
 **Read it when it's actually relevant, not just at the top of a turn.**
 The per-turn check in "Reference material" is a quick skim for anything

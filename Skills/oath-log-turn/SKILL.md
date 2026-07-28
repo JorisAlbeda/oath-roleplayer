@@ -11,7 +11,8 @@ how their turn enters the shared documents.
 
 ## The boundary
 
-Read `Game/Mechanics/oath-board-state.md` and
+Read `Game/Mechanics/oath-board-state.md`,
+`Game/Mechanics/oath-players-state.md`, and
 `Game/Mechanics/oath-logic-log.md`. The human's own description is the
 narrative source — there's no private Diary to check for the
 Human seat.
@@ -19,11 +20,19 @@ Human seat.
 ## Steps
 
 1. Take the human's own description of their turn as given.
-2. Update `Game/Mechanics/oath-board-state.md` with the mechanical
-   results. Read the file fresh immediately before appending.
-3. Add an entry to `Game/Mechanics/oath-logic-log.md` describing the
+2. Update `Game/Mechanics/oath-players-state.md` with the mechanical
+   results (Location, Region, Supply/Secrets/Favors gained or spent,
+   Banners, Adviser rows). Read the file fresh immediately before
+   appending.
+3. Update `Game/Mechanics/oath-board-state.md` with any Map changes the
+   reported turn made, per Bot-Rules "Map upkeep" — a denizen removed
+   from a site's own Denizens list once Mustered or recruited, Ruled by
+   or Number of warbands changing, Content or Relics changing, an
+   edifice flipping. Most turns won't touch the Map at all. Read the
+   file fresh immediately before appending.
+4. Add an entry to `Game/Mechanics/oath-logic-log.md` describing the
    actions taken. Read the file fresh immediately before appending.
-4. Add a narrated beat to `Game/Story/oath-chronicle.md`, grounded in
+5. Add a narrated beat to `Game/Story/oath-chronicle.md`, grounded in
    the human's own description, same specificity standard as any other
    Chronicle entry. Read the file fresh immediately before appending.
 

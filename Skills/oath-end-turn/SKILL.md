@@ -13,9 +13,9 @@ there; never called with nothing decided yet.
 
 ## The boundary
 
-Same as `oath-play-turn`: this seat's own Board state, Logic log, Characters,
-Codex, own Diary, Messengers. Never another seat's Diary, Messengers, or
-World Briefing.
+Same as `oath-play-turn`: Board state, Player state, Logic log,
+Characters, Codex, own Diary, Messengers. Never another seat's Diary,
+Messengers, or World Briefing.
 
 ## Steps
 
@@ -35,12 +35,20 @@ World Briefing.
    exact leak has happened repeatedly — catch it here, not after the
    human points it out.
 5. Update, each read fresh immediately before appending:
-   - `Game/Mechanics/oath-board-state.md` (mechanical results, including
+   - `Game/Mechanics/oath-players-state.md` (mechanical results, including
      Supply actually spent so far; if `oath-play-turn` personified a new
      adviser this segment, its Adviser row — Name, Source card, Ability,
      Ability cost, Status active — belongs here too; if an existing
      adviser was lost or discarded this segment, update its Status here,
      not in the Codex)
+   - `Game/Mechanics/oath-board-state.md` (any Map changes this segment
+     made, per Bot-Rules "Map upkeep": a denizen removed from a site's own
+     Denizens list once Mustered or recruited to an Adviser row above; an
+     edifice that flipped, with its new Ability and Relics; Ruled by or
+     Number of warbands changing after a Campaign; Content or Relics
+     changing after a Search — a Relic moves from "unknown" to Name and
+     Description the moment anyone peeks at it, for every seat, not just
+     whoever peeked. Most segments won't touch the Map at all)
    - `Game/Mechanics/oath-logic-log.md` (actions taken this segment; this is
      a public file so keep any cards secret — use 'Vision' rather than a
      specific Vision, 'Card' rather than a specific card name, to avoid

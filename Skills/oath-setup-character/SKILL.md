@@ -15,13 +15,16 @@ Supply/Secrets/Favors/Banners are already set by Game Setup.
 Read this seat's own `Game/Setup/oath-world-briefing-<seat>.md`,
 `Game/Story/Legacy/legacy-<colour>.md` if it exists, the Codex,
 `Game/Story/Codex/timeline.md`, `Game/Mechanics/oath-board-state.md`,
-and board/mat photographs including this seat's own starting-adviser
-photo. Never read another seat's World Briefing, Legacy, or private
+`Game/Mechanics/oath-players-state.md`, and this seat's own
+starting-adviser photo. Board state's Map already holds the whole
+board from Game Setup's own photographs — no need to re-photograph it
+here. Never read another seat's World Briefing, Legacy, or private
 documents.
 
 ## Steps
 
-1. Check your own World Briefing and the board/mat photographs.
+1. Check your own World Briefing, the Map in Board state, and this
+   seat's own starting-adviser photo.
 2. Check for `Game/Story/Legacy/legacy-<colour>.md`. It won't exist for
    a colour's first-ever game — that's fine, skip straight to step 3. If
    it does exist, it holds only the most recent character who held this
@@ -60,11 +63,13 @@ documents.
    Role, Colour, Location, Physical description, Personality
    description, Bonds. Read the file fresh immediately before
    appending, per the append-only convention.
-8. Update `Game/Mechanics/oath-board-state.md` with this seat's
+8. Update `Game/Mechanics/oath-players-state.md` with this seat's
    Location, Region, and Name, and a new Adviser row for the starting
    adviser — the same Name as step 6, plus Source card, Ability, Ability
-   cost, and Status active. Read the file fresh immediately before
-   appending, per the append-only convention.
+   cost, and Status active. If this starting adviser was listed under a
+   site's own Denizens in Board state's Map, remove it from there too.
+   Read each file fresh immediately before appending, per the
+   append-only convention.
 
 ## Response
 

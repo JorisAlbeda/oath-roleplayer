@@ -19,23 +19,33 @@ the project — not seat-specific.
 2. Take as given: the Oath sworn, each player's colour, Role, and
    whether they're Human- or AI-controlled.
 3. Create `Game/Mechanics/oath-board-state.md`: Round 0, Visions Drawn
-   0, World Deck Search cost: 2 Supply, the given Oath, Current Player Turn set to the Chancellor's
-   colour, one Player row per colour with Role, Controlled-by, and
-   Number of Supplies (7 for everyone) filled in. Name stays
-   blank for AI seats until their own Setup decides it; fill it in now
-   for the Human seat if known.
-4. Create empty `Game/Story/oath-characters.md`,
+   0, World Deck Search cost: 2 Supply, the given Oath, Current Player
+   Turn set to the Chancellor's colour, and the Map in full — read the
+   `Board Photographs` folder for this; it's the only time the whole
+   board is ever photographed, so get it right now. One entry per
+   Region, one sub-entry per Site within it: Name, Ability, Ruled by
+   (Empire / Bandits / an Exile's name — unclaimed sites are ruled by
+   Bandits, never "none"), Number of warbands, Relic cost, Content (if
+   any), Number of defence dice, Relics (Name and Description if
+   already peeked at in the photograph, otherwise "unknown"), and that
+   site's own Denizens (Name, Suit, Ability cost, Ability).
+4. Create `Game/Mechanics/oath-players-state.md`: one Player row per
+   colour with Role, Controlled-by, and Number of Supplies (7 for
+   everyone) filled in. Name stays blank for AI seats until their own
+   Setup decides it; fill it in now for the Human seat if known.
+5. Create empty `Game/Story/oath-characters.md`,
    `Game/Mechanics/oath-logic-log.md`, and `Game/Story/oath-chronicle.md`.
-5. For each AI-controlled seat, create an empty
+6. For each AI-controlled seat, create an empty
    `Game/Story/Diaries/oath-diary-<seat>.md`, and
    `Game/Story/Messengers/oath-messengers-<seat>.md`.
-6. For each AI-controlled seat, write
+7. For each AI-controlled seat, write
    `Game/Setup/oath-world-briefing-<seat>.md` — a paragraph grounding
    that seat's own upcoming Setup decision: named starting-location
-   options and the seat's own three starting-adviser options, as shown
-   in that seat's own photo. Keep each seat's briefing to what that seat
-   can actually see; don't leak another seat's options into it.
-7. Do not create World Briefing files for the Human seat. Don't create
+   options (cross-checked against the Map just created) and the seat's
+   own three starting-adviser options, as shown in that seat's own
+   photo. Keep each seat's briefing to what that seat can actually see;
+   don't leak another seat's options into it.
+8. Do not create World Briefing files for the Human seat. Don't create
    Strategy files for anyone here either — `oath-inspect-board` creates
    a seat's own `Game/Mechanics/strategy-<colour>.md` lazily on its
    first run.

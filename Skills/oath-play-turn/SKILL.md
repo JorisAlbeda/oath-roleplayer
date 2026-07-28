@@ -15,19 +15,22 @@ not two separate calls.
 ## The boundary
 
 Read `Game/Mechanics/oath-board-state.md`,
+`Game/Mechanics/oath-players-state.md`,
 `Game/Mechanics/oath-logic-log.md` (entries since this seat's own last
 turn), `Game/Story/oath-characters.md`, the Codex (whatever's relevant to
 where this segment happens — it's not a chronological log, so there's no
 "since last turn" to diff), this seat's own
 `Game/Story/Diaries/oath-diary-<seat>.md`, this seat's own
 `Game/Story/Messengers/oath-messengers-<seat>.md`, and the Rules/Site
-Reference/action summary as needed. Check board/mat photographs if
-updated. Never read another seat's Diary, Messengers, or World Briefing.
+Reference/action summary as needed. Board state and Player state are
+kept current from the Logic log — no board photographs to check after
+Game Setup's own initial ones. Never read another seat's Diary,
+Messengers, or World Briefing.
 
 ## Steps
 
 1. Read everything in the boundary, fresh.
-2. Scan Board state for Banners and role changes (Usurper only), per
+2. Scan Player state for Banners and role changes (Usurper only), per
    Bot-Rules "Bookkeeping discipline" — before deciding anything else,
    since these can flip what's even legal.
 3. Check whether this is a fresh turn or a resume: if the Logic log's
@@ -71,7 +74,9 @@ updated. Never read another seat's Diary, Messengers, or World Briefing.
    "Codex — using it in play": Name/Description/Location/History to the
    Codex's `characters/` subfolder, and the same Name plus Source
    card/Ability/Ability cost/Status active to a new Adviser row in this
-   seat's own Board state.
+   seat's own Player state. If it came off a site's own Denizens list
+   in Board state's Map, remove it from there too — it can't be both
+   the site's and this seat's at once.
 9. Hand off to `oath-end-turn` to narrate this segment and update the
    shared logs and this seat's Diary — this happens automatically as
    part of the same response, not a separate call the human has to make.

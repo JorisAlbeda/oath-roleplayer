@@ -11,18 +11,29 @@ exists.
 
 `Game/` splits into three subfolders — Mechanics, Setup, and Story:
 
-- **Mechanics** — Board state, Logic log, Strategy (one per AI seat,
-  written and overwritten by `oath-inspect-board` — not append-only,
-  holds only this seat's current thinking).
+- **Mechanics** — Board state, Player state, Logic log, Strategy (one
+  per AI seat, written and overwritten by `oath-inspect-board` — not
+  append-only, holds only this seat's current thinking).
 - **Setup** — World Briefing.
 - **Story** — Chronicle, Characters, plus five further subfolders:
   Conversation logs, Messengers, Diaries, Codex, and Legacy.
 
 ## Shared documents (all seats read and append to these)
 
-- `Game/Mechanics/oath-board-state.md` — Board state, including each
-  seat's Advisers (Name, Source card, Ability, Ability cost, Status) —
-  the mechanical half of a personified adviser/denizen/commander; the
+- `Game/Mechanics/oath-board-state.md` — Board state: Round, Visions
+  Drawn, Oath, Current Player Turn, World Deck Search cost, and the
+  Map — one entry per Region, one sub-entry per Site within it (Name,
+  Ability, Ruled by, Number of warbands, Relic cost, Content, Number of
+  defence dice, Relics, and that site's own Denizens: Name, Suit,
+  Ability cost, Ability — present at the site until Mustered or
+  otherwise taken by a seat). Filled in full from board photographs
+  once, during `oath-game-setup` — the only time the whole board is
+  ever photographed; kept current afterward from the Logic log alone.
+- `Game/Mechanics/oath-players-state.md` — Player state: one row per
+  colour (Role, Controlled by, Location, Region, Number of Supplies,
+  Number of Secrets, Number of Favors, Banners), each with its own
+  Advisers (Name, Source card, Ability, Ability cost, Status) — the
+  mechanical half of a personified adviser/denizen/commander; the
   narrative half is the matching Codex `characters/` entry, same Name
 - `Game/Story/oath-characters.md` — Characters (all seats' public entries)
 - `Game/Mechanics/oath-logic-log.md` — Logic log

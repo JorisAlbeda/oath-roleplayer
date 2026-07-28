@@ -6,11 +6,38 @@ the same turn._
 
 ## Documents
 
-1. Board state (shared mechanical truth)
+1. Board state (shared mechanical truth, global)
    - Round
    - Visions Drawn
    - Oath
    - Current Player Turn
+   - World Deck Search cost
+   - Map (one entry per Region, one sub-entry per Site within it):
+     - Name
+     - Ability
+     - Ruled by (Empire / Bandits / an Exile's name — unclaimed sites
+       are ruled by Bandits, never "none"; only one faction rules a
+       site at a time)
+     - Number of warbands
+     - Relic cost (e.g. three favor placed, two secrets burned)
+     - Content (if relevant — most sites won't have this)
+     - Number of defence dice
+     - Relics (Name and Description once anyone has peeked at it;
+       otherwise "unknown" — this is shared knowledge for every seat
+       the moment anyone peeks, not a private note for whoever peeked)
+     - Denizens (one per denizen present at the site, until Mustered or
+       otherwise taken by a seat):
+       - Name
+       - Suit
+       - Ability cost
+       - Ability
+   - Filled in full from board photographs once, during Game Setup —
+     the only time the whole board is ever photographed. Kept current
+     afterward from the Logic log alone, whenever Play turn, Log turn,
+     or End turn touches the Map (a denizen Mustered off a site, an
+     edifice flipping, Ruled by/warbands/Content/Relics changing).
+
+2. Player state (shared mechanical truth, per seat)
    - Players:
      - Name
      - Role
@@ -31,7 +58,7 @@ the same turn._
        - Ability cost
        - Status (active / lost / discarded)
 
-2. Characters (shared narrative truth)
+3. Characters (shared narrative truth)
    - Players:
      - Name
      - Pronouns
@@ -42,54 +69,54 @@ the same turn._
      - Personality description
      - Bonds
 
-3. Logic log
+4. Logic log
    - Turns:
      Actions taken
 
-4. Diary (One per character)
+5. Diary (One per character)
    - A short diary entry each turn
    - Private to this seat
 
-5. Chronicle
+6. Chronicle
    - Shared narrative: for the player
 
-6. Messengers (One per character)
+7. Messengers (One per character)
    - New messages
 
-7. World Briefing (One per character)
+8. World Briefing (One per character)
    - Paragraph for this seat's bot to ground its own character creation
      and board placement in the same pass, including this seat's own
      named starting-location options and its three starting-adviser
      options as shown in its photo — one per character, not shared,
      because the adviser photo is unique to each seat
 
-8. Converse dialogue (One per conversation, cross-seat only — e.g.
+9. Converse dialogue (One per conversation, cross-seat only — e.g.
    Lyn-Dorcas-R2-1 for the first conversation between them in Round 2)
    - Lines of in-character dialogue between two characters
 
-9. Legacy (One per AI-controlled colour, append-only across games — not
-   written or read by any of the eight Actions below; it's the input and
-   output of a ninth, cross-game step, oath-leave-legacy, that runs
-   once a game ends and feeds the next game's own Setup for that colour)
-   - One `## <Character Name>` entry per previous character who held
-     this colour: an in-world fragment (family record, heirloom, debt,
-     reputation, rumor) left for that colour's next character to build
-     from
+10. Legacy (One per AI-controlled colour, append-only across games — not
+    written or read by any of the eight Actions below; it's the input and
+    output of a ninth, cross-game step, oath-leave-legacy, that runs
+    once a game ends and feeds the next game's own Setup for that colour)
+    - One `## <Character Name>` entry per previous character who held
+      this colour: an in-world fragment (family record, heirloom, debt,
+      reputation, rumor) left for that colour's next character to build
+      from
 
-10. Strategy (One per AI-controlled colour, not append-only — overwritten
+11. Strategy (One per AI-controlled colour, not append-only — overwritten
     each time)
     - Two board observations, one sentence each
     - A three-point strategy for winning the game, one sentence per point
     - Kept current by `oath-inspect-board`, an eighth, standalone step
       that isn't part of the Play turn/End turn chain
 
-11. Codex (Shared; one file per entry, in a `buildings`/`characters`/
+12. Codex (Shared; one file per entry, in a `buildings`/`characters`/
     `events`/`locations`/`relics` subfolder matching its category)
     - Title, Description, History, Location
     - Mostly inherited from the previous game; read and extended during
       this one per Bot-Rules, "Codex — using it in play"
 
-12. Timeline (Shared; one running file, `Game/Story/Codex/timeline.md`;
+13. Timeline (Shared; one running file, `Game/Story/Codex/timeline.md`;
     human-maintained across games, not written by any of the eight
     Actions below)
     - Dated entries recording the world's history by era, occasionally
@@ -101,12 +128,13 @@ the same turn._
 ## Actions
 
 1. Play turn (one bot, one pass)
-   - Scan Board state for Banners and role changes before anything else
-   - Check Board state, Logic log (entries since this seat's own last
-     turn), Characters, the Codex (whatever's relevant to this segment —
-     not a chronological log, so nothing to diff "since last turn"), own
-     Diary, Messengers
-   - Check board photographs if updated
+   - Scan Player state for Banners and role changes before anything else
+   - Check Board state, Player state, Logic log (entries since this
+     seat's own last turn), Characters, the Codex (whatever's relevant
+     to this segment — not a chronological log, so nothing to diff
+     "since last turn"), own Diary, Messengers
+   - Board state and Player state are kept current from the Logic log —
+     no board photographs to check after Game Setup's own initial ones
    - Decide the one best course of action, spending most or all of this
      seat's Supply by default (max 2 remaining), chaining decisions until Rest (the turn
      is genuinely over) or pausing on a Campaign, Search, or Converse
@@ -115,7 +143,9 @@ the same turn._
    - If a new adviser/denizen/commander is drawn or recruited this turn,
      personify it now: Name, Description, Location, History to the
      Codex's characters subfolder; Name (matching), Source card, Ability,
-     Ability cost, Status active to a new Adviser row in Board state
+     Ability cost, Status active to a new Adviser row in Player state. If
+     it came off a site's own Denizens list in Board state's Map, remove
+     it from there — it's now this seat's Adviser, not the site's
    - Supply gate: state the exact Supply number left. More than 2? Add
      another action and recheck, unless none is affordable — then say so
 
@@ -124,7 +154,7 @@ the same turn._
    set by Game Setup, and they report their own starting Location via
    Log turn like any other turn
    - Check briefing (own World Briefing, written by Game Setup)
-   - Check board/mat photographs and this seat's starting-adviser photo
+   - Check Board state's Map and this seat's own starting-adviser photo
    - Check the Codex for this seat's starting Location or adviser, if
      either already has an entry, and let it shape the character below
      the same way Legacy does
@@ -132,17 +162,19 @@ the same turn._
      Motivation, Flaw, Bond with a previous character (if one exists),
      starting adviser
    - Personify the starting adviser immediately, same split as Action 1 —
-     Codex's characters subfolder for the narrative half, a Board-state
+     Codex's characters subfolder for the narrative half, a Player-state
      Adviser row for the mechanical half — it's already "drawn," same as
      any other
-   - Update Board state (Location, Region, Name) and Characters (full
+   - Update Player state (Location, Region, Name) and Characters (full
      entry: Name, Pronouns, Role, Colour, Location, Physical description,
      Personality description, Bonds)
 
 3. Log turn (Pass the human's own actions and
    description) — for the Human seat only, since it has no bot of its
    own to run Action 1
-   - Update Board state and Logic log per what was reported
+   - Update Player state (Location, Supply/Secrets/Favors, Banners,
+     Adviser rows) and Board state (any Map changes the reported turn
+     made) per what was reported, and Logic log
    - Update Chronicle with a narrated beat from the human's own
      description
 
@@ -166,11 +198,16 @@ the same turn._
 
 6. Game Setup (Pass Oath, player colours,
    roles, and which are Human-controlled)
-   - Create Board state: Round 0, Visions Drawn 0, the given Oath,
-     Current Player Turn set to the Chancellor's colour, one Player row
-     per colour with Role, Controlled-by, and Number of Supplies (fixed
-     at 7 for everyone) filled in — Name blank for AI seats until their
-     own Setup decides it, filled in now for the Human seat
+   - Create Board state: Round 0, Visions Drawn 0, World Deck Search
+     cost, the given Oath, Current Player Turn set to the Chancellor's
+     colour, and the Map in full (every Region, every Site's Name,
+     Ability, Ruled by, Number of warbands, Relic cost, Content, Number
+     of defence dice, Relics, and Denizens) read from the board
+     photographs — the only time the whole board is ever photographed
+   - Create Player state: one Player row per colour with Role,
+     Controlled-by, and Number of Supplies (fixed at 7 for everyone)
+     filled in — Name blank for AI seats until their own Setup decides
+     it, filled in now for the Human seat
    - Create empty Characters, Logic log, and Chronicle
    - Do not create Strategy files for anyone — `oath-inspect-board`
      creates one lazily for a seat's own colour on its first run
@@ -178,15 +215,17 @@ the same turn._
    - Runs once per game, before any seat's own Setup
 
 7. End turn
-   - Write a diary entry about the turn (Chronicle-quality prose, per the specificity
-     standard in Bot-Rules) and update Board state (including any
-     Adviser's Status, if it changed this segment), Logic log, own
-     Diary, and Chronicle
+   - Write a diary entry about the turn (Chronicle-quality prose, per the
+     specificity standard in Bot-Rules) and update Player state
+     (including any Adviser's Status, if it changed this segment), Board
+     state (any Map changes this segment made — a denizen removed from a
+     site, an edifice flipping with its new Ability and Relics, Ruled
+     by/warbands/Content/Relics changing), Logic log, own Diary, and
+     Chronicle
    - In response, print the diary entry followed by Player
      Instructions for the physical board
 
 8. Inspect board
-   - Read the files in the `Board photographs` folder, which should be updated (if not, say so and abort).
-   - Correct the board state as needed.
+   - Read Board state and Player state.
    - Check your strategy file (strategy-<colour>.md file in the Game/Mechanics folder) if you have one. Check the strategy's viability against the current situation.
    - Finally, make two observations about the board (one sentence each) and devise a (new) strategy you'll follow for winning the game. Let each strategy consist of three bullet points with one sentence each. Write the observations and the strategy to your strategy file (create it if it does not exist yet).
