@@ -351,50 +351,62 @@ nothing actually changed. See `Oath-Cascade-Map.md` for the fuller
 picture of what else a given change usually touches beyond the Map
 itself.
 
-## Warbands — personifying the garrison
+## Warbands — personifying a seat's own forces
 
-Ruled by and Number of warbands, both already tracked in Board state's
-Map, describe a site's occupying force in mechanical terms only. That
-force can earn the same kind of personification an Adviser does — a
-name, a leader, a character — without needing any new mechanical
-tracking, since both fields already exist.
+Ruled by and Number of warbands (Board state's Map, for a site a seat
+rules) and a seat's own Number of Warbands sitting on their own board
+(Player state, not yet placed at any site) both describe real people
+under this seat's command, not just a count. Both earn the same kind of
+personification an Adviser does — a name, a leader, a character —
+without needing any new mechanical tracking, since the fields already
+exist.
 
 **No hidden-information question here, unlike Advisers or Visions.**
-Ruled by and Number of warbands are public the moment they change —
+Warband counts, wherever they sit, are public the moment they change —
 visible wooden pieces on the physical board, not a card anyone holds
-facedown. There's nothing to gate on Reveal; personify a garrison the
-moment it's worth personifying, full stop.
+facedown. There's nothing to gate on Reveal.
 
-**When it's worth it.** Not every Muster or Campaign — most Map
-upkeep is routine bookkeeping, the same restraint already used for
-Regional voice notes and Edifice flips. It's worth personifying (or
-updating) a site's garrison when a Muster raises a new force there
-worth naming, or a Campaign hands the site to a new ruler entirely — a
-different color, a different people at that garrison, worth a fresh
-look rather than carrying the old flavor forward. A garrison, once
-established, gets updated the same way any Codex entry does — an
-appended History note when heavy losses, reinforcements, or a change of
-ruler would plausibly shift its composition or character — not
-rewritten from scratch each time.
+**A seat's own forces are personified at Setup, not conditionally.**
+Unlike an enemy's or a Bandit-held site's own garrison (still
+conditional — see below), a seat's own warbands are central enough to
+warrant it every time: whatever a seat starts the game holding, both at
+its own home site and on its own board, gets a name, a leader (a minor
+Codex `characters/` entry), and a character during `oath-setup-character`'s
+own pass, alongside the rest of the new character's world. A seat's own
+board company in particular is the one that actually travels with the
+character everywhere — treat it as at least as central as a site's own
+standing garrison, not a mechanical afterthought that only matters once
+it's ruling something.
 
-**What it looks like.** Recorded as a Garrison field on that site's own
-Codex `locations/` entry, alongside its existing Title/Description/
-History/Location structure: a name for the force itself, a leader (a
-minor NPC — added to the Codex `characters/` subfolder the same way any
-other minor NPC would be, no facedown/faceup gating needed since none
-applies here), and its own character — loyal or mercenary, disciplined
-or ragtag, eager or reluctant. Let the ruling denizen or site itself
-suggest it, the same way a Search's own denizen suggests who answers a
-Muster call — a temple's garrison reads differently from a smuggler's
-den's, or a Bandit-held site's own opportunistic camp.
+**Keep it current as the numbers change.** Whenever a Muster, a card's
+own reactive ability (a Wild Cry-style "gain warbands" trigger), a
+Campaign, or any other gain or loss changes a seat's own board or
+home-site warband count, update that company or garrison's own Codex
+entry the same turn — a note on size, a shift in composition, whatever
+the change actually means to the force's own character — the same way
+any Codex entry gets appended to when something about it changes, per
+"Update an entry when something about it actually changes" above.
 
-**Known limitation.** Only a site's own ruling force gets personified
-this way, mirroring the Map's own simplification that "Number of
-warbands" tracks one figure — whoever rules there — not every seat's
-warbands physically present. A seat's own warbands en route on
-Campaign, or otherwise not yet ruling anywhere, aren't personified until
-they actually take a site. See `Oath-Cascade-Map.md`'s "A site's
-garrison personified or updated" entry.
+**What it looks like.** Recorded as a Garrison field on a site's own
+Codex `locations/` entry for warbands stationed there (a name for the
+force, a leader as a minor `characters/` entry, its own character —
+loyal or mercenary, disciplined or ragtag, eager or reluctant), or as
+its own dedicated Codex `characters/` entry for a seat's own board
+company, describing the company itself in that entry's Description and
+naming its leader as the entry's own subject. Let the site or the
+character's own background suggest it, the same way a Search's own
+denizen suggests who answers a Muster call — a temple's garrison reads
+differently from a smuggler's den's, and a Chancellor's own home guard
+reads differently from a newly-recruited Exile's company.
+
+**Other forces stay conditional.** An enemy's or a Bandit-held site's
+own garrison is still personified only when it's worth it — not every
+Muster or Campaign, most Map upkeep is routine bookkeeping, the same
+restraint already used for Regional voice notes and Edifice flips. It's
+worth personifying (or updating) one of these when a Muster raises a
+new force there worth naming, or a Campaign hands the site to a new
+ruler entirely. The mandatory case above is specifically a seat's own
+forces — its own home site, and its own board — not warbands generally.
 
 ## Legal turn endings, and why
 
@@ -402,9 +414,7 @@ A turn's action chain always finishes on one of four actions: Rest,
 Campaign, Search, or Converse. Only one of those four actually _ends_
 the turn. The other three _pause_ it — the same seat keeps going once
 the real result is known, using whatever Supply is left, rather than
-stopping for good. Confirmed as a real playtest bug in this experiment:
-a seat did a single Search and treated the turn as over, with Supply
-still unspent and the Search's own result not yet known.
+stopping for good.
 
 - **Rest actually ends the turn.** It's the explicit "conclude here"
   action — no uncertainty involved, nothing further to decide. This is
@@ -589,9 +599,8 @@ All shared logs (Board state, Logic log, Characters, Codex, Chronicle,
 Messengers) are append-only and are edited by other seats' bots as well
 as your own. Read a shared log fresh, immediately before appending to
 it — never rely on an earlier read from this conversation, even one from
-a few turns ago. This was validated as a real failure mode during
-Playtest 2 (a player appended to a stale in-context copy of a log
-and landed the entry in the wrong place) and applies here with the same
+a few turns ago.
+
 force. Chronicle's one exception is its own `## Live threads` header at
 the top — overwritten as threads resolve or emerge, per "Live threads"
 above; the rest of the file stays append-only.

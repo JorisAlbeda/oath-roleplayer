@@ -84,6 +84,10 @@ documents.
    it in play": Name, Description, Location, History, and Voice (per
    "Voice — staying in character") to the Codex's `characters/`
    subfolder, following the structure of the existing character files.
+   Give it an actual life before this pass — a trade, a family, a debt, a
+   loss, a reason it knows what it knows — the same depth as the
+   Background Flavor in step 5, not a stub pointing back at this seat's
+   own Setup.
 9. Personify this seat's own new character in the Codex too, same
    `characters/` subfolder as step 8 but the player-character structure
    already used there for previous Truthwatchers, Exiles, and Citizens
@@ -92,18 +96,39 @@ documents.
    adviser-only. Draw the Description and History straight from the
    background, Motivation, Flaw, and Bond already decided in steps 5-6;
    don't invent new detail here, just carry it over into Codex prose.
-10. Add a full entry to `Game/Story/oath-characters.md`: Name, Pronouns,
+10. Personify this seat's own starting warbands too, per Bot-Rules
+    "Warbands — personifying a seat's own forces" — not conditional the
+    way an enemy's garrison is, do this every time. Whatever this seat
+    starts the game holding gets a name, a leader (a minor Codex
+    `characters/` entry), and a character: its own home site's standing
+    garrison (Board state Map's Number of warbands there) as a Garrison
+    field on that site's own Codex `locations/` entry, and whatever sits
+    on this seat's own board (Player state) as its own dedicated Codex
+    `characters/` entry — the company described in that entry's own
+    Description, its leader named as the entry's subject. Let the site
+    or this character's own background suggest both, the same way step 8
+    let the adviser card suggest a life.
+11. Language and Voice check, before any Codex entry above is actually
+    written: draft the Description and History for steps 8, 9, and 10,
+    then check the draft against Bot-Rules "Roleplayer — Guidelines"
+    (in-world, not in-game) and, for the adviser and the two forces, their
+    own Voice or character from step 8/10 — flag and rewrite any
+    mechanical vocabulary (a card's own printed name, "Round 0," "this
+    seat's starting adviser," "facedown"/"faceup") before it reaches the
+    Codex. Don't move on to step 12 below until this passes clean.
+12. Add a full entry to `Game/Story/oath-characters.md`: Name, Pronouns,
     Role, Colour, Location, Physical description, Personality
     description, Bonds, and any Acquaintances from step 7. Read the file
     fresh immediately before appending, per the append-only convention.
-11. Update `Game/Mechanics/oath-player-state.md` with this seat's
-    Location, Region, and Name, and a new Adviser row for the starting
-    adviser — the same Name as step 8, plus Source card, Ability,
-    Ability cost, and Status active. If this starting adviser was listed
-    under a site's own Denizens in Board state's Map, remove it from
-    there too — see `Oath-Cascade-Map.md`. Read each file fresh
-    immediately before appending, per the append-only convention.
-12. Before printing, run the Required tier of Bot-Rules' pre-flight
+13. Update `Game/Mechanics/oath-player-state.md` with this seat's
+    Location, Region, Name, and Number of Warbands on its own board (per
+    step 10), and a new Adviser row for the starting adviser — the same
+    Name as step 8, plus Source card, Ability, Ability cost, and Status
+    active. If this starting adviser was listed under a site's own
+    Denizens in Board state's Map, remove it from there too — see
+    `Oath-Cascade-Map.md`. Read each file fresh immediately before
+    appending, per the append-only convention.
+14. Before printing, run the Required tier of Bot-Rules' pre-flight
     check against this seat's own new row: Location, Region, Name set,
     and the new Adviser row has a Status.
 

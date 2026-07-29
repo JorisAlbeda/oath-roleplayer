@@ -101,8 +101,21 @@ Messengers, or World Briefing.
     Voice — per `Oath-Cascade-Map.md`'s "Adviser Revealed" entry. Same
     depth as step 9's faceup case, just triggered by Reveal instead of
     recruitment.
-11. If a Vision is drawn this turn and kept facedown as an adviser
-    (rather than immediately played faceup, step 12, or discarded), add
+11. If this segment changes this seat's own warband counts — a Muster, a
+    card's own reactive ability (a Wild Cry-style "gain warbands"
+    trigger), or a Campaign's own result — update the affected force's
+    Codex entry per Bot-Rules "Warbands — personifying a seat's own
+    forces": the Garrison field on a site's own `locations/` entry for
+    warbands stationed there, or the dedicated `characters/` entry for
+    this seat's own board company. A short appended note (size, a shift
+    in composition) is usually enough — not a rewrite from scratch. If
+    this seat gains a home site or a board company for the first time
+    this game (nothing to update because `oath-setup-character` never
+    personified one — a newly-taken site, a first-ever warband on this
+    seat's own board), personify it fresh instead, same depth as step 9's
+    faceup adviser case.
+12. If a Vision is drawn this turn and kept facedown as an adviser
+    (rather than immediately played faceup, step 13, or discarded), add
     a placeholder Adviser row in this seat's own Player state now — Name
     "Vision (unrevealed)", Source card/Ability/Ability cost "unknown
     until Revealed", Status active — never its real identity, per
@@ -110,11 +123,11 @@ Messengers, or World Briefing.
     narrower case than a facedown denizen," and `Oath-Cascade-Map.md`'s
     "Vision drawn and kept facedown as an adviser" entry. It never gets a
     Codex entry, even once Revealed — it's not a person.
-12. If this segment plays a Vision faceup — whether drawn faceup this
-    turn or Revealed from a facedown placeholder per step 11 — update
+13. If this segment plays a Vision faceup — whether drawn faceup this
+    turn or Revealed from a facedown placeholder per step 12 — update
     this seat's own Player-state Revealed Vision field with its Name and
     Goal now, discarding whatever it held before, and remove the
-    placeholder Adviser row from step 11 if there was one — a Revealed
+    placeholder Adviser row from step 12 if there was one — a Revealed
     Vision lives in the Revealed Vision field, not both places at once —
     per `Oath-Cascade-Map.md`'s "Vision revealed" entry. Flag this for
     `oath-end-turn`: the Diary entry below owes this a dedicated
@@ -122,7 +135,7 @@ Messengers, or World Briefing.
     short Personality-description note reflecting a shift in Motivation,
     per Bot-Rules, "Character creation — background flavor and starting
     social circle."
-13. Hand off to `oath-end-turn` to narrate this segment and update the
+14. Hand off to `oath-end-turn` to narrate this segment and update the
     shared logs and this seat's Diary — this happens automatically as
     part of the same response, not a separate call the human has to make.
 

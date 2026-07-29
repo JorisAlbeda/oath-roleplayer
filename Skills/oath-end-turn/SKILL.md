@@ -40,10 +40,15 @@ Messengers, or World Briefing.
    character"? Fix any line that doesn't sound like this character
    specifically.
 5. Gate: don't move on to writing Player state, Board state, Logic log,
-   Diary, or Chronicle until steps 3 and 4 both pass clean. This step
-   exists because the mechanical-vocabulary leak in particular has
-   happened repeatedly — catch it here, not after the human points it
-   out.
+   Diary, Chronicle, or any Codex prose (step 7 below) until steps 3 and
+   4 both pass clean. This step exists because the mechanical-vocabulary
+   leak in particular has happened repeatedly — catch it here, not after
+   the human points it out. Codex is included deliberately: it's easy to
+   assume a clean Diary means the check is done for this segment, but
+   Codex Description/History is separate prose, written fresh in step 7,
+   and needs the same pass — "Round 0," a card's own printed name, or
+   "this seat's starting adviser" are exactly the kind of phrase that
+   survives here if it's not re-checked.
 6. Update, each read fresh immediately before appending:
    - `Game/Mechanics/oath-player-state.md` (mechanical results, including
      Supply actually spent so far; if `oath-play-turn` recruited a new
@@ -80,7 +85,16 @@ Messengers, or World Briefing.
      in-character sentences)
 7. Codex upkeep, per Bot-Rules "Codex — using it in play" (narrative
    only — Ability, Ability cost, and Status live in Player state, per
-   step 6 above, not here):
+   step 6 above, not here). Run this prose through the same steps 3-4
+   check before it's written, per the gate above — a card's own printed
+   name, "Round 0," "this seat's starting adviser," and similar phrases
+   belong in Player state and Logic log, never in Codex prose. Description
+   and History are an in-world biography, not a record of when or how this
+   segment recruited them: give a new character an actual life before this
+   seat ever met them — a trade, a family, a loss, a reason they know what
+   they know — the same depth Bot-Rules already expects of a Background
+   Flavor at character creation, not a one-line stub pointing back at this
+   turn:
    - If `oath-play-turn` recruited a new adviser, denizen, or warband
      commander **faceup** this segment, or Revealed a previously-facedown
      one, confirm its Codex entry (Name, Description, Location, History,
