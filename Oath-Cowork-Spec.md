@@ -49,9 +49,11 @@ the same turn._
      - Number of Secrets
      - Number of Favors
      - Banners
-     - Revealed Vision (Name, Goal — "none" if not currently held; an
-       Exile's own held Vision, discarded and replaced the moment a new
-       one is revealed, or discarded outright if this seat is Defeated)
+     - Revealed Vision (Name, Goal — "none" if not currently held; only
+       an Exile can hold one, discarded and replaced the moment a new
+       one is revealed, or discarded outright — and only then — if this
+       Exile accepts Citizenship, since a Citizen can't hold one
+       revealed at all)
      - Advisers (one per personified adviser/denizen/commander this seat
        holds — mechanical half only; the narrative half is the matching
        Codex `characters/` entry):

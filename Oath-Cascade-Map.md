@@ -50,19 +50,30 @@ Touches: Player state's Adviser row only. The Codex entry is untouched
 — its Description and History stay as they are; only what this
 character can still *do* changed, not who they *are*.
 
-**Vision revealed, or a held one discarded/replaced — Low**
-Touches: Player state's Revealed Vision field only — set to the newly
-revealed Vision's Name and Goal, discarding whatever it held before (a
-seat can only hold one at a time, per the rules), or set back to "none"
-if this seat is Defeated. Only Exiles can hold one faceup. Earns the
-turn's Diary its own dedicated paragraph beyond the usual three, per
-Bot-Rules "Diary — structure" — that's a content requirement on a
-document already being written this segment, not a new document, so it
-doesn't bump the size. Also conditionally worth a short note to
-Personality description in Characters if it shifts this character's
-stated Motivation, per Bot-Rules "Character creation — background
-flavor and starting social circle" — same conditional-touch restraint
-as Bonds, doesn't bump the size either.
+**Vision revealed, or a held one discarded — Low**
+Touches: Player state's Revealed Vision field only. Only an Exile can
+hold one revealed (an Imperial player — Chancellor or Citizen — never
+holds one faceup except the Conspiracy). Revealing is a free, 0-Supply
+minor action. Set the field to the newly revealed Vision's Name and
+Goal, discarding whatever it held before (a seat can only hold one
+revealed at a time, per the rules). Once revealed, there is no way to
+lose it *except* that Exile accepting Citizenship (6.6.2) — Citizenship
+discards it outright, since a Citizen can't hold one revealed at all;
+set the field back to "none" then, and only then, never on a Campaign
+loss or any other setback. A facedown Vision kept as an adviser is a
+different, lighter case: any seat can hold one, its card back publicly
+marks it as a Vision to everyone (unlike a facedown denizen, whose
+identity is fully hidden), but which Vision it is stays unknown until
+Revealed — and keeping one facedown never touches Motivation or Diary,
+only an actual Reveal does. Revealing itself earns the turn's Diary its
+own dedicated paragraph beyond the usual three, per Bot-Rules "Diary —
+structure" — that's a content requirement on a document already being
+written this segment, not a new document, so it doesn't bump the size.
+Also conditionally worth a short note to Personality description in
+Characters if it shifts this character's stated Motivation, per
+Bot-Rules "Character creation — background flavor and starting social
+circle" — same conditional-touch restraint as Bonds, doesn't bump the
+size either.
 
 **Edifice flips — Low**
 Touches: Board state's Map only (that site's Name if it changes,

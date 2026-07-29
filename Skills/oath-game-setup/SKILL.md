@@ -34,11 +34,11 @@ seat-specific.
    site's own Denizens (Name, Suit, Ability cost, Ability).
 4. Create `Game/Mechanics/oath-player-state.md`: one Player row per
    colour with Role, Controlled-by, and Number of Supplies (7 for
-   everyone) filled in, and Number of Secrets 0, Number of Favors 0, and
-   Banners none for everyone — explicit zeroes/none, not left blank, so
-   the Required pre-flight check has an actual value to find. Name stays
-   blank for AI seats until their own Setup decides it; fill it in now
-   for the Human seat if known.
+   everyone) filled in, and Number of Secrets 0, Number of Favors 0,
+   Banners none, and Revealed Vision none for everyone — explicit
+   zeroes/none, not left blank, so the Required pre-flight check has an
+   actual value to find. Name stays blank for AI seats until their own
+   Setup decides it; fill it in now for the Human seat if known.
 5. Create empty `Game/Story/oath-characters.md`,
    `Game/Mechanics/oath-logic-log.md`, and `Game/Story/oath-chronicle.md`
    — the Chronicle starts with an empty `## Live threads` header at the
