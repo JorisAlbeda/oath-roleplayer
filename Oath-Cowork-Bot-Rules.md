@@ -50,6 +50,8 @@ itself, not just the decision.
 - The Map entry for wherever this segment is actually happening has at
   least Ruled by and Number of warbands recorded.
 - Every existing Adviser row in Player state has a Status.
+- This seat's own row states whether it holds a Revealed Vision (Name,
+  Goal) or "none."
 - At Game Setup only: Oath, Current Player Turn, and every seat's Role
   and Controlled-by are set.
 
@@ -130,6 +132,15 @@ The description must be from the in-world character. Mechanical detail — exact
 reasoning, bank sources like secrets and favors — belongs in Board state and Logic log, never
 here.
 
+**Vision reveal gets its own paragraph.** If this segment plays a
+Vision faceup — not merely drawing one, which stays a normal Search
+beat — add a dedicated paragraph beyond the usual Development/Feelings/
+Action three: what gave this character the inspiration, why this is
+the way forward for them and for the Empire, and how they announced it
+to the world. This is rare enough, and significant enough, to earn more
+room than a normal month's entry. See `Oath-Cascade-Map.md`'s "Vision
+revealed" entry for what else this touches.
+
 ## Character creation — background flavor and starting social circle
 
 `oath-setup-character` doesn't decide Motivation, Flaw, and Bond in the
@@ -156,6 +167,29 @@ independently and merely made compatible with it afterward. If the
 background doesn't suggest an obvious Bond, that's fine — not forcing
 one is better than inventing a connection the background doesn't
 support.
+
+**Motivation must answer this seat's own Role, not just its
+background.** Whatever Role this seat currently holds — Chancellor,
+Exile, or Citizen, including a Citizen carried over from a previous
+game at Setup — Motivation has to say why this specific character wants
+that Role's own stake in the Empire's fate, grown out of the background
+just chosen: an Exile's reason for wanting the Empire overthrown, a
+Chancellor's reason for wanting it preserved, a Citizen's reason for
+wanting to become Successor. A Motivation that only explains the
+character's personal circumstances without ever touching what their
+Role is actually fighting for or against is incomplete.
+
+**Motivation isn't fixed at creation.** Motivation isn't its own field
+in Characters — it lives inside Personality description, alongside
+Flaw. If this seat's own Role genuinely changes later — Citizenship
+offered and accepted, an Exile flipping to Usurper, a Citizen exiled
+back out — or this character reveals a Vision, that's worth a short
+appended note to Personality description reflecting how Motivation has
+shifted, the same restraint already used for Bonds in
+`oath-conclude-conversation`: only when the political reality actually
+shifted, not on every turn. See `Oath-Cascade-Map.md`'s "Banners
+change, or a Role changes" and "Vision revealed" entries for where this
+gets triggered.
 
 **Starting Social Circle.** Independent of whether a Bond exists,
 establish 1-2 minor Acquaintances at creation — lighter than a Bond,
@@ -471,9 +505,9 @@ the reasoning behind them is. Keep a running ledger of Supplies/Secrets/
 Favors changes within the turn rather than computing totals once at the
 end from memory. Name the actual bank or source for anything gained (a
 specific site, a specific card) rather than a generic "from the bank."
-Scan for Banners and role changes (Usurper only) at the top of every
-turn before deciding anything else, since these can flip what's even
-legal.
+Scan for Banners and Role changes (Usurper flip, Citizenship offered or
+accepted, a Citizen exiled back out) at the top of every turn before
+deciding anything else, since these can flip what's even legal.
 
 ## Append-only convention
 

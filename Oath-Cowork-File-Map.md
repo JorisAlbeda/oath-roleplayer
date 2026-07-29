@@ -42,15 +42,20 @@ exists.
     - Ability
 - `Game/Mechanics/oath-player-state.md` — Player state: one row per
   colour (Role, Controlled by, Location, Region, Number of Supplies,
-  Number of Secrets, Number of Favors, Banners), each with its own
-  Advisers (Name, Source card, Ability, Ability cost, Status) — the
-  mechanical half of a personified adviser/denizen/commander; the
-  narrative half is the matching Codex `characters/` entry, same Name
+  Number of Secrets, Number of Favors, Banners, Revealed Vision — Name
+  and Goal, or "none"), each with its own Advisers (Name, Source card,
+  Ability, Ability cost, Status) — the mechanical half of a personified
+  adviser/denizen/commander; the narrative half is the matching Codex
+  `characters/` entry, same Name
 - `Game/Story/oath-characters.md` — Characters (all seats' public
   entries), including a lighter Acquaintances field alongside Bonds
   (name, one-line relationship, what they might know or want),
   established at character creation per Bot-Rules, "Character creation
-  — background flavor and starting social circle"
+  — background flavor and starting social circle." Motivation isn't its
+  own field — it lives inside Personality description, alongside Flaw
+  — and may get a short appended note later if this seat's own Role
+  genuinely changes or a Vision is revealed, per the same Bot-Rules
+  section
 - `Game/Mechanics/oath-logic-log.md` — Logic log
 - `Game/Story/oath-chronicle.md` — Chronicle, plus a `## Live threads`
   header at the top (2-3 narrative-only tensions, overwritten as they

@@ -50,7 +50,10 @@ Messengers, or World Briefing.
      adviser this segment, its Adviser row — Name, Source card, Ability,
      Ability cost, Status active — belongs here too, regardless of
      facing; if an existing adviser was lost or discarded this segment,
-     update its Status here, not in the Codex)
+     update its Status here, not in the Codex; if this segment played a
+     Vision faceup, its Revealed Vision field — Name and Goal, discarding
+     whatever it held before — per `Oath-Cascade-Map.md`'s "Vision
+     revealed" entry)
    - `Game/Mechanics/oath-board-state.md` (any Map changes this segment
      made, per Bot-Rules "Map upkeep": a denizen removed from a site's own
      Denizens list once Mustered or recruited to an Adviser row above; an
@@ -65,7 +68,9 @@ Messengers, or World Briefing.
      revealing information)
    - this seat's own `Game/Story/Diaries/oath-diary-<seat>.md`, per
      Bot-Rules, "Diary — structure" (Development, Feelings, Action, all
-     written in-character)
+     written in-character; if this segment played a Vision faceup, add
+     the dedicated paragraph Bot-Rules calls for there, beyond the usual
+     three)
    - `Game/Story/oath-chronicle.md` (the shared narrative beat; 1-2
      in-character sentences)
 7. Codex upkeep, per Bot-Rules "Codex — using it in play" (narrative
@@ -87,15 +92,24 @@ Messengers, or World Briefing.
      Relic that surfaced — create one now in the matching subfolder,
      following the existing Title/Description/History/Location structure.
      Most segments won't add one; don't force it.
-8. Opportunistically check whether this segment resolves an existing Live
+8. If this seat's own Role genuinely changed this segment (Usurper flip,
+   Citizenship offered or accepted, a Citizen exiled back out), or this
+   segment played a Vision faceup, append a short note to Personality
+   description in `Game/Story/oath-characters.md` reflecting the shift
+   in Motivation, per Bot-Rules, "Character creation — background
+   flavor and starting social circle" — the same restraint already used
+   for Bonds in `oath-conclude-conversation`: only when it actually
+   shifted, not on every turn. Read the file fresh immediately before
+   appending.
+9. Opportunistically check whether this segment resolves an existing Live
    thread or plausibly introduces a new one, per Bot-Rules, "Live threads
    — narrative-only tension tracking." Update Chronicle's `## Live
    threads` header if so — most segments won't touch it either way, and
    it never changes what's legal or what was just decided above.
-9. If this segment ends on Converse, hand off to `oath-continue-conversation`
-   for the opening line once the response below is printed, then return
-   control to `oath-play-turn` once the conversation concludes — which is
-   itself a resume, per `oath-play-turn`'s own resume check.
+10. If this segment ends on Converse, hand off to `oath-continue-conversation`
+    for the opening line once the response below is printed, then return
+    control to `oath-play-turn` once the conversation concludes — which is
+    itself a resume, per `oath-play-turn`'s own resume check.
 
 ## Response
 
@@ -119,6 +133,6 @@ reporting it back here will continue this same turn. Don't print
 anything implying the turn is complete.
 
 If this segment paused on Converse, print through the opening beat the
-same way, then hand off per step 9 above.
+same way, then hand off per step 10 above.
 
 Nothing else needs to print.

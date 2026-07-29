@@ -66,7 +66,12 @@ documents.
    Motivation, Flaw, a Bond with a previous character if one plausibly
    exists, and which starting adviser you're taking — with Motivation,
    Flaw, and Bond visibly derived from the background just chosen, not
-   picked independently of it.
+   picked independently of it. Motivation must also answer this seat's
+   own Role, already set in Player state by Game Setup (Chancellor,
+   Exile, or a Citizen carried over from a previous game) — why this
+   character wants that Role's own stake in the Empire's fate, per
+   Bot-Rules, "Character creation — background flavor and starting
+   social circle."
 7. Starting Social Circle, per the same Bot-Rules section: independent
    of whether the Bond above exists, establish 1-2 minor Acquaintances
    tied to this character's Location or the background just chosen — a

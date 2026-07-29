@@ -18,7 +18,10 @@ Read `Game/Mechanics/oath-board-state.md`,
 `Game/Mechanics/oath-player-state.md`, and
 `Game/Mechanics/oath-logic-log.md`. The human's own description is the
 narrative source — there's no private Diary to check for the
-Human seat.
+Human seat. Steps below may also write to the Codex and
+`Game/Story/oath-characters.md` when the reported turn actually touches
+them (a faceup recruit, a Reveal, a Vision played faceup, a genuine Role
+change).
 
 ## Steps
 
@@ -42,17 +45,33 @@ Human seat.
    personify it now in full (Description, Location, History, Voice), per
    `Oath-Cascade-Map.md`'s "Adviser Revealed" entry. Read the Codex
    fresh immediately before writing.
-5. Update `Game/Mechanics/oath-board-state.md` with any Map changes the
+5. If the human's turn played a Vision faceup, update this seat's own
+   Player-state Revealed Vision field with its Name and Goal now,
+   discarding whatever it held before — per `Oath-Cascade-Map.md`'s
+   "Vision revealed" entry. Read the file fresh immediately before
+   appending.
+6. Update `Game/Mechanics/oath-board-state.md` with any Map changes the
    reported turn made, per Bot-Rules "Map upkeep" — a denizen removed
    from a site's own Denizens list once Mustered or recruited, Ruled by
    or Number of warbands changing, Content or Relics changing, an
    edifice flipping. Most turns won't touch the Map at all. Read the
    file fresh immediately before appending.
-6. Add an entry to `Game/Mechanics/oath-logic-log.md` describing the
+7. Add an entry to `Game/Mechanics/oath-logic-log.md` describing the
    actions taken. Read the file fresh immediately before appending.
-7. Add a narrated beat to `Game/Story/oath-chronicle.md`, grounded in
+8. Add a narrated beat to `Game/Story/oath-chronicle.md`, grounded in
    the human's own description, same specificity standard as any other
-   Chronicle entry. Read the file fresh immediately before appending.
+   Chronicle entry — if the human's turn played a Vision faceup, this
+   beat earns the fuller, dedicated-paragraph treatment per Bot-Rules,
+   "Diary — structure," since the Human seat has no Diary of its own to
+   carry it instead. Read the file fresh immediately before appending.
+9. If this seat's own Role genuinely changed this turn (Usurper flip,
+   Citizenship offered or accepted, a Citizen exiled back out), or the
+   human's turn played a Vision faceup, append a short note to
+   Personality description in `Game/Story/oath-characters.md` reflecting
+   the shift in Motivation, per Bot-Rules, "Character creation —
+   background flavor and starting social circle" — only when it
+   actually shifted, not on every turn. Read the file fresh immediately
+   before appending.
 
 ## Response
 

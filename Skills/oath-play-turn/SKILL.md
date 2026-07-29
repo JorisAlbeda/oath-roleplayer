@@ -40,7 +40,8 @@ Messengers, or World Briefing.
    missing (no strategy file yet, a site's Content/Relics reading
    "none"/"unknown", a Codex entry with no Voice yet), proceed and name
    the assumption.
-3. Scan Player state for Banners and role changes (Usurper only), per
+3. Scan Player state for Banners and Role changes (Usurper flip,
+   Citizenship offered or accepted, a Citizen exiled back out), per
    Bot-Rules "Bookkeeping discipline" — before deciding anything else,
    since these can flip what's even legal.
 4. Check whether this is a fresh turn or a resume: if the Logic log's
@@ -99,7 +100,15 @@ Messengers, or World Briefing.
     Voice — per `Oath-Cascade-Map.md`'s "Adviser Revealed" entry. Same
     depth as step 9's faceup case, just triggered by Reveal instead of
     recruitment.
-11. Hand off to `oath-end-turn` to narrate this segment and update the
+11. If this segment plays a Vision faceup, update this seat's own
+    Player-state Revealed Vision field with its Name and Goal now,
+    discarding whatever it held before — per `Oath-Cascade-Map.md`'s
+    "Vision revealed" entry. Flag this for `oath-end-turn`: the Diary
+    entry below owes this a dedicated paragraph, per Bot-Rules, "Diary —
+    structure," and it may be worth a short Personality-description note
+    reflecting a shift in Motivation, per Bot-Rules, "Character creation
+    — background flavor and starting social circle."
+12. Hand off to `oath-end-turn` to narrate this segment and update the
     shared logs and this seat's Diary — this happens automatically as
     part of the same response, not a separate call the human has to make.
 

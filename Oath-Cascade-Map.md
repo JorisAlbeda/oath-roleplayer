@@ -50,6 +50,20 @@ Touches: Player state's Adviser row only. The Codex entry is untouched
 — its Description and History stay as they are; only what this
 character can still *do* changed, not who they *are*.
 
+**Vision revealed, or a held one discarded/replaced — Low**
+Touches: Player state's Revealed Vision field only — set to the newly
+revealed Vision's Name and Goal, discarding whatever it held before (a
+seat can only hold one at a time, per the rules), or set back to "none"
+if this seat is Defeated. Only Exiles can hold one faceup. Earns the
+turn's Diary its own dedicated paragraph beyond the usual three, per
+Bot-Rules "Diary — structure" — that's a content requirement on a
+document already being written this segment, not a new document, so it
+doesn't bump the size. Also conditionally worth a short note to
+Personality description in Characters if it shifts this character's
+stated Motivation, per Bot-Rules "Character creation — background
+flavor and starting social circle" — same conditional-touch restraint
+as Bonds, doesn't bump the size either.
+
 **Edifice flips — Low**
 Touches: Board state's Map only (that site's Name if it changes,
 Ability, and Relics, overwritten in place, same entry) — no different
@@ -64,13 +78,20 @@ Touches: Board state's Map's Relics field for that site, updated once,
 for every seat simultaneously — not a private note for whoever peeked.
 If taken, remove it from the Map entirely.
 
-**Banners change, or a role changes (Usurper) — High**
-Touches: Player state's Banners field, plus a legality re-check on
-anything already decided this segment (per Bot-Rules, "Bookkeeping
-discipline" — scan for this before deciding anything else, not after).
-Also worth flagging to the human that this seat's Strategy file may be
-worth an `oath-inspect-board` re-run soon, since a Banner or role change
-can undercut an existing strategy's assumptions.
+**Banners change, or a Role changes (Usurper flip, Citizenship offered
+or accepted, a Citizen exiled back out) — High**
+Touches: Player state's Banners field, its Role field, plus a legality
+re-check on anything already decided this segment (per Bot-Rules,
+"Bookkeeping discipline" — scan for this before deciding anything else,
+not after). Also worth flagging to the human that this seat's Strategy
+file may be worth an `oath-inspect-board` re-run soon, since a Banner or
+Role change can undercut an existing strategy's assumptions. If the
+Role change is genuine (not, say, a Citizenship offer merely made and
+declined), it's also worth a short appended note to Personality
+description in Characters reflecting the shift in Motivation, per
+Bot-Rules, "Character creation — background flavor and starting social
+circle" — conditional, the same restraint already used for Bonds, so it
+doesn't bump this above High on its own.
 
 **Bond shifts in Converse — Low**
 Touches: Characters' Bonds field for the affected character(s) only.

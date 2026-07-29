@@ -49,6 +49,9 @@ the same turn._
      - Number of Secrets
      - Number of Favors
      - Banners
+     - Revealed Vision (Name, Goal — "none" if not currently held; an
+       Exile's own held Vision, discarded and replaced the moment a new
+       one is revealed, or discarded outright if this seat is Defeated)
      - Advisers (one per personified adviser/denizen/commander this seat
        holds — mechanical half only; the narrative half is the matching
        Codex `characters/` entry):
@@ -170,6 +173,12 @@ the same turn._
      Revealed" entry. If it came off a site's own Denizens list in Board
      state's Map, remove it from there either way — it's now this seat's
      Adviser, not the site's
+   - If this segment plays a Vision faceup, update Player state's
+     Revealed Vision field now (discarding any previous one it held, per
+     the rules) — see `Oath-Cascade-Map.md`'s "Vision revealed" entry;
+     this also earns the turn's Diary entry its own dedicated paragraph
+     per Bot-Rules, "Diary — structure," handled in the same pass as End
+     turn
    - Supply gate: state the exact Supply number left. More than 2? Add
      another action and recheck, unless none is affordable — then say so
 
@@ -189,7 +198,12 @@ the same turn._
    - Decide, in the same pass: Location, Region, Name, Pronouns,
      Motivation, Flaw, and Bond with a previous character (if one
      exists) — all derived from the background just chosen, not decided
-     independently of it — and which starting adviser you're taking
+     independently of it — and which starting adviser you're taking.
+     Motivation must also answer this seat's own Role (Chancellor,
+     Exile, or a Citizen carried over from a previous game) — why this
+     character wants that Role's own stake in the Empire's fate, per
+     Bot-Rules, "Character creation — background flavor and starting
+     social circle"
    - Starting Social Circle: alongside the Bond, establish 1-2 minor
      Acquaintances tied to this character's Location or background
    - Personify the starting adviser immediately — starting advisers are
@@ -212,9 +226,17 @@ the same turn._
      (any Map changes the reported turn made) per what was reported, and
      Logic log. If the human's own turn Reveals a previously-facedown
      Adviser, personify it in full now — see `Oath-Cascade-Map.md`'s
-     "Adviser Revealed" entry
+     "Adviser Revealed" entry. If the human's turn plays a Vision faceup,
+     update Player state's Revealed Vision field the same way — see
+     `Oath-Cascade-Map.md`'s "Vision revealed" entry
    - Update Chronicle with a narrated beat from the human's own
-     description
+     description — a Vision reveal earns the fuller, dedicated-paragraph
+     treatment per Bot-Rules, "Diary — structure," since the Human seat
+     has no Diary of its own to carry it
+   - If this seat's own Role genuinely changed this turn, or a Vision was
+     revealed, append a short note to Personality description in
+     Characters reflecting the shift in Motivation, per Bot-Rules,
+     "Character creation — background flavor and starting social circle"
 
 4. Continue conversation (Pass Converse
    dialogue) — cross-seat
@@ -262,11 +284,18 @@ the same turn._
      vocabulary? Don't move on until both pass clean
    - Write a diary entry about the turn (Chronicle-quality prose, per the
      specificity standard in Bot-Rules) and update Player state
-     (including any Adviser's Status, if it changed this segment), Board
+     (including any Adviser's Status, if it changed this segment, and its
+     Revealed Vision field if this segment played one faceup), Board
      state (any Map changes this segment made — a denizen removed from a
      site, an edifice flipping with its new Ability and Relics, Ruled
      by/warbands/Content/Relics changing), Logic log, own Diary, and
-     Chronicle
+     Chronicle — if this segment played a Vision faceup, its Diary entry
+     gets a dedicated paragraph beyond the usual three, per Bot-Rules,
+     "Diary — structure"
+   - If this seat's own Role genuinely changed this segment, or a Vision
+     was revealed, append a short note to Personality description in
+     Characters reflecting the shift in Motivation, the same restraint
+     already used for Bonds — most segments won't touch it
    - Opportunistically check whether this segment resolves or introduces
      a Live thread (per Bot-Rules) — most segments won't touch it
    - In response, print the diary entry followed by Player
