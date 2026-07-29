@@ -244,10 +244,10 @@ the same turn._
      (any Map changes the reported turn made, plus that site's Codex
      Garrison field, conditionally, if a Muster or Campaign makes it
      worth naming or updating, per Bot-Rules, "Warbands — personifying
-     the garrison") per what was reported, and Logic log. If the human's
-     own turn Reveals a previously-facedown
-     Adviser, personify it in full now — see `Oath-Cascade-Map.md`'s
-     "Adviser Revealed" entry. If the human's turn drew a Vision and kept
+     the garrison") per what was reported, and Logic log. If the
+     human's own turn Reveals a previously-facedown Adviser, personify
+     it in full now — see `Oath-Cascade-Map.md`'s "Adviser Revealed"
+     entry. If the human's turn drew a Vision and kept
      it facedown, add a placeholder Adviser row instead of its real
      identity — see `Oath-Cascade-Map.md`'s "Vision drawn and kept
      facedown as an adviser" entry; it never gets a Codex entry either
@@ -323,9 +323,9 @@ the same turn._
      plus, conditionally, that site's Codex Garrison field if the change
      makes it worth naming or updating, per Bot-Rules, "Warbands —
      personifying the garrison"), Logic log, own Diary, and Chronicle —
-     if this segment played a
-     Vision faceup, its Diary entry gets a dedicated paragraph beyond the
-     usual three, per Bot-Rules, "Diary — structure"
+     if this segment played a Vision faceup, its Diary entry gets a
+     dedicated paragraph beyond the usual three, per Bot-Rules, "Diary
+     — structure"
    - If this seat's own Role genuinely changed this segment, or a Vision
      was revealed, append a short note to Personality description in
      Characters reflecting the shift in Motivation, the same restraint
