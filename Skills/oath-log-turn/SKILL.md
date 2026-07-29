@@ -66,8 +66,12 @@ change).
    reported turn made, per Bot-Rules "Map upkeep" — a denizen removed
    from a site's own Denizens list once Mustered or recruited, Ruled by
    or Number of warbands changing, Content or Relics changing, an
-   edifice flipping. Most turns won't touch the Map at all. Read the
-   file fresh immediately before appending.
+   edifice flipping. If a Muster or Campaign made a site's own garrison
+   worth naming or updating, personify or update its Codex `locations/`
+   entry's Garrison field too, per Bot-Rules, "Warbands — personifying
+   the garrison" — most turns won't warrant this, don't force it. Most
+   turns won't touch the Map at all. Read the file fresh immediately
+   before appending.
 8. Add an entry to `Game/Mechanics/oath-logic-log.md` describing the
    actions taken. Read the file fresh immediately before appending.
 9. Add a narrated beat to `Game/Story/oath-chronicle.md`, grounded in

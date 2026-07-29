@@ -99,6 +99,13 @@ Messengers, or World Briefing.
      Relic that surfaced — create one now in the matching subfolder,
      following the existing Title/Description/History/Location structure.
      Most segments won't add one; don't force it.
+   - If this segment's Muster or Campaign made a site's own garrison
+     worth naming or updating (a new force raised, or the site handed to
+     an entirely new ruler), personify or update its Codex `locations/`
+     entry's Garrison field now, per Bot-Rules, "Warbands — personifying
+     the garrison," and `Oath-Cascade-Map.md`'s "A site's garrison
+     personified or updated" entry. Most Map changes won't warrant this;
+     don't force it.
 8. If this seat's own Role genuinely changed this segment (Usurper flip,
    Citizenship offered or accepted, a Citizen exiled back out), or this
    segment played a Vision faceup, append a short note to Personality

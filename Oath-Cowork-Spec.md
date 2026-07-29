@@ -133,6 +133,12 @@ the same turn._
     - `locations/` entries may optionally carry Regional voice notes (a
       proverb or two, a conversational habit) — added the first time a
       scene actually happens there, not upfront
+    - `locations/` entries may also optionally carry a Garrison field
+      (a name, a leader as a minor `characters/` NPC, its own
+      character) for that site's own ruling force — added or updated
+      when a Muster or Campaign makes it worth naming, not on every
+      routine Map change, per Bot-Rules, "Warbands — personifying the
+      garrison"
     - Mostly inherited from the previous game; read and extended during
       this one per Bot-Rules, "Codex — using it in play"
 
@@ -235,8 +241,11 @@ the same turn._
    - Update Player state (Location, Supply/Secrets/Favors, Banners,
      Adviser rows, added regardless of facing; faceup recruits also get a
      Codex entry now, facedown ones wait until Revealed) and Board state
-     (any Map changes the reported turn made) per what was reported, and
-     Logic log. If the human's own turn Reveals a previously-facedown
+     (any Map changes the reported turn made, plus that site's Codex
+     Garrison field, conditionally, if a Muster or Campaign makes it
+     worth naming or updating, per Bot-Rules, "Warbands — personifying
+     the garrison") per what was reported, and Logic log. If the human's
+     own turn Reveals a previously-facedown
      Adviser, personify it in full now — see `Oath-Cascade-Map.md`'s
      "Adviser Revealed" entry. If the human's turn drew a Vision and kept
      it facedown, add a placeholder Adviser row instead of its real
@@ -310,8 +319,11 @@ the same turn._
      segment played one faceup, removing any facedown placeholder rather
      than leaving both), Board state (any Map changes this segment made
      — a denizen removed from a site, an edifice flipping with its new
-     Ability and Relics, Ruled by/warbands/Content/Relics changing),
-     Logic log, own Diary, and Chronicle — if this segment played a
+     Ability and Relics, Ruled by/warbands/Content/Relics changing —
+     plus, conditionally, that site's Codex Garrison field if the change
+     makes it worth naming or updating, per Bot-Rules, "Warbands —
+     personifying the garrison"), Logic log, own Diary, and Chronicle —
+     if this segment played a
      Vision faceup, its Diary entry gets a dedicated paragraph beyond the
      usual three, per Bot-Rules, "Diary — structure"
    - If this seat's own Role genuinely changed this segment, or a Vision

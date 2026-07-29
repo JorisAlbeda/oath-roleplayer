@@ -95,6 +95,18 @@ state closely enough that leaving it as-is would read as wrong; that
 conditional touch doesn't bump the size, the same way the Chronicle
 beat every segment gets regardless doesn't.
 
+**A site's garrison personified or updated — Low**
+Touches: Board state's Map (Ruled by/Number of warbands, already
+changing regardless, per any Muster or Campaign) plus, conditionally,
+that site's Codex `locations/` entry's Garrison field (a name, a leader
+as a minor `characters/` NPC, its own character) — only when a new
+force is worth naming or a Campaign hands the site to an entirely new
+ruler, not on every routine Muster or warband shuffle; that conditional
+touch doesn't bump the size, same restraint as Edifice flips. No
+facedown/faceup gating applies — Ruled by and Number of warbands are
+already public the moment they change, unlike an Adviser or a Vision.
+See Bot-Rules, "Warbands — personifying the garrison."
+
 **Relic peeked at or taken — Low, but shared-wide**
 Touches: Board state's Map's Relics field for that site, updated once,
 for every seat simultaneously — not a private note for whoever peeked.

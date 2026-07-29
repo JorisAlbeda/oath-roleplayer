@@ -76,9 +76,13 @@ exists.
   `characters/` entries carry a fifth field, Voice, per Bot-Rules
   "Voice — staying in character"; `locations/` entries may optionally
   carry Regional voice notes, added the first time a scene actually
-  happens there. Mostly inherited from the previous game, extended
-  during this one — read per Bot-Rules "Codex — using it in play,"
-  appended to (new History) or added to (new entries) the same way
+  happens there, and may also optionally carry a Garrison field (a
+  name, a leader as a minor `characters/` NPC, its own character) for
+  that site's own ruling force, added or updated per Bot-Rules,
+  "Warbands — personifying the garrison." Mostly inherited from the
+  previous game, extended during this one — read per Bot-Rules "Codex —
+  using it in play," appended to (new History) or added to (new
+  entries) the same way
 - `Game/Story/Codex/timeline.md` — long-form world history across games,
   dated by era of the Old Oak, occasionally with editorial commentary.
   Human-maintained and read-only for every seat's bot — no skill writes

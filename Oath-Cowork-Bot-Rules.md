@@ -130,7 +130,13 @@ Make sure it includes the following:
 - **Action** — the most impactful action(s) taken this segment,
   narrated in-character. Logic log and Board state already hold
   the complete mechanical record — this is what it meant to the
-  character, not an itemized action list.
+  character, not an itemized action list. A turn usually chains several
+  actions; pick whichever one actually makes this month's best story
+  and let that carry the paragraph, rather than spelling all of them
+  out in sequence. See `Oath-Narrative-Prompts.md` for what a given
+  action can mean to the character actually doing it — Travel, Search,
+  Muster, Trade, Recover, Campaign, and the minor actions each get their
+  own entry there.
 
 The description must be from the in-world character. Mechanical detail — exact Supply costs, legality
 reasoning, bank sources like secrets and favors — belongs in Board state and Logic log, never
@@ -344,6 +350,51 @@ Most segments won't touch the Map at all — don't force an edit where
 nothing actually changed. See `Oath-Cascade-Map.md` for the fuller
 picture of what else a given change usually touches beyond the Map
 itself.
+
+## Warbands — personifying the garrison
+
+Ruled by and Number of warbands, both already tracked in Board state's
+Map, describe a site's occupying force in mechanical terms only. That
+force can earn the same kind of personification an Adviser does — a
+name, a leader, a character — without needing any new mechanical
+tracking, since both fields already exist.
+
+**No hidden-information question here, unlike Advisers or Visions.**
+Ruled by and Number of warbands are public the moment they change —
+visible wooden pieces on the physical board, not a card anyone holds
+facedown. There's nothing to gate on Reveal; personify a garrison the
+moment it's worth personifying, full stop.
+
+**When it's worth it.** Not every Muster or Campaign — most Map
+upkeep is routine bookkeeping, the same restraint already used for
+Regional voice notes and Edifice flips. It's worth personifying (or
+updating) a site's garrison when a Muster raises a new force there
+worth naming, or a Campaign hands the site to a new ruler entirely — a
+different color, a different people at that garrison, worth a fresh
+look rather than carrying the old flavor forward. A garrison, once
+established, gets updated the same way any Codex entry does — an
+appended History note when heavy losses, reinforcements, or a change of
+ruler would plausibly shift its composition or character — not
+rewritten from scratch each time.
+
+**What it looks like.** Recorded as a Garrison field on that site's own
+Codex `locations/` entry, alongside its existing Title/Description/
+History/Location structure: a name for the force itself, a leader (a
+minor NPC — added to the Codex `characters/` subfolder the same way any
+other minor NPC would be, no facedown/faceup gating needed since none
+applies here), and its own character — loyal or mercenary, disciplined
+or ragtag, eager or reluctant. Let the ruling denizen or site itself
+suggest it, the same way a Search's own denizen suggests who answers a
+Muster call — a temple's garrison reads differently from a smuggler's
+den's, or a Bandit-held site's own opportunistic camp.
+
+**Known limitation.** Only a site's own ruling force gets personified
+this way, mirroring the Map's own simplification that "Number of
+warbands" tracks one figure — whoever rules there — not every seat's
+warbands physically present. A seat's own warbands en route on
+Campaign, or otherwise not yet ruling anywhere, aren't personified until
+they actually take a site. See `Oath-Cascade-Map.md`'s "A site's
+garrison personified or updated" entry.
 
 ## Legal turn endings, and why
 
