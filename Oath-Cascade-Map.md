@@ -50,26 +50,37 @@ Touches: Player state's Adviser row only. The Codex entry is untouched
 — its Description and History stay as they are; only what this
 character can still *do* changed, not who they *are*.
 
+**Vision drawn and kept facedown as an adviser — Low**
+Touches: Player state only — a placeholder Adviser row, not the real
+card. Any seat can hold one; its card back publicly marks it as a
+Vision to everyone (unlike a facedown denizen, whose identity is fully
+hidden), but which Vision it is stays unknown until Revealed even at the
+physical table. Per Bot-Rules, "Codex — using it in play," "A facedown
+Vision is a narrower case than a facedown denizen," the row gets a
+placeholder — Name "Vision (unrevealed)", Source card/Ability/Ability
+cost "unknown until Revealed", Status active — never its real identity,
+and never a Codex entry (it's not a person). Keeping one facedown never
+touches Motivation or Diary; only an actual Reveal does, below. If
+discarded instead while still facedown, it never gets a Player-state row
+at all.
+
 **Vision revealed, or a held one discarded — Low**
-Touches: Player state's Revealed Vision field only. Only an Exile can
-hold one revealed (an Imperial player — Chancellor or Citizen — never
-holds one faceup except the Conspiracy). Revealing is a free, 0-Supply
-minor action. Set the field to the newly revealed Vision's Name and
-Goal, discarding whatever it held before (a seat can only hold one
-revealed at a time, per the rules). Once revealed, there is no way to
-lose it *except* that Exile accepting Citizenship (6.6.2) — Citizenship
-discards it outright, since a Citizen can't hold one revealed at all;
-set the field back to "none" then, and only then, never on a Campaign
-loss or any other setback. A facedown Vision kept as an adviser is a
-different, lighter case: any seat can hold one, its card back publicly
-marks it as a Vision to everyone (unlike a facedown denizen, whose
-identity is fully hidden), but which Vision it is stays unknown until
-Revealed — and keeping one facedown never touches Motivation or Diary,
-only an actual Reveal does. Revealing itself earns the turn's Diary its
-own dedicated paragraph beyond the usual three, per Bot-Rules "Diary —
-structure" — that's a content requirement on a document already being
-written this segment, not a new document, so it doesn't bump the size.
-Also conditionally worth a short note to Personality description in
+Touches: Player state's Revealed Vision field, replacing any placeholder
+Adviser row from the entry above (not sitting alongside it — a Revealed
+Vision lives in one place, not two). Only an Exile can hold one revealed
+(an Imperial player — Chancellor or Citizen — never holds one faceup
+except the Conspiracy). Revealing is a free, 0-Supply minor action. Set
+the field to the newly revealed Vision's Name and Goal, discarding
+whatever it held before (a seat can only hold one revealed at a time,
+per the rules). Once revealed, there is no way to lose it *except* that
+Exile accepting Citizenship (6.6.2) — Citizenship discards it outright,
+since a Citizen can't hold one revealed at all; set the field back to
+"none" then, and only then, never on a Campaign loss or any other
+setback. Revealing itself earns the turn's Diary its own dedicated
+paragraph beyond the usual three, per Bot-Rules "Diary — structure" —
+that's a content requirement on a document already being written this
+segment, not a new document, so it doesn't bump the size. Also
+conditionally worth a short note to Personality description in
 Characters if it shifts this character's stated Motivation, per
 Bot-Rules "Character creation — background flavor and starting social
 circle" — same conditional-touch restraint as Bonds, doesn't bump the

@@ -46,7 +46,10 @@ exists.
   and Goal, or "none"), each with its own Advisers (Name, Source card,
   Ability, Ability cost, Status) — the mechanical half of a personified
   adviser/denizen/commander; the narrative half is the matching Codex
-  `characters/` entry, same Name
+  `characters/` entry, same Name. A facedown Vision kept as an adviser
+  gets a placeholder row instead — Name "Vision (unrevealed)" — never
+  its real identity, per Bot-Rules, "Codex — using it in play," "A
+  facedown Vision is a narrower case than a facedown denizen"
 - `Game/Story/oath-characters.md` — Characters (all seats' public
   entries), including a lighter Acquaintances field alongside Bonds
   (name, one-line relationship, what they might know or want),

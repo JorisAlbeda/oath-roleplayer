@@ -80,35 +80,49 @@ Messengers, or World Briefing.
    number (and a stated reason, if skipping ahead) is checkable; "adjust
    if needed" isn't, and this rule has been skipped past enough times
    that it needs to be one.
-9. If a new adviser, denizen, or warband commander is drawn or
-   recruited this turn, add its Adviser row in this seat's own Player
-   state now regardless of facing — Name, Source card, Ability, Ability
-   cost, Status active. If it's taken **faceup**, also personify it in
-   the Codex now, per Bot-Rules "Codex — using it in play" and "Voice —
-   staying in character": Name/Description/Location/History/Voice to
-   the Codex's `characters/` subfolder, same Name as the Adviser row —
-   see `Oath-Cascade-Map.md`'s "Denizen recruited or Mustered" entry. If
-   it's taken **facedown**, skip the Codex entry for now — per
-   Bot-Rules, "A card taken facedown stays unpersonified until
-   Revealed," it isn't owed one until step 10 below catches it, whether
-   that's later this same segment or a future turn. If it came off a
-   site's own Denizens list in Board state's Map, remove it from there
-   too either way — it can't be both the site's and this seat's at once.
+9. If a new adviser, denizen, or warband commander (not a Vision — see
+   steps 11-12 below for those) is drawn or recruited this turn, add its
+   Adviser row in this seat's own Player state now regardless of facing
+   — Name, Source card, Ability, Ability cost, Status active. If it's
+   taken **faceup**, also personify it in the Codex now, per Bot-Rules
+   "Codex — using it in play" and "Voice — staying in character":
+   Name/Description/Location/History/Voice to the Codex's `characters/`
+   subfolder, same Name as the Adviser row — see `Oath-Cascade-Map.md`'s
+   "Denizen recruited or Mustered" entry. If it's taken **facedown**,
+   skip the Codex entry for now — per Bot-Rules, "A card taken facedown
+   stays unpersonified until Revealed," it isn't owed one until step 10
+   below catches it, whether that's later this same segment or a future
+   turn. If it came off a site's own Denizens list in Board state's Map,
+   remove it from there too either way — it can't be both the site's and
+   this seat's at once.
 10. If this segment includes Revealing a previously-facedown Adviser
     (already sitting in this seat's own Player state with no Codex entry
     yet), personify it now in full — Description, Location, History,
     Voice — per `Oath-Cascade-Map.md`'s "Adviser Revealed" entry. Same
     depth as step 9's faceup case, just triggered by Reveal instead of
     recruitment.
-11. If this segment plays a Vision faceup, update this seat's own
-    Player-state Revealed Vision field with its Name and Goal now,
-    discarding whatever it held before — per `Oath-Cascade-Map.md`'s
-    "Vision revealed" entry. Flag this for `oath-end-turn`: the Diary
-    entry below owes this a dedicated paragraph, per Bot-Rules, "Diary —
-    structure," and it may be worth a short Personality-description note
-    reflecting a shift in Motivation, per Bot-Rules, "Character creation
-    — background flavor and starting social circle."
-12. Hand off to `oath-end-turn` to narrate this segment and update the
+11. If a Vision is drawn this turn and kept facedown as an adviser
+    (rather than immediately played faceup, step 12, or discarded), add
+    a placeholder Adviser row in this seat's own Player state now — Name
+    "Vision (unrevealed)", Source card/Ability/Ability cost "unknown
+    until Revealed", Status active — never its real identity, per
+    Bot-Rules "Codex — using it in play," "A facedown Vision is a
+    narrower case than a facedown denizen," and `Oath-Cascade-Map.md`'s
+    "Vision drawn and kept facedown as an adviser" entry. It never gets a
+    Codex entry, even once Revealed — it's not a person.
+12. If this segment plays a Vision faceup — whether drawn faceup this
+    turn or Revealed from a facedown placeholder per step 11 — update
+    this seat's own Player-state Revealed Vision field with its Name and
+    Goal now, discarding whatever it held before, and remove the
+    placeholder Adviser row from step 11 if there was one — a Revealed
+    Vision lives in the Revealed Vision field, not both places at once —
+    per `Oath-Cascade-Map.md`'s "Vision revealed" entry. Flag this for
+    `oath-end-turn`: the Diary entry below owes this a dedicated
+    paragraph, per Bot-Rules, "Diary — structure," and it may be worth a
+    short Personality-description note reflecting a shift in Motivation,
+    per Bot-Rules, "Character creation — background flavor and starting
+    social circle."
+13. Hand off to `oath-end-turn` to narrate this segment and update the
     shared logs and this seat's Diary — this happens automatically as
     part of the same response, not a separate call the human has to make.
 

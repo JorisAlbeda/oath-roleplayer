@@ -50,10 +50,15 @@ Messengers, or World Briefing.
      adviser this segment, its Adviser row — Name, Source card, Ability,
      Ability cost, Status active — belongs here too, regardless of
      facing; if an existing adviser was lost or discarded this segment,
-     update its Status here, not in the Codex; if this segment played a
-     Vision faceup, its Revealed Vision field — Name and Goal, discarding
-     whatever it held before — per `Oath-Cascade-Map.md`'s "Vision
-     revealed" entry)
+     update its Status here, not in the Codex; if this segment drew a
+     Vision and kept it facedown, a placeholder Adviser row instead —
+     Name "Vision (unrevealed)", Source card/Ability/Ability cost
+     "unknown until Revealed" — never its real identity, per
+     `Oath-Cascade-Map.md`'s "Vision drawn and kept facedown as an
+     adviser" entry; if this segment played a Vision faceup instead, its
+     Revealed Vision field — Name and Goal, discarding whatever it held
+     before, and removing any facedown placeholder row rather than
+     leaving both — per `Oath-Cascade-Map.md`'s "Vision revealed" entry)
    - `Game/Mechanics/oath-board-state.md` (any Map changes this segment
      made, per Bot-Rules "Map upkeep": a denizen removed from a site's own
      Denizens list once Mustered or recruited to an Adviser row above; an
@@ -83,6 +88,8 @@ Messengers, or World Briefing.
      `Oath-Cascade-Map.md`'s "Denizen recruited or Mustered" and "Adviser
      Revealed" entries. If it was taken facedown and not Revealed this
      segment, there's nothing to reflect yet — that's expected, not a gap.
+     A Vision, facedown or Revealed, never gets a Codex entry either way
+     — it's not a person, so there's nothing here to confirm for it.
    - If this segment's events actually changed something about an existing
      entry (a relic changing hands, a location transformed, an event's
      consequences finally landing), append a note to that entry's History,

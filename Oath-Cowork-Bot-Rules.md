@@ -77,6 +77,10 @@ block on these:**
   stays unpersonified until Revealed"); narrate around it without
   inventing detail, and personify it in full only once it's actually
   Revealed.
+- A Player-state Adviser row reads "Vision (unrevealed)" instead of a
+  name — that's expected too, not a gap (see "Codex — using it in
+  play," "A facedown Vision is a narrower case than a facedown
+  denizen"); it never gets a Codex entry at all, even once Revealed.
 
 The distinction that matters: Required data missing means stop and name
 it. Recommended data missing means proceed and name the assumption
@@ -261,6 +265,25 @@ lost or discarded while still facedown, having never been Revealed, it
 never gets a Codex entry at all — that's the point: narrative effort
 lands only on Advisers that actually became visible, not on every card
 that passes through a seat's hand.
+
+**A facedown Vision is a narrower case than a facedown denizen — give
+it a placeholder, not its real identity.** The tradeoff above (Player
+state exposes a facedown card's real Name and Ability to every seat's
+bot) is a deliberate simplification for denizens and commanders, where
+the physical card's identity really is fully hidden at the table. A
+Vision is different: its card back publicly marks it as a Vision to
+everyone the moment it's drawn and kept facedown as an adviser — that
+much genuinely isn't secret — but which Vision it is stays hidden until
+Revealed, even at the physical table. Exposing its real Name and Goal
+in Player state the same way a facedown denizen's are exposed wouldn't
+be the same accepted tradeoff — it would misrepresent what's actually
+public. So a Vision kept facedown gets a placeholder row instead: Name
+"Vision (unrevealed)", Source card/Ability/Ability cost "unknown until
+Revealed," Status active — see `Oath-Cascade-Map.md`'s "Vision revealed"
+entry. It never earns a Codex entry either way, even once Revealed —
+it's not a person, so it has nothing to personify; a Revealed Vision's
+Name and Goal live in Player state's own Revealed Vision field instead,
+replacing the placeholder row, not sitting alongside it.
 
 **A site's own Denizens, before they're anyone's Adviser.** Until a
 denizen is actually Mustered or otherwise recruited, it belongs to a

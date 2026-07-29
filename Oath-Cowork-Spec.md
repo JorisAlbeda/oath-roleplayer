@@ -163,24 +163,34 @@ the same turn._
      is genuinely over) or pausing on a Campaign, Search, or Converse
      whose outcome isn't known yet — see Bot-Rules, "Legal turn
      endings," for how a paused turn resumes
-   - If a new adviser/denizen/commander is drawn or recruited this turn,
-     add its Adviser row in Player state now regardless of facing — Name,
-     Source card, Ability, Ability cost, Status active. If taken faceup,
-     also personify it in the Codex now (Name, Description, Location,
-     History, Voice), same Name as the Adviser row; if taken facedown,
-     the Codex entry waits until it's Revealed — see `Oath-Cascade-Map.md`
-     for the fuller cascade either way. If this segment instead Reveals a
-     previously-facedown Adviser, personify it in full now, the same
-     depth as any faceup recruit — see `Oath-Cascade-Map.md`'s "Adviser
-     Revealed" entry. If it came off a site's own Denizens list in Board
-     state's Map, remove it from there either way — it's now this seat's
-     Adviser, not the site's
-   - If this segment plays a Vision faceup, update Player state's
-     Revealed Vision field now (discarding any previous one it held, per
-     the rules) — see `Oath-Cascade-Map.md`'s "Vision revealed" entry;
-     this also earns the turn's Diary entry its own dedicated paragraph
-     per Bot-Rules, "Diary — structure," handled in the same pass as End
-     turn
+   - If a new adviser/denizen/commander (not a Vision — see below) is
+     drawn or recruited this turn, add its Adviser row in Player state
+     now regardless of facing — Name, Source card, Ability, Ability
+     cost, Status active. If taken faceup, also personify it in the
+     Codex now (Name, Description, Location, History, Voice), same Name
+     as the Adviser row; if taken facedown, the Codex entry waits until
+     it's Revealed — see `Oath-Cascade-Map.md` for the fuller cascade
+     either way. If this segment instead Reveals a previously-facedown
+     Adviser, personify it in full now, the same depth as any faceup
+     recruit — see `Oath-Cascade-Map.md`'s "Adviser Revealed" entry. If
+     it came off a site's own Denizens list in Board state's Map, remove
+     it from there either way — it's now this seat's Adviser, not the
+     site's
+   - A Vision is a different, narrower case: if drawn and kept facedown
+     as an adviser, it gets a placeholder Adviser row instead of its real
+     identity — Name "Vision (unrevealed)", Source card/Ability/Ability
+     cost "unknown until Revealed" — since unlike a facedown denizen,
+     only the fact that it's a Vision is actually public, not which one
+     — see `Oath-Cascade-Map.md`'s "Vision drawn and kept facedown as an
+     adviser" entry. It never earns a Codex entry, facedown or Revealed —
+     it's not a person. If this segment instead plays a Vision faceup
+     (drawn faceup, or Revealed from a facedown placeholder), update
+     Player state's Revealed Vision field now (discarding any previous
+     one it held, per the rules, and removing any facedown placeholder
+     row rather than leaving both) — see `Oath-Cascade-Map.md`'s "Vision
+     revealed" entry; this also earns the turn's Diary entry its own
+     dedicated paragraph per Bot-Rules, "Diary — structure," handled in
+     the same pass as End turn
    - Supply gate: state the exact Supply number left. More than 2? Add
      another action and recheck, unless none is affordable — then say so
 
@@ -228,8 +238,13 @@ the same turn._
      (any Map changes the reported turn made) per what was reported, and
      Logic log. If the human's own turn Reveals a previously-facedown
      Adviser, personify it in full now — see `Oath-Cascade-Map.md`'s
-     "Adviser Revealed" entry. If the human's turn plays a Vision faceup,
-     update Player state's Revealed Vision field the same way — see
+     "Adviser Revealed" entry. If the human's turn drew a Vision and kept
+     it facedown, add a placeholder Adviser row instead of its real
+     identity — see `Oath-Cascade-Map.md`'s "Vision drawn and kept
+     facedown as an adviser" entry; it never gets a Codex entry either
+     way. If the human's turn plays a Vision faceup instead, update
+     Player state's Revealed Vision field the same way, removing any
+     facedown placeholder row rather than leaving both — see
      `Oath-Cascade-Map.md`'s "Vision revealed" entry
    - Update Chronicle with a narrated beat from the human's own
      description — a Vision reveal earns the fuller, dedicated-paragraph
@@ -269,8 +284,11 @@ the same turn._
      photographs — the only time the whole board is ever photographed
    - Create Player state: one Player row per colour with Role,
      Controlled-by, and Number of Supplies (fixed at 7 for everyone)
-     filled in — Name blank for AI seats until their own Setup decides
-     it, filled in now for the Human seat
+     filled in, plus explicit Number of Secrets 0, Number of Favors 0,
+     Banners none, and Revealed Vision none for everyone — not left
+     blank, so the Required pre-flight check has an actual value to
+     find. Name blank for AI seats until their own Setup decides it,
+     filled in now for the Human seat
    - Create empty Characters, Logic log, and Chronicle
    - Do not create Strategy files for anyone — `oath-inspect-board`
      creates one lazily for a seat's own colour on its first run
@@ -286,14 +304,16 @@ the same turn._
      vocabulary? Don't move on until both pass clean
    - Write a diary entry about the turn (Chronicle-quality prose, per the
      specificity standard in Bot-Rules) and update Player state
-     (including any Adviser's Status, if it changed this segment, and its
-     Revealed Vision field if this segment played one faceup), Board
-     state (any Map changes this segment made — a denizen removed from a
-     site, an edifice flipping with its new Ability and Relics, Ruled
-     by/warbands/Content/Relics changing), Logic log, own Diary, and
-     Chronicle — if this segment played a Vision faceup, its Diary entry
-     gets a dedicated paragraph beyond the usual three, per Bot-Rules,
-     "Diary — structure"
+     (including any Adviser's Status, if it changed this segment; a
+     placeholder Adviser row, not its real identity, if a Vision was
+     drawn and kept facedown; and its Revealed Vision field if this
+     segment played one faceup, removing any facedown placeholder rather
+     than leaving both), Board state (any Map changes this segment made
+     — a denizen removed from a site, an edifice flipping with its new
+     Ability and Relics, Ruled by/warbands/Content/Relics changing),
+     Logic log, own Diary, and Chronicle — if this segment played a
+     Vision faceup, its Diary entry gets a dedicated paragraph beyond the
+     usual three, per Bot-Rules, "Diary — structure"
    - If this seat's own Role genuinely changed this segment, or a Vision
      was revealed, append a short note to Personality description in
      Characters reflecting the shift in Motivation, the same restraint
