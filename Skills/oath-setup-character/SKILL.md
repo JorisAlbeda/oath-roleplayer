@@ -17,8 +17,10 @@ Game Setup.
 ## The boundary
 
 Read this seat's own `Game/Setup/oath-world-briefing-<seat>.md`,
-`Game/Story/Legacy/legacy-<colour>.md` if it exists, the Codex,
-`Game/Story/Codex/timeline.md`, `Game/Mechanics/oath-board-state.md`,
+`Game/Story/Legacy/legacy-<colour>.md` if it exists, the Codex and
+`timeline.md` — both kept in the connected `codex` folder, outside this
+project's own `Game/` tree, in its own git repository shared across
+playtests, not copied in here — `Game/Mechanics/oath-board-state.md`,
 `Game/Mechanics/oath-player-state.md`, and this seat's own
 starting-adviser photo. Board state's Map already holds the whole
 board from Game Setup's own photographs — no need to re-photograph it
@@ -51,8 +53,9 @@ documents.
    established detail shape this character's Physical description,
    Personality description, or Bond the same way Legacy does above.
    Most starting points won't have one; that's fine.
-4. Check `Game/Story/Codex/timeline.md`'s latest entries — human-
-   maintained and read-only, never written to by this or any skill. Let
+4. Check the connected codex folder's `timeline.md` latest entries —
+   human-maintained and read-only, never written to by this or any
+   skill. Let
    the world's current era (what year of the Old Oak this is, what its
    most recent entry says just happened) ground this character's
    Motivation, Flaw, or Bond the same way Legacy and the Codex do above.
@@ -81,18 +84,26 @@ documents.
    it in play": Name, Description, Location, History, and Voice (per
    "Voice — staying in character") to the Codex's `characters/`
    subfolder, following the structure of the existing character files.
-9. Add a full entry to `Game/Story/oath-characters.md`: Name, Pronouns,
-   Role, Colour, Location, Physical description, Personality
-   description, Bonds, and any Acquaintances from step 7. Read the file
-   fresh immediately before appending, per the append-only convention.
-10. Update `Game/Mechanics/oath-player-state.md` with this seat's
+9. Personify this seat's own new character in the Codex too, same
+   `characters/` subfolder as step 8 but the player-character structure
+   already used there for previous Truthwatchers, Exiles, and Citizens
+   (Marren Wick, Iona Ashe, Rowan Voss, Sorrel Wick): Description,
+   History, Location, and Status (`Active`) — no Voice field, that's
+   adviser-only. Draw the Description and History straight from the
+   background, Motivation, Flaw, and Bond already decided in steps 5-6;
+   don't invent new detail here, just carry it over into Codex prose.
+10. Add a full entry to `Game/Story/oath-characters.md`: Name, Pronouns,
+    Role, Colour, Location, Physical description, Personality
+    description, Bonds, and any Acquaintances from step 7. Read the file
+    fresh immediately before appending, per the append-only convention.
+11. Update `Game/Mechanics/oath-player-state.md` with this seat's
     Location, Region, and Name, and a new Adviser row for the starting
     adviser — the same Name as step 8, plus Source card, Ability,
     Ability cost, and Status active. If this starting adviser was listed
     under a site's own Denizens in Board state's Map, remove it from
     there too — see `Oath-Cascade-Map.md`. Read each file fresh
     immediately before appending, per the append-only convention.
-11. Before printing, run the Required tier of Bot-Rules' pre-flight
+12. Before printing, run the Required tier of Bot-Rules' pre-flight
     check against this seat's own new row: Location, Region, Name set,
     and the new Adviser row has a Status.
 

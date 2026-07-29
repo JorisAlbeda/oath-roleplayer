@@ -34,8 +34,8 @@ seat-specific.
    site's own Denizens (Name, Suit, Ability cost, Ability).
 4. Create `Game/Mechanics/oath-player-state.md`: one Player row per
    colour with Role, Controlled-by, and Number of Supplies (7 for
-   everyone) filled in, and Number of Secrets 0, Number of Favors 0,
-   Banners none, and Revealed Vision none for everyone — explicit
+   everyone) filled in, and Number of Secrets 1, Number of Favors 2 for the Chanellor, 1 for everyone else,
+   Banners as per the setup conditions, and Revealed Vision none for everyone — explicit
    zeroes/none, not left blank, so the Required pre-flight check has an
    actual value to find. Name stays blank for AI seats until their own
    Setup decides it; fill it in now for the Human seat if known.
