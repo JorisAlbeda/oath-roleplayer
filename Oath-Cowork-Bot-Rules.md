@@ -592,18 +592,6 @@ company or garrison and its leader is current state, not history, and
 stays; a parenthetical citing where else to find it (a `(Codex)` note, a
 locations-entry cross-reference) is clutter and doesn't.
 
-## Site naming in prose
-
-In Diary, Codex, and Chronicle prose only, Plains and Keep are given
-their fuller, more ceremonial names — "the Openhold Plains" and
-"Openhold Keep" — rather than the bare printed card names. This is a
-narrative-flavor choice, not a rename: Board state, Player state, and
-Logic log keep using the plain "Plains" and "Keep" throughout, since
-those documents track the printed card names exactly and shouldn't
-drift from them. When editing "Keep" specifically, check it isn't the
-common verb ("keep the ledger," "keep it going") before applying the
-fuller name — only the site/denizen sense gets it.
-
 ## Bookkeeping discipline
 
 Legal Player Instructions are a hard floor regardless of how integrated
