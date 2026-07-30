@@ -118,7 +118,7 @@ guess from the name.
 
 ## Diary — structure
 
-Every Play-turn call appends one diary entry. These entries are written in-character, following "Roleplayer — Guidelines" above.
+Every Play-turn call appends one diary entry. These entries are written in-character and in first person ("I," not the character's name or "she"/"he"/"they") — a diary is this character's own hand, not narration about them — following "Roleplayer — Guidelines" above.
 One turn is a month. Describe in 4-6 sentences how your character experienced that month.
 
 Make sure it includes the following:
@@ -581,6 +581,28 @@ Neither skill should let this list influence the strategy or the turn's
 own decision — if it starts to, that's a sign a thread has drifted out
 of "flavor" territory and either belongs in the Codex as a real Event,
 or should be dropped.
+
+## Board state and Player state stay clean
+
+Both documents show only the current state — a number, a name, a Status.
+Never annotate a value with how it got there ("refreshed at Rest,"
+"returned from X," "freshly Mustered") — that reasoning belongs in Logic
+log, which exists precisely to hold it. A name for a personified warband
+company or garrison and its leader is current state, not history, and
+stays; a parenthetical citing where else to find it (a `(Codex)` note, a
+locations-entry cross-reference) is clutter and doesn't.
+
+## Site naming in prose
+
+In Diary, Codex, and Chronicle prose only, Plains and Keep are given
+their fuller, more ceremonial names — "the Openhold Plains" and
+"Openhold Keep" — rather than the bare printed card names. This is a
+narrative-flavor choice, not a rename: Board state, Player state, and
+Logic log keep using the plain "Plains" and "Keep" throughout, since
+those documents track the printed card names exactly and shouldn't
+drift from them. When editing "Keep" specifically, check it isn't the
+common verb ("keep the ledger," "keep it going") before applying the
+fuller name — only the site/denizen sense gets it.
 
 ## Bookkeeping discipline
 
