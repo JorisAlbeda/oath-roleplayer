@@ -28,10 +28,43 @@ seat-specific.
    board is ever photographed, so get it right now. One entry per
    Region, one sub-entry per Site within it: Name, Ability, Ruled by
    (Empire / Bandits / an Exile's name — unclaimed sites are ruled by
-   Bandits, never "none"), Number of warbands, Relic cost, Content (if
-   any), Number of defence dice, Relics (Name and Description if
-   already peeked at in the photograph, otherwise "unknown"), and that
-   site's own Denizens (Name, Suit, Ability cost, Ability).
+   Bandits, never "none"; a freshly-dealt Site is unclaimed by
+   definition), Number of warbands (a Bandit-ruled Site carries 1
+   warband by default unless the photo clearly shows otherwise), Relic
+   cost, Content (if any), Number of defence dice, Relics (Name and
+   Description if already peeked at in the photograph, otherwise
+   "unknown"), and that site's own Denizens (Name, Suit, Ability cost,
+   Ability). Board state records only these current values — no
+   rationale or history for how a value got there; that belongs in the
+   Logic log.
+
+   Filling in a Site's Ability, Number of defence dice, Denizen
+   capacity, or Relic cost needs two different sources, not one: read
+   `oath_rules.txt` section 2.8 for which of the card's four corners
+   each field comes from, then read `Oath_Reference.pdf` page 2 (the
+   actual Site Reference aid sheet) for what that corner's icon means —
+   2.8 says where to look, the aid sheet says what's there. A Site's own
+   Power (bottom-left corner) is never printed as card text at all, so
+   the aid sheet lookup for it isn't optional; "not legible in the
+   photo" is never the right conclusion for a Site's Power. Note that
+   `Oath_Reference.pdf` is image-only — open and read it as an image,
+   not a text search.
+
+   A card with no ordinary suit crest, showing crossed-out restriction
+   icons instead (a Ruin), is still a real Denizen belonging to whatever
+   Site it sits at — record it in that Site's own Denizens list, not as
+   a Vision or a stray reference card.
+
+   Count each Region's own undiscovered Sites too, not just the faceup
+   one(s): a facedown Site shows in the photograph as a plain green card
+   with a white border and a blue compass. Add one `**Unknown site**`
+   entry per such card — don't assume the one identified Site is the
+   Region's only one.
+
+   Each Region's own header shows a flat Search Discard Pile cost (2
+   Supply, per rule 5.1.1) — this is distinct from Board state's own
+   top-level World Deck Search cost, which instead scales with Visions
+   Drawn (2.1.6). Don't conflate the two.
 4. Create `Game/Mechanics/oath-player-state.md`: one Player row per
    colour with Role, Controlled-by, and Number of Supplies (7 for
    everyone) filled in, and Number of Secrets 1, Number of Favors 2 for the Chanellor, 1 for everyone else,
