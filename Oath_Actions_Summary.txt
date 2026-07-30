@@ -1,10 +1,10 @@
 During your turn, you may take as many actions as you like, provided you have enough Supply.
  
 Six major actions: 
-Travel (Cost: 1-4 Supply): Move your pawn to any site on the board. If the site is face-down, you flip it over to reveal it.
-Search (Cost: 2-4 Supply): Draw cards from the world deck or discard pile to discover new abilities, advisors, or win conditions, and play them to your site or board.
-Muster (Cost: 1 Supply): Recruit armies and place warbands on an empty card at your site.
-Trade (Cost: 1 Supply): Spend Favor or Secrets to acquire the opposite resource, boosting your income based on matching suit advisors.
+Travel (Cost: 1-4 Supply): Move your pawn to any site on the board. If the site is face-down (unknown), you flip it over to reveal it.
+Search (Cost: 2-4 Supply): Draw cards from the world deck or discard pile to discover new denizens, advisers, or win conditions, and play them to your site or board (facedown or faceup).
+Muster (Cost: 1 Supply): Spend 1 favor on a denizen at your site to place 2 warbands on your board.
+Trade (Cost: 1 Supply): Spend Favor or Secrets on a denizen at your site to acquire the opposite resource, boosting your income based on matching suit advisors.
 Recover (Cost: 1 Supply): Take control of a Relic at your site, the People's Favor banner, or the Darkest Secret by paying its cost.
 Campaign (Cost: 2 Supply): Wage war on enemies at your site to seize their territory, relics, or banners, while potentially banishing their pawn and favor.
  
