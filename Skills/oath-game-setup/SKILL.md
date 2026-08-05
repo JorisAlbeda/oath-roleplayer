@@ -65,10 +65,11 @@ seat-specific.
    Supply, per rule 5.1.1) — this is distinct from Board state's own
    top-level World Deck Search cost, which instead scales with Visions
    Drawn (2.1.6). Don't conflate the two.
+
 4. Create `Game/Mechanics/oath-player-state.md`: one Player row per
    colour with Role, Controlled-by, and Number of Supplies (7 for
-   everyone) filled in, and Number of Secrets 1, Number of Favors 2 for the Chanellor, 1 for everyone else,
-   Banners as per the setup conditions, and Revealed Vision none for everyone — explicit
+   everyone) filled in, and Number of Secrets 1, Number of Favors 2 for the Chancellor, 1 for everyone else,
+   Banners as per the setup conditions, The Grand Scepter for the Chancellor and Revealed Vision none for all Exiles.
    zeroes/none, not left blank, so the Required pre-flight check has an
    actual value to find. Name stays blank for AI seats until their own
    Setup decides it; fill it in now for the Human seat if known.
@@ -77,7 +78,7 @@ seat-specific.
    — the Chronicle starts with an empty `## Live threads` header at the
    top (per Bot-Rules, "Live threads — narrative-only tension tracking"),
    nothing under it yet.
-6. For each AI-controlled seat, create an empty
+6. For each seat, create an empty
    `Game/Story/Diaries/oath-diary-<seat>.md`, and
    `Game/Story/Messengers/oath-messengers-<seat>.md`.
 7. For each AI-controlled seat, write

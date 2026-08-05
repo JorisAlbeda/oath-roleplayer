@@ -26,7 +26,7 @@ another seat's private documents or strategy file.
 
 ## Steps
 
-1. Read Board state and Player state, fresh.
+1. Read Board state, Logic log, and Player state, fresh.
 2. Check this seat's own `Game/Mechanics/strategy-<colour>.md`, if it
    exists, and weigh its existing observations and strategy against the
    current board — is it still viable, or has something changed that
