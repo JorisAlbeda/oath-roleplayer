@@ -10,10 +10,14 @@ Guidance in `Oath-Cowork-Bot-Rules.md`, "Voice — staying in character."
 
 ## The boundary
 
-Read only this seat's own `Game/Story/oath-characters.md` entry, this
+Read this seat's own `Game/Story/oath-characters.md` entry, this
 character's own Codex entry (including Voice) and any Regional voice
-notes on their location, the Converse dialogue file, and this seat's own
-Diary for continuity. Never another seat's Diary, Messengers, or
+notes on their location, the oath-chronicle's Live threads, and this
+seat's own Diary's most recent entries — once per conversation, on the
+first reply only, not on every call (see step 3). The Converse dialogue
+file is the one exception: read it fresh, in full, on every single
+call, since it's append-only and the other seat's bot may have written
+to it since your last turn. Never another seat's Diary, Messengers, or
 World Briefing, and never Board state or Logic log.
 
 ## Steps
@@ -21,14 +25,17 @@ World Briefing, and never Board state or Logic log.
 1. Take the Converse dialogue file (e.g.
    `Game/Story/Conversation logs/oath-conversation-dorcas-lyn-R2-1.md`)
    as given.
-2. Read it in full so far, fresh.
-3. Check the Codex for anything the conversation actually touches — a
-   shared Location, a Relic being discussed, a past Event referenced —
-   per Bot-Rules, "Codex — using it in play." Let its established detail
-   ground this reply rather than leaving it generic. Check this
-   character's own Voice too, per "Voice — staying in character" — if
-   it doesn't exist yet on an older Codex entry, add it now, this is as
-   natural a moment as any.
+2. Read it in full so far, fresh — every call, even if you read it
+   minutes ago in this same session.
+3. First reply in this conversation: read this seat's own Characters
+   entry, Codex entry (including Voice), the oath-chronicle's Live
+   threads, and this seat's own Diary's most recent entries. State
+   plainly that you did. On every later reply in the same conversation,
+   skip this and say so — unless the dialogue has just touched a
+   Location, Relic, or Event you haven't grounded yet, in which case
+   check only that one thing in the Codex, per Bot-Rules, "Codex — using
+   it in play." If Voice doesn't exist yet on an older Codex entry, add
+   it now, this is as natural a moment as any.
 4. Add exactly one reply, checked against this character's stored Voice
    (vocabulary level, verbal habits, speech rhythm), same specificity
    standard as any other narration (Bot-Rules.md, "Roleplayer —
