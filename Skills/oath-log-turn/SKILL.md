@@ -76,10 +76,16 @@ change).
    actions taken. Read the file fresh immediately before appending.
 9. Add a narrated beat to `Game/Story/oath-chronicle.md`, grounded in
    the human's own description, same specificity standard as any other
-   Chronicle entry — if the human's turn played a Vision faceup, this
-   beat earns the fuller, dedicated-paragraph treatment per Bot-Rules,
-   "Diary — structure," since the Human seat has no Diary of its own to
-   carry it instead. Read the file fresh immediately before appending.
+   Chronicle entry. Check the draft against Bot-Rules "Roleplayer —
+   Guidelines" own rhetorical-device budget before writing it — at most
+   one reversal, comparison, or negation-stacked beat, most turns at
+   zero — the same check `oath-end-turn` runs on its own narration; this
+   seat has no stored Voice file to check vocabulary against, but the
+   device budget still applies to it. If the human's turn played a
+   Vision faceup, this beat earns the fuller, dedicated-paragraph
+   treatment per Bot-Rules, "Diary — structure," since the Human seat has
+   no Diary of its own to carry it instead. Read the file fresh
+   immediately before appending.
 10. If this seat's own Role genuinely changed this turn (Usurper flip,
     Citizenship offered or accepted, a Citizen exiled back out), or the
     human's turn played a Vision faceup, append a short note to

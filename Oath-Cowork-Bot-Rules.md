@@ -478,7 +478,9 @@ one you spend for wherever the emotional weight actually is — the
 climax, not the opener — and don't force one in if the turn doesn't
 have a moment that earns it. Professional metaphors (see above) share
 this same budget rather than sitting outside it just because they're
-grammatically anchored correctly.
+grammatically anchored correctly. Multiple negations inside a single
+beat ("not with a name, not with a denial") still count as one spend,
+not one per negation — the budget is per beat, not per instance.
 
 **Silence and omission are a real answer, not a shortfall.** Before
 writing a character's line, name plainly what their role, habit, or

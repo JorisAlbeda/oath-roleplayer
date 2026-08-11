@@ -41,7 +41,10 @@ state mechanical game state from them.
 4. Keep it under 200 words, written as something a future character
    would actually possess or have heard, not a plot summary. Follow the
    specificity standard in `Oath-Cowork-Bot-Rules.md`, "Roleplayer —
-   Guidelines," as always.
+   Guidelines," as always — including its rhetorical-device budget,
+   which matters more here than almost anywhere else: at 200 words with
+   no scene around it to dilute one, an overspent device is the whole
+   piece's texture, not one beat among many.
 5. `Game/Story/Legacy/legacy-<colour>.md` holds only this colour's most
    recent legacy, not a running family history. If the file already
    exists from an earlier game, read it fresh immediately before

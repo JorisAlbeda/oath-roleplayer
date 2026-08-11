@@ -34,11 +34,15 @@ Messengers, or World Briefing.
    mechanical vocabulary — Supply, Secret, Favor, a card's own printed
    name, "traded," "played," "revealed" — and rewrite that sentence in the
    character's own in-world terms.
-4. Voice check, right after: does the draft actually match this
-   character's stored Voice (vocabulary level, verbal habits), or has it
-   drifted toward generic prose per Bot-Rules, "Voice — staying in
-   character"? Fix any line that doesn't sound like this character
-   specifically.
+4. Voice and device check, right after: does the draft actually match
+   this character's stored Voice (vocabulary level, verbal habits), or
+   has it drifted toward generic prose, per Bot-Rules, "Voice — staying
+   in character"? And separately, does it stay inside "Roleplayer —
+   Guidelines" own rhetorical-device budget — at most one reversal,
+   comparison, or negation-stacked beat per character's turn, most turns
+   at zero? Fix any line that doesn't sound like this character
+   specifically, and cut back any turn that's spent more than its one
+   device.
 5. Gate: don't move on to writing Player state, Board state, Logic log,
    Diary, Chronicle, or any Codex prose (step 7 below) until steps 3 and
    4 both pass clean. This step exists because the mechanical-vocabulary

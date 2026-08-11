@@ -21,10 +21,14 @@ another seat's Messengers/World Briefing.
 
 1. Take the Converse dialogue file as given. Add a closing line if the
    last line didn't already end it — checked against that character's
-   own Voice, same as any other line — appended after it, never inserted
-   earlier in the file. Same specificity standard as any other line.
+   own Voice and against Bot-Rules' rhetorical-device budget, same as
+   any other line — appended after it, never inserted earlier in the
+   file. A closing line is exactly where devices get overspent, since
+   it's carrying the whole scene's weight; the budget still caps it at
+   one. Same specificity standard as any other line.
 2. Summarize the outcome in **both** participants' own Diaries —
-   not just whoever initiated. Link to the Converse dialogue file itself
+   not just whoever initiated — following the same device-budget check
+   as any other Diary entry. Link to the Converse dialogue file itself
    rather than repeating it in full. Append each summary at the very end
    of its own file, reading it fresh immediately beforehand.
 3. Only if the conversation happened somewhere another character could
