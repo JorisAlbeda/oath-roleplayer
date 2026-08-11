@@ -12,7 +12,7 @@ Guidance in `Oath-Cowork-Bot-Rules.md`, "Voice — staying in character."
 
 Read this seat's own `Game/Story/oath-characters.md` entry, this
 character's own Codex entry (including Voice) and any Regional voice
-notes on their location, the oath-chronicle's Live threads, and this
+notes on their location, the oath-chronicle in full, and this
 seat's own Diary's most recent entries — once per conversation, on the
 first reply only, not on every call (see step 3). The Converse dialogue
 file is the one exception: read it fresh, in full, on every single
@@ -28,8 +28,8 @@ World Briefing, and never Board state or Logic log.
 2. Read it in full so far, fresh — every call, even if you read it
    minutes ago in this same session.
 3. First reply in this conversation: read this seat's own Characters
-   entry, Codex entry (including Voice), the oath-chronicle's Live
-   threads, and this seat's own Diary's most recent entries. State
+   entry, Codex entry (including Voice), the oath-chronicle in full,
+   and this seat's own Diary. State
    plainly that you did. On every later reply in the same conversation,
    skip this and say so — unless the dialogue has just touched a
    Location, Relic, or Event you haven't grounded yet, in which case
@@ -40,7 +40,7 @@ World Briefing, and never Board state or Logic log.
    (vocabulary level, verbal habits, speech rhythm), same specificity
    standard as any other narration (Bot-Rules.md, "Roleplayer —
    Guidelines"). This is one line in an ongoing back-and-forth, not a
-   full scene. Append it as the next line at the very end of the file.
+   full scene. Append it as the next line at the very end of the file, then print it in the response to the user so they can follow along.
 5. Optionally end it here if this character has nothing more to say —
    say so plainly rather than padding out a reply.
 
