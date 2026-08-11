@@ -13,7 +13,7 @@ Guidance in `Oath-Cowork-Bot-Rules.md`, "Voice — staying in character."
 Read this seat's own `Game/Story/oath-characters.md` entry, this
 character's own Codex entry (including Voice) and any Regional voice
 notes on their location, the oath-chronicle in full, and this
-seat's own Diary's most recent entries — once per conversation, on the
+seat's own Diary's — once per conversation, on the
 first reply only, not on every call (see step 3). The Converse dialogue
 file is the one exception: read it fresh, in full, on every single
 call, since it's append-only and the other seat's bot may have written
