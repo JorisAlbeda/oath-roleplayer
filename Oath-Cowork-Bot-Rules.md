@@ -447,27 +447,124 @@ stopping for good.
 
 ## Roleplayer — Guidelines
 
-Specificity, not mood labels. One concrete, named detail — an object, a
-gesture, a name, a place — is the floor for any narrated beat, regardless
-of length. "She seemed anxious" describes a mood; "she kept turning the
-signet ring her mother left her" shows one. Reveal a trait through
-action or contrast, not adjective. This isn't a call for more words —
-often the specific version is shorter than the vague one. It applies to
-every piece of narration this bot produces: turn narration, Converse
-lines, Chronicle beats, and Messenger notes alike.
+**Specificity means a physical thing, not a clever abstraction.** One
+concrete, named detail — an object, a gesture, a name, a place — is the
+floor for any narrated beat, regardless of length. "She seemed anxious"
+describes a mood; "she kept turning the signet ring her mother left
+her" shows one. That's the target. It is not the same thing as reaching
+for a professional metaphor and then letting the metaphor's own object
+act on its own — "the ledger wouldn't close," "the page never once
+asked me to feel comfortable" — which sounds specific but isn't:
+nothing in the world is actually a ledger closing or a page asking.
+Keep the professional metaphor, people do think in the tools of their
+own work, but keep the character as the subject: [character] +
+[perceives / measures / reads / reaches for] + [object], never [object]
++ [verb]. "She read fourteen honest seasons off that ledger and still
+couldn't square it with what he'd just told her" — not "the ledger
+wouldn't close." Reveal a trait through action or contrast, not
+adjective. This applies to every piece of narration this bot produces:
+turn narration, Converse lines, Chronicle beats, and Messenger notes
+alike.
 
-In-world, not in-game. Narration describes what a character in this
+**Rhetorical devices are spent, not banned — and they're spent
+rarely.** A reversal ("that's not X, that's Y"), a comparison ("the way
+she'd..."), a beat built entirely from what a character *doesn't* do —
+none of these are wrong. They're wrong at the density this kind of
+narration tends to default to: one or more per line, from every
+character, until they stop signaling anything and just read as house
+style. Budget: at most one of these constructions per character's turn,
+at most two across a whole scene. Most turns should have zero. Save the
+one you spend for wherever the emotional weight actually is — the
+climax, not the opener — and don't force one in if the turn doesn't
+have a moment that earns it. Professional metaphors (see above) share
+this same budget rather than sitting outside it just because they're
+grammatically anchored correctly.
+
+**Silence and omission are a real answer, not a shortfall.** Before
+writing a character's line, name plainly what their role, habit, or
+history obligates them to say or do right now. Then decide, honestly,
+whether they can actually manage it. If the honest answer is no, let
+the gap show — a pause, a truncated line, a single word — rather than
+narrating the gap ("she couldn't find the words"). The gap only reads
+if the obligation was established first: silence means nothing on its
+own, it means something specific once the reader already knows what
+should have come instead.
+
+**Every line needs a tactic, not just a fact.** Before finalizing a
+line of dialogue, work out, silently, what this character wants from
+this exchange, what their tactic is this beat, and what they do if that
+tactic fails. A line whose only job is conveying true, relevant
+information — even if that information matters — should be re-cast as
+an attack, a deflection, an extraction, a dare, or a closing move, not
+delivered as a report. Characters don't have to answer the question
+they were actually asked; deflection and tangent are legitimate
+tactics, not a failure to communicate. Exposition still has to land
+somewhere, and it's fine for one character in a group scene to carry
+more of it than others, but assign it deliberately rather than
+defaulting into it by omission.
+
+**Composure isn't automatic, especially once the tactic above runs
+out.** The default failure mode is a character staying rhetorically
+self-possessed and self-diagnosing all the way through, even at the
+exact beat where their own tactic has just failed. Real people get
+defensive, interrupt, overreach, or repeat themselves at that specific
+moment far more often than they calmly concede and analyze what it
+means. When a character's tactic genuinely fails mid-scene, let their
+control crack there — even where it costs some strict adherence to
+their stated Voice. A controlled character's control failing under real
+pressure isn't a contradiction of who they are; it can be the truest
+thing they do all scene.
+
+**Action beats are prose, not a bracketed aside.** Write what a
+character does while speaking as an ordinary narrative sentence folded
+into the paragraph — not as a parenthetical tag hung off the dialogue.
+"The price went up." She set her cup down without looking at it.
+"Supply from the north dried up two weeks ago" — not "*(sets cup down,
+doesn't look at it)* The price went up." Existing Converse logs that
+use the bracketed convention don't need to be rewritten, but new
+material should use prose.
+
+**Plainness has a floor too.** Cutting the ornateness above doesn't
+mean writing telegraphic fragments. "No entry. Restricted." isn't what
+a curt person actually says; a curt person says "Road's closed past the
+bridge. Military business. Turn around or I'll have to make you turn
+around, and neither of us wants that" — still short, still guarded, but
+a full thought a person would actually say out loud. Blunt is not the
+same as clipped to a noun phrase.
+
+**Register matches Oath's own genre, not a default toward wonder.**
+This is a grounded political-war drama, not high fantasy — closer to
+sparse, precise prose with short sentences in tense moments and minimal
+metaphor than to a lush or wondering register. When emotion needs to
+show up in the prose itself, rather than only in what a character
+doesn't do, let it bend sentence rhythm and sensory focus directly
+(fury narrows to a few short, percussive sentences; grief lingers on a
+detail a beat too long) rather than naming the emotion or stacking
+another negation.
+
+**A scene's own supporting cast gets a single writer and a real
+want.** When narrating background companions or NPCs who aren't a
+separate seat — the way a companion travels with one character, or a
+handful of soldiers sit at another's table — write their reactions and
+lines directly in the same pass as the main beat, rather than reducing
+them to silent scenery. Give each one actively present in a scene at
+least a one-line want of their own, the same as any named social
+contact would get. A scene with several active voices, each pulling a
+different direction, reads more alive than one voice carrying the whole
+room.
+
+**In-world, not in-game.** Narration describes what a character in this
 world experiences, never the mechanics of playing them. "Pawn" is a
 game piece — write the character's name. A card being "drawn,"
 "played," or "revealed" is a mechanic — write what its arrival
 actually looks like to the character (someone they met while searching the area, a
 name overheard, a door opening).
 
-Build on the world. Expand the world this character actually lives in —
+**Build on the world.** Expand the world this character actually lives in —
 what it's like at their current site, a favorite spot, a habit tied to a
 place — rather than only ever narrating the mechanical action itself.
 
-Use what the game gives you. Cards, locations, and actions are sources
+**Use what the game gives you.** Cards, locations, and actions are sources
 of inspiration, not just mechanical inputs, a
 site's own character, an action's flavor are all material to draw the
 scene from, not obstacles to narrate around. See "Codex — using it in
@@ -489,6 +586,16 @@ Reveals it: `oath-play-turn` step 10, `oath-log-turn` step 4, or
 voice genuinely shifts as a deliberate story beat, the same discipline
 as History.
 
+**Voice sets the dial, not a license.** A character's Voice describes
+their own baseline — how educated, how guarded, how quick to speak. It
+never overrides "Roleplayer — Guidelines" own rhetorical-device budget
+or its plainness floor. A measured, scholarly character still gets at
+most one reversal or comparison per turn, at most two per scene, same
+as anyone else; a clipped character still speaks in full thoughts a
+person would actually say, not fragments. Voice shapes which words a
+character reaches for, not how often this bot reaches for a rhetorical
+device regardless of who's speaking.
+
 **Why it exists.** Nothing currently stops this character's Diary
 entries, Converse lines, and Chronicle beats from drifting apart session
 to session, or bot to bot, since nothing but memory anchors how they
@@ -501,13 +608,14 @@ Voice first, the same way "Codex — using it in play" already asks for a
 Location or Relic. Let vocabulary level and verbal habits actually show
 up, not just emotional default.
 
-**Voice check, alongside the language check.** `oath-end-turn`'s
-existing language check catches mechanical vocabulary leaking into
-narration. Run a second, equally concrete check right after it: does
-this line match the stored Voice, or has it quietly drifted toward
-generic prose? Both checks gate the same moment — don't move on to
-writing Player state, Logic log, Diary, or Chronicle until both pass
-clean.
+**Voice check, alongside the language and device checks.**
+`oath-end-turn`'s existing language check catches mechanical vocabulary
+leaking into narration. Run two more, equally concrete, right after it:
+does this line match the stored Voice, or has it quietly drifted toward
+generic prose — and does this turn stay inside "Roleplayer —
+Guidelines" own rhetorical-device budget? All three checks gate the
+same moment — don't move on to writing Player state, Logic log, Diary,
+or Chronicle until they pass clean.
 
 **Regional voice, as a lighter shared layer.** The first time a scene
 actually happens somewhere with no established texture yet, its Codex
