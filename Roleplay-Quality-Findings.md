@@ -1,6 +1,6 @@
 # Oath Roleplaying Quality — Findings & Plan
 
-_Working document. Last updated after Step 5 — the investigation is complete and the rewrite has been applied to `Oath-Cowork-Bot-Rules.md`._
+_Working document. Step 5's device-budget rewrite is applied to `Oath-Cowork-Bot-Rules.md` and validated. Step 6 (turn length / pacing) added a drafted revision to `oath-continue-conversation` that is NOT yet applied or validated — see Step 6 below, including its own test plan, before treating this investigation as closed._
 
 ## 1. Mission
 
@@ -15,6 +15,8 @@ The goal of this investigation is to diagnose the actual pattern — not from fi
 3. **Collect and analyze a human rewrite** of the Teagan–Wynn scene from this game, to see concretely what a human writer does differently from the bots, line by line.
 4. **Get the Worldbuilding Roleplay library skills** for Claude Cowork — a separate skill library Joris says produces strong roleplaying, and which some ideas were already folded into the current Oath skills — for comparison.
 5. **Synthesize** all of the above into a diagnosis and a concrete rewrite of the relevant guidance, tested against the swipe file rather than shipped on a first draft.
+
+A sixth step was added after the fact, once turn length surfaced as a separate axis from device density during post-Step-5 discussion — see Step 6, below the original Conclusion.
 
 ## 3. Findings by step
 
@@ -85,7 +87,7 @@ All 13 conclusion points folded into a rewrite of `Oath-Cowork-Bot-Rules.md`'s "
 **Quantitative validation.** Drafted several short blind test beats applying only the new rules, then tallied devices per turn by hand:
 - *"Perrine found the shortfall on the second read, not the first — four sacks unaccounted, the same four Cobb Ferrer had sworn to weighing twice. She didn't call for him. She wrote the number down instead, plain, and went to go weigh it herself."* — a borderline call, not a clean one: "didn't call for him... instead" is a real negation clause. It's defensible as 0 under the rule's "built *entirely* from what a character doesn't do" wording, since the beat resolves into a real positive action right after, but it's close enough that a stricter reader could count it as 1. Either way it's inside budget.
 - *"'Same story you told me at the tower gate.' Teagan didn't sit. 'You said the coin was clean then too.'"* — 0 devices, plain accusation, clear tactic (testing consistency).
-- *"He didn't answer that. Not with a name, not with a denial — just turned the cup a half turn on the wood and let her watch him do it."* — 1 device (a negation-stack), spent deliberately at the one evasive beat, inside budget.
+- *"He didn't answer that. Not with a name, not with a denial — just turned the cup a half turn on the wood and let her watch him do it."* — 1 device (a negation-stack), spent deliberately at the one evasive beat, inside budget. (The counting-granularity question this raised — do stacked negations in one beat count once or per instance — was resolved directly in `Oath-Cowork-Bot-Rules.md`, "Rhetorical devices are spent, not banned": one spend per beat, not per negation.)
 
 Most blind turns landed at zero or one device, none over the cap — the budget reads as a ceiling that's easy to stay under by default, not a quota that gets filled out of habit, which was the actual risk with vaguer past guidance.
 
@@ -122,3 +124,72 @@ Step 5's validation checked the rewrite's internal consistency: does the new rul
 2. **Generalization test on a scene this investigation never touched.** Pick a character pair and a moment nothing in Steps 1–5 looked at, so nothing here could have been overfit to it — a real risk, since the rules were tuned directly against specimens pulled from the Teagan–Wynn material (Wynn's concession line, the Yarrow coda, Ren's codex line). Run it under the new rules and check it independently for the same four patterns. Holding up here is stronger evidence of a general fix than a second pass at the scene the rules were built from.
 
 3. **Blind judging test — a blind-spot check, not a Turing test.** Give an independent bot, with no context on this investigation, a passage written under the new rules and ask what, if anything, reads as synthetic about it — no checklist, no device-budget framing. The goal isn't fooling the judge into thinking it's human; it's checking whether the four diagnosed patterns (personified abstractions, backloaded reversal, simile-crutch, negation-stacked beats) are the whole explanation for why bot writing doesn't sound human, or just the most nameable symptoms found in the specimens gathered so far. If the judge names something already covered by those four, that's confirmation. If it names something new, that's a fifth pattern to go add — the same failure mode the "one concrete detail" patch fell into is exactly what this test exists to catch early, before it becomes another checklist satisfied by rote without fixing the underlying problem.
+
+## Step 6 — Turn length vs. the skill's own boundary
+
+Splitting `R8-2` (Joris's human rewrite) into turns by who'd actually own each beat — Teagan+Mireille on one side, Wynn+Yarrow+Corin+Dagny on the other — to see what real per-bot alternation would look like surfaced something Steps 1–5 never measured: turn length itself, as distinct from device density.
+
+- **The rewrite hands off far more often than the bot draft did.** Split by ownership, `R8-2` changes hands roughly 24 times across the scene. `oath-conversation-teagan-wynn-R8-1.md`, the bot-written draft of the same scene, hands off about 9 times. Some of the gap is single-word volleys the rewrite lets stand on their own — "Would you ever use that fire again?" / "Yes." / "You'd burn a company down again?" / "If I had to." is four handoffs in six lines — where a bot turn folds the whole exchange into one block instead.
+- **No ownership problem in the split.** The one beat that looked like it might cross a seat boundary — Teagan exits, Corin catches Wynn's arm — splits cleanly at the sentence boundary once a printed paragraph stops being treated as one indivisible unit: "Teagan considers him with a look of pity, then shakes her head and walks off, Mireille trailing behind her" is Teagan/Mireille's sentence in full; "He tries to walk after her, but Corin catches his arm. He watches her leave for a while, then shakes off the arm and sits down" is Wynn/Corin's, referencing Teagan's position without narrating anything she does. The scene was never actually unsplittable — it just wasn't split.
+- **`oath-continue-conversation` already states the boundary the bot draft violates.** Step 4: "This is one line in an ongoing back-and-forth, not a full scene." Step 5: "Optionally end it here... say so plainly rather than padding out a reply." `R8-1`'s turns run 68–251 words each — several sentences of dialogue plus stage direction, every time. That's not "one line" under any reading of the skill's own instruction. Step 5's validation checked the new device-budget rules against the swipe file; nothing checked turn length against this pre-existing rule, even though the evidence it was being routinely violated was already sitting in the same corpus this whole investigation mined.
+
+**Hypothesis worth testing: turn length may be upstream of device density, not just a parallel problem.** A turn asked to carry several conversational beats at once — greeting, accusation, question, reveal — has more material to organize and more reason to reach for a reversal or a rhetorical shape to hold it together than a turn asked to land one beat and stop. If shorter turns need fewer devices to stay coherent by default, some of the device-density fix may already be sitting inside a rule that was written from the start and simply never enforced.
+
+**Suggested action, superseded below.** The idea of a flat sentence-or-word ceiling was the first pass at this. Checking a second library and re-examining `R8-2`'s own actual shape (below) replaced it with a tiered, corpus-derived design rather than a single number.
+
+### Where the World Roleplay library's Pacing guidance fits
+
+`world-roleplay/references/narration-style.md` has a dedicated Pacing section, built for a single continuous GM narrator rather than alternating bots, but with two pieces worth transplanting once adjusted for the difference:
+
+- **Match length to significance, not habit** — a tiered system (routine / mild-interest / significant / critical), rather than one flat rule, so length is a judgment call anchored to named bands instead of an unquantified feeling.
+- **Rhythm variation** — "don't let every response have the same shape... two long, dense scenes in a row need a short, brisk one after." Independently arrived at, and a direct answer to the compensatory dynamic Joris flagged (point 3 of the original feedback: a beat's right length depends partly on how much room the previous beat already spent).
+
+The access gap between a single-narrator system and Oath's alternating bots turned out to be smaller than expected: `oath-continue-conversation` Step 2 already requires reading the Converse file fresh, in full, on every call. A bot already has the last several turns in front of it every time it writes one — nothing currently asks it to use that information for pacing, only for factual consistency.
+
+Two things needed correcting before this became a rule, both caught by review rather than assumed correct on the strength of the source:
+
+1. **"Never two long turns in a row" is a binary rule, and this project has already learned that binary rules on this exact axis fail** (the same lesson "use sparingly" → the device budget already taught). Checked directly against `R8-2`: line 11 (Teagan's "you're going to tell me what you saw... all of it") and line 13 (Wynn's battle report) are adjacent and both substantial — one of the stronger stretches in the file, not a flaw in it. Lines 41 and 43 (the tirade and "I tried!") are the same pattern in the confrontation phase. The scene's actual shape isn't strict alternation, it's movements: a build-up (3–13, ending on the long exposition), a run of shorter probing exchanges (15–27), the volley (29–35), a confrontation phase where two weighty turns sit together again (37–43), then the coda (45–49). A strict pairwise rule would have flagged two of the file's best stretches as violations of the specimen it was supposedly modeled on.
+2. **The bands themselves are sized for the wrong unit.** "Significant scene: 3–6 paragraphs" describes a GM's narration of an entire scene in a solo session, not one line in a back-and-forth — importing it directly would contradict `oath-continue-conversation`'s own definition of a turn ("one line... not a full scene") and reintroduce padding at the exact tier meant to be rare.
+
+**Re-derived, against `R8-2` itself, for the actual unit ("one line, not a full scene"):**
+- **Minimal** — a single word or short clause ("If I had to.", "Glowing?"). Most turns in a tense exchange can land here.
+- **Weighted** — one to three sentences, at most one action beat folded in as prose (line 33, line 9, line 39). The default for a turn doing real work without carrying exposition or the scene's peak. Not scarce — can repeat turn after turn, as the build-up and confrontation phases both show.
+- **Carrying** — several sentences, tight prose; reserved for the one turn per side, per scene, that's genuinely carrying necessary exposition or landing the emotional peak (line 13, line 41). This is the only scarce band, and the only one a rhythm check should gate — a bot shouldn't reach for it twice in a row, but nothing stops Weighted turns from sitting next to each other.
+
+### Proposed revision — `oath-continue-conversation` Step 4 (draft, not yet applied)
+
+Not written into the live skill file. This is a draft, sized for review and for the A/B and cut-point tests already designed above before it ships — the same standard applied to the device-budget rewrite in Step 5, which was validated before, not after, being written into `Oath-Cowork-Bot-Rules.md`.
+
+> 4. Identify the single most recent conversational move this reply is actually answering — the specific question, challenge, or action the last line put on the table, not the exchange as a whole or what's likely to come next. Answer only that move.
+>
+> Then size the reply to one of three bands, judged by weight, not habit:
+> - **Minimal** — a single word or short clause, when the honest answer to the move above is that short (a concession, a flat yes/no, a name, an echo or reflex question — "Glowing?"). Most turns in a tense exchange should be able to land here.
+> - **Weighted** — one to three sentences, at most one action beat folded in as prose. The default for a turn doing real work — an accusation, a pointed question, a rebuttal — without carrying the scene's own exposition or its emotional peak. Not scarce: this band can repeat turn after turn without being a problem.
+> - **Carrying** — several sentences, tight prose, reserved for the one turn (at most one per side, per scene) that's genuinely carrying necessary exposition or landing the scene's own climax, per Bot-Rules "Every line needs a tactic, not just a fact" ("assign it deliberately... rather than defaulting into it by omission"). Name it as deliberate if asked; don't reach for it because the moment merely feels important.
+>
+> Before finalizing, glance back at the last two or three turns already in the file (already being read fresh per Step 2). If one of them already claimed the Carrying band, this turn shouldn't reach for it too — that band is scarce by design. Minimal and Weighted aren't scarce the same way and can sit next to each other or repeat freely; nothing about pacing requires strict alternation between short and long.
+>
+> Checked against this character's stored Voice (vocabulary level, verbal habits, speech rhythm), same specificity standard as any other narration (Bot-Rules.md, "Roleplayer — Guidelines"). Append it as the next line at the very end of the file, then print it in the response to the user so they can follow along.
+
+### Validating the pacing rule
+
+This is a creative task, not a scientific one — Joris's own choices in `R8-2` are one valid set of options, not the correct answer, so nothing here scores a bot's output against matching that specific line. What follows measures range and internal calibration instead.
+
+**Cut points.** Six, picked for variety of beat type rather than convenience, each defined as "feed the bot everything up through this point, formatted as an actual Converse file, and have it write the next turn":
+
+1. After line 11, before line 13 (Wynn) — the exposition case. Tests whether the Carrying band still lets a genuinely long turn through rather than defaulting everything short.
+2. After line 19, before line 21 (Wynn's side, companion turn) — tests companion-voice composition, not length; Dagny chiming in is optional, not correct or incorrect.
+3. After line 31, before line 33 (Teagan), and
+4. after line 33, before line 35 (Wynn) — the short volley, run as a consecutive pair to check whether a bot that lands one short turn compensates by padding the very next one.
+5. After line 39, before line 41 (Teagan) — the mirror of cut point 1: Teagan's one legitimately long turn, testing whether Carrying is recognized on her side too, not just Wynn's exposition.
+6. After line 43, before line 45 (both sides, split) — the cross-boundary beat (Teagan exits, Corin catches Wynn's arm): tests whether a bot given only one side's authority writes just its own half and stops.
+
+**Range, not match.** At each cut point, generate several samples per condition (current skill wording vs. the drafted Step 4 revision) and look at the spread of band choice and length across samples — not whether any individual output matches `R8-2`. The failure mode being tested for is a narrow, uniform band regardless of content (`R8-1`'s actual problem); success is real variation shaped by what the bot judges the beat to need.
+
+**Resampling a fixed prefix is not the same test as varying the prefix.** Resampling the same cut point repeatedly checks whether the model has a deterministic default it collapses to — useful, but it can't surface whether length is actually responding to context, since the prefix always encodes one fixed choice about how earlier turns went. To test the compensatory dynamic specifically (point 3: a beat can run longer "especially if point 1 was shorter"), vary the input itself — feed cut points 3/5 both the actual-length and an artificially shortened version of the point-1 exposition, and check whether the typical length downstream shifts in response.
+
+**A stated tactic matching its own output is a weak signal on its own.** If the scratch-step ("what's the tactic this beat") and the dialogue are generated in the same pass, the model can produce a plausible-sounding label for whatever it was going to write regardless — confabulation dressed as planning. The stronger test: does adding the scratch-step change the output distribution at all, compared to the same cut point without it. If the distributions don't differ, the scratch-step isn't doing real constraining work no matter how well the labels read.
+
+**Composition is its own tracked variable, separate from length.** At cut points 2 and 6 specifically, tally which companion voices appear per sample (Dagny present or absent, Corin's action included or not) independently of word count — a sample can vary correctly in length while never varying in who gets to speak, and the length metric alone won't catch that.
+
+**The climax question (originally point 5) needs a full run, not a cut point.** Whether escalation happens can't be pinned to a specific line — it could land two lines later than expected, which is fine. This needs a live, multi-turn generation from the same starting point, judged afterward for whether a real peak shows up anywhere in the run, not scored against a fixed position.
