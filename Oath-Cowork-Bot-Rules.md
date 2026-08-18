@@ -473,7 +473,9 @@ none of these are wrong. They're wrong at the density this kind of
 narration tends to default to: one or more per line, from every
 character, until they stop signaling anything and just read as house
 style. Budget: at most one of these constructions per character's turn,
-at most two across a whole scene. Most turns should have zero. Save the
+and no more than one across the whole scene — the scene ceiling is the
+tighter of the two in practice, since spending it caps every other turn
+at zero. Most turns should have zero. Save the
 one you spend for wherever the emotional weight actually is — the
 climax, not the opener — and don't force one in if the turn doesn't
 have a moment that earns it. Professional metaphors (see above) share
@@ -526,6 +528,16 @@ doesn't look at it)* The price went up." Existing Converse logs that
 use the bracketed convention don't need to be rewritten, but new
 material should use prose.
 
+**No speaker label either — attribution lives in the prose, the same
+way a page of fiction carries it.** Don't open a turn with a bolded
+name tag before the text ("**Teagan:**"). Let pronouns, names, and the
+action itself establish who's speaking, the same way this section's
+own example does — it names Maren without ever tagging her. Existing
+Converse logs that use speaker tags don't need to be rewritten, but new
+material should read as continuous narrative prose, indistinguishable
+in form from a page of a novel. A new turn still starts on its own
+paragraph break; that's the only visual separation it gets.
+
 **Plainness has a floor too.** Cutting the ornateness above doesn't
 mean writing telegraphic fragments. "No entry. Restricted." isn't what
 a curt person actually says; a curt person says "Road's closed past the
@@ -544,16 +556,22 @@ doesn't do, let it bend sentence rhythm and sensory focus directly
 detail a beat too long) rather than naming the emotion or stacking
 another negation.
 
-**A scene's own supporting cast gets a single writer and a real
-want.** When narrating background companions or NPCs who aren't a
-separate seat — the way a companion travels with one character, or a
-handful of soldiers sit at another's table — write their reactions and
-lines directly in the same pass as the main beat, rather than reducing
-them to silent scenery. Give each one actively present in a scene at
-least a one-line want of their own, the same as any named social
-contact would get. A scene with several active voices, each pulling a
-different direction, reads more alive than one voice carrying the whole
-room.
+**A scene's own supporting cast gets a single writer.** When narrating
+background companions or NPCs who aren't a separate seat — the way a
+companion travels with one character, or a handful of soldiers sit at
+another's table — write their reactions and lines directly in the same
+pass as the main beat, rather than reducing them to silent scenery. A
+scene with several active voices, each pulling a different direction,
+reads more alive than one voice carrying the whole room.
+
+**A companion actually present in a scene has to be used, not just
+remembered.** This is a correctness requirement, not a style choice: an
+established companion going unacknowledged for an entire scene is a
+standing gap, confirmed independently across two different games. Give
+each one actively present at least a one-line want of their own, the
+same as any named social contact would get — a name that never speaks
+or wants anything isn't being tracked, it's being forgotten with extra
+steps.
 
 **In-world, not in-game.** Narration describes what a character in this
 world experiences, never the mechanics of playing them. "Pawn" is a
@@ -592,7 +610,7 @@ as History.
 their own baseline — how educated, how guarded, how quick to speak. It
 never overrides "Roleplayer — Guidelines" own rhetorical-device budget
 or its plainness floor. A measured, scholarly character still gets at
-most one reversal or comparison per turn, at most two per scene, same
+most one reversal or comparison per turn, at most one per scene, same
 as anyone else; a clipped character still speaks in full thoughts a
 person would actually say, not fragments. Voice shapes which words a
 character reaches for, not how often this bot reaches for a rhetorical
