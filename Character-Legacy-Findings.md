@@ -23,7 +23,7 @@ Codex.
 
 ## 2. Findings
 
-### Finding 1 — instruction examples become templates: the "debt" convergence
+### Finding 1 — instruction examples become templates: the "debt" and "ledger" convergence
 
 Three separate documents independently reach for the same illustrative word:
 
@@ -44,11 +44,33 @@ special; it's just the word that got picked three times independently by
 whoever wrote these three documents, and every bot since has pattern-matched
 to it.
 
-### Finding 2 — Codex office history compounds without limit: the "ledger" convergence
+**Confirmed directly, not just inferred: the convergence survives varied
+input, which rules out an over-reading explanation.** Joris checked Perrine's
+bot's actual creation transcript. Alongside Marren Wick and Sorrel Wick (both
+clerk-themed), it also read Rowan Voss and Iona Ashe — a Warden who "marched
+on the Woodland Empire chasing some grand answer" and a rebel who "tried to
+start a rebellion among the Woodland people," neither one a clerk, both
+equally available material. Perrine still converged on ledger imagery. A
+fifth data point, Mireille — no Truthwatcher or Ashe lineage at all, nothing
+ledger- or debt-themed anywhere in her own established Codex material —
+reached for "debt" unprompted in an unrelated test (see Validation item 2).
+Three unrelated lineages, one of them with no connection to either convergent
+word at all, landing on the same vocabulary rules out "reads too narrowly"
+as the mechanism. The convergence happens at the synthesis stage — which
+detail gets featured — not the read-scope stage. This directly reframes
+Finding 2, below.
 
-This one isn't the legacy file's fault at all — it's a separate, deeper
-mechanism. Traced the actual succession at the Truthwatcher's desk through
-the shared Codex (`codex/characters/`):
+### Finding 2 — the Codex doesn't distinguish current-age characters from historical ones
+
+Narrowed from an earlier version of this finding, which claimed the
+Truthwatcher succession below was *caused* by unbounded reading and treated
+that as the source of the "ledger" convergence. Checking Perrine's own
+creation transcript (Finding 1, above) ruled that out directly — she read
+plenty of non-clerk material and converged anyway. What's left, and still
+real: `codex/characters/` mixes every era together with no structural
+signal for which figures are part of the present cast and which are
+history. Traced the actual succession at the Truthwatcher's desk through
+the shared Codex:
 
 - **Sorrel Wick**, Truthwatcher two games ago — *"became known for her sharp
   eye for ledgers."*
@@ -62,16 +84,15 @@ the shared Codex (`codex/characters/`):
   ledger with her always"*; her own Voice note: *"a tally-rider's old habit
   of confirming a claim before she's willing to act on it."*
 
-Four Truthwatchers in a row, ledger-themed, each one established before the
-next was created. `oath-setup-character` step 3 explicitly says to let a
-Location or office's established Codex detail shape a new character's
-Physical description, Personality description, or Bond — with nothing
-distinguishing "this was true of the immediately previous holder" from "this
-has now been true of four holders running and is entrenching, not just
-continuing." `legacy-<colour>.md` resets to most-recent-only every game
-(step 5 of `oath-leave-legacy`). The Codex's own accumulated office history
-never does — it just keeps compounding, and each new bot reads the full
-stack at once.
+All four sit in the same flat folder, undated by era, none of them marked as
+belonging to a closed chapter versus the present one. That's a real problem
+worth fixing on its own terms — it's what lets a bot accidentally treat a
+decades-dead figure as though they might still be current, and it's the
+natural organizational partner to Fix 5's close-out work (Description and
+History should read as history once someone's gone, and the folder they sit
+in should say so too). It just isn't why the ledger trait kept recurring —
+that's Finding 1's mechanism, and Fix 1 needs the check that actually
+addresses it.
 
 ### Finding 3 — the vocabulary bleeds across lineages, not just within one office
 
@@ -149,12 +170,29 @@ them checked out. Three points changed what's below:
    to use Year of the Old Oak instead: already in-world, already tracked in
    `timeline.md`, and a more accurate unit for what Fix 2 is actually trying
    to measure — elapsed time, not session count.
+4. **Finding 2 was solving the wrong stage of the problem — caught by
+   checking the actual creation transcript rather than continuing to reason
+   about it abstractly.** Joris found the real file-read list from Perrine's
+   own Setup: alongside the two clerk-themed predecessors, it also read
+   Rowan Voss and Iona Ashe, neither one a clerk, both equally available —
+   and still produced a fourth ledger-themed character. That rules out
+   over-reading as the mechanism; the convergence happens at the synthesis
+   stage, not the read-scope stage. Finding 2 is narrowed to the problem it
+   actually is (the flat Codex doesn't distinguish current-age figures from
+   historical ones), and Fix 3 is kept for that reason — general clarity,
+   not trait-diversity. The actual convergence mechanism is folded into
+   Finding 1, and Fix 1 gets an explicit object-level check added below.
 
 ## 4. Proposed fixes (draft — not yet applied)
 
 **1. Replace Bot-Rules' single worked example with a relationship taxonomy,
-plus a diversity check.** Covers Findings 1 and 3. Does not cover Finding 2
-— see Fix 3.
+plus a diversity check — now covering the recurring object, not just the
+relationship type.** Covers Findings 1, 2, and 3. An earlier draft of this
+fix only checked relationship-*type* (Continuation/Rejection/etc.), which
+Finding 1's transcript evidence shows isn't enough on its own: Perrine had a
+Warden and a rebel available as alternatives to "clerk" and still reached
+for ledger imagery, meaning the fix has to catch the repeated *object*
+directly, not just diversify how the character relates to it.
 
 > **Background Flavor.** Before deciding anything else, sketch 2-3 short
 > background options — two or three sentences each, specific and sensory,
@@ -193,6 +231,16 @@ plus a diversity check.** Covers Findings 1 and 3. Does not cover Finding 2
 > specific reason to pick differently this time, not confirmation to keep
 > going.
 >
+> Separately from the relationship check above: note the specific object,
+> trade, or image the material actually surfaced (a ledger, a forge, a
+> page) against whatever the immediately preceding holder of this colour,
+> Location, or office already featured. Picking a different relationship to
+> the same object isn't enough — a rejection story built around a ledger is
+> still a ledger story. Where other, unrelated material was also available
+> in the same Setup pass (a different family line, a different adviser, a
+> different Codex entry entirely) and wasn't used, that's the first place to
+> look for a genuinely different object, not a forced substitution.
+>
 > Choose one background, or blend two, as this character's actual
 > background. Not stored as its own field — it feeds Physical description,
 > Personality description, and the decisions below, and is worth printing in
@@ -222,32 +270,47 @@ measured in Year of the Old Oak, not session or game count.**
 > showing up mid-scene, not just at Setup.
 
 **3. Fix Finding 2 structurally: split the Codex into current and historical
-characters, instead of asking a bot to self-limit a survey every time.**
-Superseded from an earlier draft of this fix, which proposed a survey step
-("count how many prior holders share this trait") — that still relied on a
-bot correctly self-bounding an open-ended search each time, the same shape
-of soft instruction this whole investigation keeps finding doesn't hold up.
-A structural boundary is more reliable than an instruction asking for
-restraint:
+characters — kept for clarity and consistency, not as a fix for
+trait-convergence.** An earlier draft justified this fix as the thing that
+stops the ledger compounding; Finding 1's transcript evidence shows it
+wouldn't have, since the convergence happens regardless of how much or how
+narrowly a bot reads. The fix survives on its own, separate merits: it's
+what lets a bot know, unambiguously, whether a referenced figure is part of
+the present cast or a past one, and it's the natural organizational partner
+to Fix 5's close-out work — moving someone into `historical/` at the same
+moment their entry converts to past tense means the folder and the grammar
+agree automatically, instead of being two facts that can quietly drift out
+of sync.
 
 > `codex/characters/` holds only currently-relevant figures — anyone
 > plausibly alive and part of the present cast. A new subfolder,
 > `codex/characters/historical/`, holds everyone closed out at a previous
-> game's end (see Fix 5). `oath-setup-character` step 3 and the broader
-> "Codex — using it in play" guidance read `characters/` by default, not
-> `historical/`. The one deliberate exception: when grounding a new
-> character in a Location, office, or colour's own past, check
-> `historical/` specifically for the immediately previous holder of that
-> Location, office, or colour — one named lookup, not a scan of the whole
-> subfolder.
+> game's end (see Fix 5). The one deliberate exception to "closed out at
+> game's end": a character with a specific in-world reason to persist
+> (long-lived or effectively immortal) stays in `characters/` regardless.
 >
-> This also means a new Truthwatcher's Setup simply won't encounter Sorrel,
-> Marren, and Bevan all at once — they're each in `historical/` by the time
-> the next game starts, out of the default read path, available only
-> through the one-hop lookup above. The compounding in Finding 2 most likely
-> comes from there being no boundary at all in the current flat folder, not
-> from a specific instruction that needs identifying and rewritten — this
-> also reframes Validation item 1, below.
+> This doesn't bound what `oath-setup-character` step 3 or "Codex — using it
+> in play" read for grounding purposes — per Finding 1, that reading should
+> stay broad, and narrowing it would remove exactly the kind of varied
+> material (a Warden, a rebel) that should have been available as an
+> alternative to the recurring object in the first place. What the split
+> does is make it clear which folder a bot is looking at when it does read
+> broadly, so nothing gets narrated as though it might still be alive
+> decades after it wasn't.
+
+Migration, not just a going-forward rule: everything currently in
+`characters/` predates this fix and won't sort itself. A one-time pass,
+whenever Fix 3 ships, checks every existing entry against one question — is
+this an active player character, or an adviser/companion currently attached
+to one — and moves anything that isn't into `historical/`, applying Fix 5's
+close-out treatment (Died year, past tense, a remembered-by line) to
+whoever hasn't had it yet regardless of when they died or fell out of play.
+This is not a short list: a glance at the folder shows Halvard Cray, Isolde
+Varn, Wren Sable, the Sorcerer of the Woods, Lilianne, Corvin Varn, Perrin
+Ashe, Lilith Woodborne, Rowan Voss, and Iona Ashe all sitting there
+alongside Sorrel, Marren, and Bevan — decades to centuries of accumulated
+cast, not three names. Scoped and run as part of Validation item 2, below,
+rather than as its own separate pass over the same folder.
 
 **4. Replace "First appeared, Round N" with an in-world Year, across the
 Codex.** This fixes a standing violation of Bot-Rules' own "in-world, not
@@ -294,37 +357,117 @@ present tense throughout).
 > Fix 3 — narrative closure and the folder move happen in the same pass, not
 > as separate steps.
 
-## 5. Validation — not yet run
+## 5. Validation — partially run
 
-None of this has been checked against blind output yet, and only two
-lineages were actually traced (Truthwatcher/ledger, Ashe/debt) — worth
-checking at least one or two more Codex offices or family lines before
-treating the diagnosis as general rather than a pattern found in the two
-places this session happened to look. Before shipping:
+Three of four items below now have real evidence behind them, gathered via
+blind subagents with no awareness of this investigation's goals (mirroring
+`Roleplay-Quality-Findings.md`'s own spread-not-match testing) and a direct
+grep sweep of the shared Codex, not simulated in-head. Item 2's migration
+half is deliberately not run yet — moving real files is implementation, not
+validation, and stays deferred until the fixes above are actually adopted.
 
-1. **Test whether the current/historical folder split actually stops the
-   over-broad read**, rather than continuing to hunt for the exact
-   instruction wording responsible. Generate a new Truthwatcher-role
-   character with Sorrel, Marren, and Bevan sitting in `historical/` rather
-   than the flat `characters/` folder, and check whether the result still
-   converges on ledger-themed characterization as strongly, or genuinely
-   varies. Holding up here is stronger evidence for the structural
-   explanation than pinning an exact clause would have been — and cheaper to
-   test than to keep tracing instruction text.
-2. **Check other Codex lines for the same compounding**, the way the
-   prose-quality work checked its four patterns against Joris's independent
-   earlier game before trusting them. If Truthwatcher/ledger and Ashe/debt
-   turn out to be the only two entrenched patterns in the whole Codex, that
-   changes how urgent Fix 3 is.
-3. **Retrofit the taxonomy against existing characters as a sanity check.**
-   Would Perrine, generated under fix 1, still plausibly land on
-   Continuation (she's a strong specimen of it — tally-rider mother, granary
-   ledger father) or would a fair roll have picked Rejection or Rupture
-   instead? If the taxonomy still obviously points to Continuation for her
-   specifically, that's a good sign the fix targets the right thing rather
-   than forcing variation that doesn't fit the material.
-4. **Blind generation test.** Run `oath-setup-character` for a fresh seat
-   under the revised Background Flavor section and check whether the
-   resulting background actually varies in relationship-type across a
-   handful of runs, the same spread-not-match standard used for the pacing
-   rule.
+1. **Done — Fix 1's object-level check changes what gets featured.** Three
+   parallel blind agents, none told this was a homogeneity investigation,
+   were given the same five character excerpts (Marren Wick and Sorrel Wick
+   as clerk predecessors, Rowan Voss and Iona Ashe as non-clerk alternatives,
+   Daz as a fifth unrelated option) and asked to sketch 2-3 background
+   options and choose one for a new Truthwatcher-line character. Two got the
+   full Fix 1 process (relationship taxonomy plus the object-level check);
+   one got no rules at all, just "sketch and choose," as a control.
+
+   - **Control (no Fix 1 rules): converged straight onto the bug.** Built a
+     clerk discovering an unfinished "closing entry" at the desk and
+     finishing the paperwork — ledger, rolls, desk, almost a direct replay of
+     Marren Wick's own material, despite Rowan Voss and Iona Ashe sitting
+     right there as equally available alternatives. This reproduces Finding
+     1's mechanism cleanly: unprompted, given a choice, the default is the
+     object already in the room.
+   - **Sample A (with Fix 1): picked Repurposing, built on Daz.** Used the
+     Bandit Chief's oral counting-stones tradition — no ledger, no desk, a
+     genuinely different object carried into a genuinely different form.
+   - **Sample B (with Fix 1): picked Rejection, built on inherited
+     relics/signets.** Centered on resenting inherited proof-objects as
+     illegitimate rather than debt or ledgers at all; explicitly considered
+     and set aside "unclosed debt" as an option before choosing this instead
+     — the check visibly did its job of surfacing the recurring object and
+     asking whether to use it.
+
+   Clean result: the rules produce real object-level variation where their
+   absence reproduces the original bug. One caveat worth flagging for Fix 1's
+   wording — **Iona Ashe's own established material already carries
+   debt-adjacent language** ("counts things off on her fingers when she's
+   working out what's owed," "never call a debt settled just because it's
+   gone quiet"). She's not a clean escape from the theme, just a variant
+   phrasing of it — she's the Ashe line's origin point for it, not an
+   alternative to it. The object-level check should watch for the underlying
+   accounting/obligation metaphor generally (owed, settled, tallied,
+   accounted for), not just the literal word "ledger," or a bot could pick
+   Iona as its "different" material and land right back in the same place
+   under a different name.
+
+   Folder-split tense check (the lower-stakes half of this item) not yet
+   run — needs an actual narrated scene referencing both a `characters/` and
+   a `historical/` figure once Fix 3 ships, not just a background-generation
+   test.
+
+2. **Partially done — checked other Codex lines for the same compounding via
+   direct grep sweep; migration itself deliberately deferred.** Searched
+   every file in `codex/characters/` (61 entries, not just the two traced
+   lineages) for "ledger," "debt/owed," "tally," and "account." Results are
+   more pervasive than the two traced lineages suggested, but need
+   splitting by how telling each hit actually is:
+
+   - **"Ledger" specifically — the telling one, since it's a distinct object,
+     not just a common word.** 11 hits. Four are the already-documented
+     Truthwatcher line (Bevan Stroud, Marren Wick, Sorrel Wick, Perrine
+     Oswick) and one is the already-documented Ashe bleed (Wynn Ashe). The
+     other six are new: **Farthing (a courier horse)**, Hetty Doyle (a
+     trader with no Truthwatcher connection), Lilith Woodborne (the
+     Chancellor), Ossian Fenwick (a toll-warden), Tinney Woodborne (the
+     setting's central nature-deity figure — "swore itself to the ledger
+     the way Openhold once swore itself to a ledger"), and Wren Sable (a
+     decades-dead tragic figure with a "sealed ledger box"). A horse, a
+     trader, a chancellor, a toll-warden, a deity, and a dead stranger all
+     reaching for the identical accounting image is real evidence the
+     convergence isn't scoped to the two lineages this document traced — it
+     looks closer to a saturating property of the whole Codex's prose voice
+     than a localized bug in two family lines.
+   - **"Debt/owed" — weaker signal, worth naming as weaker rather than
+     folding into the same claim.** 13 hits, but several are the Corvin
+     Varn → Isolde Varn → Ressa Kindler cluster, which is the actual
+     documented origin of the Ashe line's inherited-debt material (expected,
+     not new contamination), and others use "owed" in senses that aren't
+     financial at all — Corin Hale's garrison loyalty, Fenna Rook's respect
+     for the dead, Tamsin Reed's care for the wounded regardless of banner.
+     "Debt" and "owed" are common words in a setting literally named for
+     sworn obligation; their recurrence is much less diagnostic than
+     "ledger" specifically reappearing as a physical object.
+   - Migration (sorting all 61 entries into `characters/` vs.
+     `historical/`, applying Fix 5's close-out treatment) was scoped in the
+     original draft of this item but is **not run** — it changes real files
+     in a repo shared with other seats' bots, which makes it implementation
+     rather than validation. Held until Fix 3 is actually adopted.
+
+3. **Done — retrofit sanity check on Perrine.** Read her full Codex entry
+   directly rather than reasoning from the earlier-quoted excerpts alone.
+   Continuation holds up as the honest pick, not a forced one: both parents
+   are in the trade (Joss Oswick keeps the town's granary ledgers, Ede taught
+   her to read a scale), she rode a decade as a tally-rider before taking the
+   desk, three generations of neighbours already know her family's business,
+   and her own predecessor Bevan Stroud is quoted directly in her own
+   History. That's a wide, specific, multi-generational base for Continuation
+   — not one convenient detail. The taxonomy check, run honestly against her,
+   would land on Continuation for her the same way it did originally; it
+   doesn't force variation that doesn't fit the actual material, which is
+   the right failure mode to confirm before trusting it on a fresh character.
+
+4. **Substantially covered by item 1, not run as its own separate pass.**
+   Item 1's two Fix-1 samples already produced two different relationship
+   types (Repurposing, Rejection) and two different objects (counting-stones,
+   inherited signets) from the same source material in a single small batch
+   — real spread, not a coincidence of one lucky run. A larger-N run through
+   the actual `oath-setup-character` skill (rather than a hand-built prompt
+   approximating it) would still be worth doing once Fix 1's wording is
+   final and gets implemented into the live skill file, since the real skill
+   has surrounding steps and context this test didn't reproduce. Not blocking
+   — the spread signal is already there.
