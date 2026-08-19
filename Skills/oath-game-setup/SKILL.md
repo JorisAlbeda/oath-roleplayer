@@ -23,7 +23,10 @@ seat-specific.
    whether they're Human- or AI-controlled.
 3. Create `Game/Mechanics/oath-board-state.md`: Round 0, Visions Drawn
    0, World Deck Search cost: 2 Supply, the given Oath, Current Player
-   Turn set to the Chancellor's colour, and the Map in full — read the
+   Turn set to the Chancellor's colour, Favor Banks (3 favor in each of
+   the six banks — Discord, Hearth, Beast, Nomad, Order, Arcane; 4 each
+   instead with 5 or 6 players, per 2.1.3/setup step 6), and the Map in
+   full — read the
    `Board Photographs` folder for this; it's the only time the whole
    board is ever photographed, so get it right now. One entry per
    Region, one sub-entry per Site within it: Name, Ability, Ruled by
@@ -64,7 +67,9 @@ seat-specific.
    Each Region's own header shows a flat Search Discard Pile cost (2
    Supply, per rule 5.1.1) — this is distinct from Board state's own
    top-level World Deck Search cost, which instead scales with Visions
-   Drawn (2.1.6). Don't conflate the two.
+   Drawn (2.1.6). Don't conflate the two. Every Region's discard pile
+   starts empty at Setup — record `Discard Pile: 0 cards` alongside
+   each Region's Search Discard Pile cost.
 
 4. Create `Game/Mechanics/oath-player-state.md`: one Player row per
    colour with Role, Controlled-by, and Number of Supplies (7 for
@@ -73,6 +78,18 @@ seat-specific.
    zeroes/none, not left blank, so the Required pre-flight check has an
    actual value to find. Name stays blank for AI seats until their own
    Setup decides it; fill it in now for the Human seat if known.
+
+   Also fill in Warbands in reserve, using the fixed total warband pool
+   each Role starts with (24 for the Chancellor, shared with every
+   Citizen; 14 for each Exile) minus whatever the setup photographs
+   show already placed on that seat's own board and at sites they rule.
+   For the Chancellor, count every Empire-ruled site's warbands
+   (including any placed under a Citizen's local command) plus the
+   Chancellor's own board — that combined total is what the whole
+   Empire's reserve is measured against, so only the Chancellor's row
+   carries a number. Give each Citizen row a one-line note instead
+   ("shares the Chancellor's reserve — see Bot-Rules, 'Warband reserve
+   and the Supply refresh table'"), not a number of their own.
 5. Create empty `Game/Story/oath-characters.md`,
    `Game/Mechanics/oath-logic-log.md`, and `Game/Story/oath-chronicle.md`
    — the Chronicle starts with an empty `## Live threads` header at the
@@ -95,7 +112,10 @@ seat-specific.
 9. Before finishing, run the Required tier of the pre-flight check
    (Bot-Rules) against what was just created: Oath, Current Player Turn,
    and every seat's Role/Controlled-by set in Player state; every Map
-   entry has at least Ruled by and Number of warbands. If anything's
+   entry has at least Ruled by and Number of warbands; all six Favor
+   Banks have exact counts; every Region has a Discard Pile count; every
+   seat's Warbands in reserve is set (a number for an Exile or the
+   Chancellor, the shared-reserve note for a Citizen). If anything's
    missing, say so plainly rather than handing off an incomplete board.
 
 ## Response

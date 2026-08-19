@@ -52,6 +52,15 @@ itself, not just the decision.
 - Every existing Adviser row in Player state has a Status.
 - This seat's own row states whether it holds a Revealed Vision (Name,
   Goal) or "none."
+- Board state's Favor Banks section has all six banks (Discord, Hearth,
+  Beast, Nomad, Order, Arcane) with an exact count each — not "plenty"
+  or "not tracked."
+- The Map entry for whichever region this segment is actually happening
+  in has a Discard Pile count recorded.
+- This seat's own row in Player state has Warbands in reserve recorded
+  (for the Chancellor, this is the Empire's one shared bank; for a
+  Citizen, a one-line note that they share the Chancellor's reserve
+  instead of a number of their own).
 - At Game Setup only: Oath, Current Player Turn, and every seat's Role
   and Controlled-by are set.
 
@@ -115,6 +124,17 @@ past enough times that "genuinely low" alone can't be trusted to catch it.
 refers to this character and often to others — use exactly the Pronouns
 already recorded for them in Characters, never a default or a re-derived
 guess from the name.
+
+**Spare Secrets are close to free at the end of a turn.** Per 4.3.2
+(Return Secrets), a *placed* Secret — one spent on a "place 1 secret"
+or "2 secrets placed" cost — comes back to its own owner's board at
+Rest. This is unlike placed Favor, which goes to the shared bank
+instead of back to whoever spent it (4.3.1). So a Secret you're not
+otherwise saving toward a Recover or a Vision goal is nearly free to
+spend this turn — on a Trade, on an Action cost — since it returns to
+you regardless. Check for this specifically before choosing Rest: don't
+sit on a spare Secret out of the same instinct that (correctly) says to
+conserve Favor.
 
 ## Diary — structure
 
@@ -345,6 +365,18 @@ a segment actually changes it:
   added to or taken from.
 - **An edifice flipping** — overwrite that site's Name (if it changes),
   Ability, and Relics in place; same site entry, new facing.
+- **Favor Banks** — update the specific bank(s) touched, the same
+  segment, whenever favor moves to or from one: a Search's own
+  gain-one-favor step (5.1.4.I), a Trade, a Muster's cost, a Recover's
+  cost, or a card's own power that names a bank. Check all six banks
+  are still exact numbers, not "plenty," while you're there.
+- **Discard Pile counts** — a region's count drops by however many
+  cards a Search actually drew from it, and rises by however many cards
+  get discarded there. Discarded cards land on the *next* region's pile
+  clockwise, not the acting pawn's own region — Cradle discards go to
+  Provinces, Provinces discards go to Hinterland, Hinterland discards
+  go to Cradle (Glossary, "Discard") — so the region whose count changes
+  is often not the one this segment is happening in.
 
 Most segments won't touch the Map at all — don't force an edit where
 nothing actually changed. See `Oath-Cascade-Map.md` for the fuller
@@ -407,6 +439,37 @@ worth personifying (or updating) one of these when a Muster raises a
 new force there worth naming, or a Campaign hands the site to a new
 ruler entirely. The mandatory case above is specifically a seat's own
 forces — its own home site, and its own board — not warbands generally.
+
+## Warband reserve and the Supply refresh table
+
+Player state's Warbands in reserve field (a seat's own personal bank
+for an Exile, or the Empire's one shared bank for the Chancellor and
+every Citizen — see "Pre-flight check" above) is what 4.3.3 (Refresh
+Supply) actually reads at Rest. Use this table directly instead of
+flagging the resulting number for the human to confirm — that's been
+the recurring gap in the Logic log up to now, and the table is exactly
+what closes it:
+
+**Exile:**
+- 0 to 3 warbands in reserve → refresh to 4 Supply
+- 4 to 8 warbands in reserve → refresh to 5 Supply
+- 9+ warbands in reserve → refresh to 6 Supply
+- Maximum/starting Supply: 7 (Save Supply, 4.3.4, can never push past this)
+
+**Chancellor** (this band applies to the Empire's one shared reserve,
+not a per-seat count):
+- 0 to 3 warbands in reserve → refresh to 3 Supply
+- 4 to 10 warbands in reserve → refresh to 4 Supply
+- 11 to 17 warbands in reserve → refresh to 5 Supply
+- 18+ warbands in reserve → refresh to 6 Supply
+- Maximum/starting Supply: 7
+
+**Citizen:** always refreshes to match the Chancellor's own current
+Supply (4.3.3) — never computed from reserve directly, since a Citizen
+has no reserve of its own.
+
+After computing the refresh, still apply Save Supply (4.3.4) on top:
+one further space for each Supply left unspent this turn, capped at 7.
 
 ## Legal turn endings, and why
 

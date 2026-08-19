@@ -21,11 +21,15 @@ exists.
 ## Shared documents (all seats read and append to these)
 
 - `Game/Mechanics/oath-board-state.md` — Board state: Round, Visions
-  Drawn, Oath, Current Player Turn, World Deck Search cost, and the
-  Map. Filled in full from board photographs once, during
-  `oath-game-setup` — the only time the whole board is ever
-  photographed; kept current afterward from the Logic log alone. The
-  Map holds one entry per Region, one sub-entry per Site within it:
+  Drawn, Oath, Current Player Turn, World Deck Search cost, Favor Banks
+  (an exact count for each of the six suits — Discord, Hearth, Beast,
+  Nomad, Order, Arcane), and the Map. Filled in full from board
+  photographs once, during `oath-game-setup` — the only time the whole
+  board is ever photographed; kept current afterward from the Logic log
+  alone. Each Region also carries its own Discard Pile count (how many
+  cards currently sit on it), alongside its Travel and Search Discard
+  Pile cost. The Map holds one entry per Region, one sub-entry per Site
+  within it:
   - Name
   - Ability
   - Ruled by
@@ -43,7 +47,12 @@ exists.
 - `Game/Mechanics/oath-player-state.md` — Player state: one row per
   colour (Role, Controlled by, Location, Region, Number of Supplies,
   Number of Secrets, Number of Favors, Banners, Revealed Vision — Name
-  and Goal, or "none"), each with its own Advisers (Name, Source card,
+  and Goal, or "none"), plus Warbands in reserve — a real count for an
+  Exile or the Chancellor (the Chancellor's is the Empire's one shared
+  bank, also read by every Citizen row), or a one-line note for a
+  Citizen that they share the Chancellor's reserve instead of holding
+  one of their own (see Bot-Rules, "Warband reserve and the Supply
+  refresh table"), each with its own Advisers (Name, Source card,
   Ability, Ability cost, Status) — the mechanical half of a personified
   adviser/denizen/commander; the narrative half is the matching Codex
   `characters/` entry, same Name. A facedown Vision kept as an adviser

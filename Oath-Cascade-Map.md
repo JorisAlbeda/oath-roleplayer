@@ -112,6 +112,36 @@ Touches: Board state's Map's Relics field for that site, updated once,
 for every seat simultaneously — not a private note for whoever peeked.
 If taken, remove it from the Map entirely.
 
+**Favor moves to or from a bank — Low, but shared-wide**
+Touches: Board state's Favor Banks section, for whichever bank(s)
+actually changed — a Search's own gain-one-favor step (5.1.4.I), a
+Trade, a Muster's cost, a Recover's cost, or a card power naming a
+bank. Same shared-wide handling as a Relic peek: updated once, for
+every seat, not a private note. See Bot-Rules, "Map upkeep."
+
+**A card is discarded, or a Search draws from a pile — Low, but often
+touches a different Region than the one this segment is happening in**
+Touches: Board state's Discard Pile count for the Region the cards
+actually land on or come from. Discards rotate clockwise to the *next*
+Region (Cradle → Provinces → Hinterland → Cradle, per the Glossary's
+"Discard" entry) rather than returning to the acting pawn's own Region
+— don't default to updating the pawn's own Region's count. Drawing with
+Search lowers the count of whichever pile it actually drew from
+instead.
+
+**Warbands move between reserve, board, and a site — Low, but feeds a
+later Supply refresh**
+Touches: Player state's Warbands in reserve, alongside whatever the
+triggering action already changes (Number of warbands on board, a
+site's own Number of warbands, per "Ruled by / Number of warbands"
+above). A Muster moves 2 warbands from reserve to board; a Kill moves a
+warband back to reserve rather than removing it from the game; a
+Campaign's own warband movements between board and site never touch
+reserve at all. This field is what 4.3.3 (Refresh Supply) reads at that
+seat's next Rest — see Bot-Rules, "Warband reserve and the Supply
+refresh table" — so leaving it stale surfaces later as a wrong Supply
+number, not immediately.
+
 **Banners change, or a Role changes (Usurper flip, Citizenship offered
 or accepted, a Citizen exiled back out) — High**
 Touches: Player state's Banners field, its Role field, plus a legality

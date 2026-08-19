@@ -33,7 +33,11 @@ change).
    entry with no Voice yet) just get noted, never block.
 3. Update `Game/Mechanics/oath-player-state.md` with the mechanical
    results (Location, Region, Supply/Secrets/Favors gained or spent,
-   Banners, Adviser rows). If the human recruited a new denizen, adviser,
+   Banners, Adviser rows, and Warbands in reserve whenever a Muster,
+   Kill, or other gain/loss changed it). If the turn ended on Rest,
+   record the Supply refresh computed from Bot-Rules' "Warband reserve
+   and the Supply refresh table" rather than asking the human to state
+   it. If the human recruited a new denizen, adviser,
    or commander (not a Vision — see steps 5-6 below) this turn, add its
    Adviser row here regardless of facing. If taken faceup, also
    personify it in the Codex now, the same way `oath-play-turn` does —
@@ -66,7 +70,9 @@ change).
    reported turn made, per Bot-Rules "Map upkeep" — a denizen removed
    from a site's own Denizens list once Mustered or recruited, Ruled by
    or Number of warbands changing, Content or Relics changing, an
-   edifice flipping. If a Muster or Campaign made a site's own garrison
+   edifice flipping, Favor Banks changing whenever favor moved to or
+   from one, and Discard Pile counts (discards land on the *next*
+   Region clockwise, not the reporting seat's own). If a Muster or Campaign made a site's own garrison
    worth naming or updating, personify or update its Codex `locations/`
    entry's Garrison field too, per Bot-Rules, "Warbands — personifying
    the garrison" — most turns won't warrant this, don't force it. Most

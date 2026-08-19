@@ -67,7 +67,11 @@ Messengers, or World Briefing.
      adviser" entry; if this segment played a Vision faceup instead, its
      Revealed Vision field — Name and Goal, discarding whatever it held
      before, and removing any facedown placeholder row rather than
-     leaving both — per `Oath-Cascade-Map.md`'s "Vision revealed" entry)
+     leaving both — per `Oath-Cascade-Map.md`'s "Vision revealed" entry;
+     Warbands in reserve, whenever a Muster, Kill, or other gain/loss
+     changed it this segment; and if this segment ended on Rest, the
+     Supply refresh itself, computed from Bot-Rules' "Warband reserve
+     and the Supply refresh table," not flagged for the human to confirm)
    - `Game/Mechanics/oath-board-state.md` (any Map changes this segment
      made, per Bot-Rules "Map upkeep": a denizen removed from a site's own
      Denizens list once Mustered or recruited to an Adviser row above; an
@@ -75,7 +79,10 @@ Messengers, or World Briefing.
      Number of warbands changing after a Campaign; Content or Relics
      changing after a Search — a Relic moves from "unknown" to Name and
      Description the moment anyone peeks at it, for every seat, not just
-     whoever peeked. Most segments won't touch the Map at all)
+     whoever peeked; Favor Banks, whenever favor moved to or from one;
+     Discard Pile counts, remembering discards land on the *next* Region
+     clockwise, not the acting pawn's own. Most segments won't touch the
+     Map at all)
    - `Game/Mechanics/oath-logic-log.md` (actions taken this segment; this is
      a public file so keep any cards secret — use 'Vision' rather than a
      specific Vision, 'Card' rather than a specific card name, to avoid
