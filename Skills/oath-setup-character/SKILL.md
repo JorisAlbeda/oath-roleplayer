@@ -38,9 +38,11 @@ documents.
    shape this new character rather than treating it as flavor text to
    nod at. The Motivation, Flaw, or Bond below should
    visibly grow out of it where it makes sense (an heirloom carried
-   forward, a debt inherited, a reputation to live down or live up
-   to). Not required to force a connection if the legacy content
-   doesn't suggest one, but check first. Also check for a portrait
+   forward, a trade continued or deliberately turned away from, a
+   reputation to live down or live up to) — see step 5's relationship
+   and object checks for how to decide which. Not required to force a
+   connection if the legacy content doesn't suggest one, but check
+   first. Also check for a portrait
    image in the same `Game/Story/Legacy/` folder, named after this
    colour, if one exists — a visual reference for whoever held this
    colour before. This is the only step where you'll actually see it,
@@ -59,12 +61,23 @@ documents.
    the world's current era (what year of the Old Oak this is, what its
    most recent entry says just happened) ground this character's
    Motivation, Flaw, or Bond the same way Legacy and the Codex do above.
+   Note the Year itself, not just the era's mood — the Legacy and Codex
+   material from steps 2-3 each carry their own Year too (see Bot-Rules,
+   "Dating a Codex entry") — since the gap between that Year and this
+   one sets how raw or how storied this character's own connection to it
+   should read (Bot-Rules, "Elapsed-time register").
 5. Background Flavor, per Bot-Rules "Character creation — background
    flavor and starting social circle": sketch 2-3 short, concrete,
    sensory background options — two or three sentences each, implying a
    particular life rather than stating a trait — grounded in whatever
-   Legacy, Codex, and Timeline material steps 2-4 surfaced. Choose one,
-   or blend two, as this character's actual background.
+   Legacy, Codex, and Timeline material steps 2-4 surfaced. Where a
+   family trade or role is available, run the relationship check
+   (Continuation/Rejection/Rupture/Repurposing) against whatever the
+   immediately preceding holder of this colour, Location, or office
+   already used, and separately check the specific object or image the
+   material surfaced against what that predecessor already featured —
+   both per the same Bot-Rules section. Choose one, or blend two, as
+   this character's actual background.
 6. Decide, in the same pass: Location, Region, Name, Pronouns,
    Motivation, Flaw, a Bond with a previous character if one plausibly
    exists, and which starting adviser you're taking — with Motivation,
@@ -84,10 +97,12 @@ documents.
    it in play": Name, Description, Location, History, and Voice (per
    "Voice — staying in character") to the Codex's `characters/`
    subfolder, following the structure of the existing character files.
-   Give it an actual life before this pass — a trade, a family, a debt, a
-   loss, a reason it knows what it knows — the same depth as the
-   Background Flavor in step 5, not a stub pointing back at this seat's
-   own Setup.
+   Give it an actual life before this pass — a trade, a family, an old
+   grievance, a loss, a reason it knows what it knows — the same depth
+   as the Background Flavor in step 5, not a stub pointing back at this
+   seat's own Setup. Include a Born year where the background makes one
+   plausibly inferable, per Bot-Rules "Dating a Codex entry" — never a
+   Round number.
 9. Personify this seat's own new character in the Codex too, same
    `characters/` subfolder as step 8 but the player-character structure
    already used there for previous Truthwatchers, Exiles, and Citizens
@@ -96,6 +111,9 @@ documents.
    adviser-only. Draw the Description and History straight from the
    background, Motivation, Flaw, and Bond already decided in steps 5-6;
    don't invent new detail here, just carry it over into Codex prose.
+   Include a Born year where the background makes one plausibly
+   inferable, per Bot-Rules "Dating a Codex entry" — never a Round
+   number.
 10. Personify this seat's own starting warbands too, per Bot-Rules
     "Warbands — personifying a seat's own forces" — not conditional the
     way an enemy's garrison is, do this every time. Whatever this seat

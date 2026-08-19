@@ -1,9 +1,9 @@
 # Oath Character Creation — Legacy & Homogeneity Findings
 
-_Working document. Draft — one investigation pass, not yet validated against
-blind generation tests the way `Roleplay-Quality-Findings.md` validated its
-own rewrite before shipping. Treat the diagnosis as solid, the fixes below as
-proposals to test, not settled._
+_Working document. Validated (Section 5) and implemented — all five fixes
+are live in `Oath-Cowork-Bot-Rules.md`, `Skills/oath-setup-character/
+SKILL.md`, and `Skills/oath-leave-legacy/SKILL.md` as of this pass. Kept as
+the record of diagnosis, validation evidence, and what shipped._
 
 ## 1. Mission
 
@@ -410,10 +410,10 @@ validation, and stays deferred until the fixes above are actually adopted.
    a `historical/` figure once Fix 3 ships, not just a background-generation
    test.
 
-2. **Partially done — checked other Codex lines for the same compounding via
-   direct grep sweep; migration itself deliberately deferred.** Searched
-   every file in `codex/characters/` (61 entries, not just the two traced
-   lineages) for "ledger," "debt/owed," "tally," and "account." Results are
+2. **Done — checked other Codex lines for the same compounding via direct
+   grep sweep, then acted on both halves.** Searched every file in
+   `codex/characters/` (56 entries, not just the two traced lineages) for
+   "ledger," "debt/owed," "tally," and "account." Results are
    more pervasive than the two traced lineages suggested, but need
    splitting by how telling each hit actually is:
 
@@ -442,11 +442,38 @@ validation, and stays deferred until the fixes above are actually adopted.
      "Debt" and "owed" are common words in a setting literally named for
      sworn obligation; their recurrence is much less diagnostic than
      "ledger" specifically reappearing as a physical object.
-   - Migration (sorting all 61 entries into `characters/` vs.
-     `historical/`, applying Fix 5's close-out treatment) was scoped in the
-     original draft of this item but is **not run** — it changes real files
-     in a repo shared with other seats' bots, which makes it implementation
-     rather than validation. Held until Fix 3 is actually adopted.
+   - **Vocabulary cleanup — done.** Joris called this: rephrase the
+     "ledger" instances that don't belong to the Truthwatcher line's own
+     established object (Farthing's naming story, Hetty Doyle's
+     description, Ossian Fenwick's "no ledger of his own," and the
+     Truthwatcher-desk reference inside Lilith Woodborne's history — the
+     last kept its actual content, just dropped the word, since it's a
+     genuine reference to the Truthwatcher's own literal ledger and not
+     independent bleed). Wren Sable's "ledger box" became "strongbox" for
+     the same reason. Tinney Woodborne's own ledger line was left alone at
+     Joris's instruction — already rewritten elsewhere by the time this ran,
+     confirmed by re-reading the file directly rather than assuming. Left
+     untouched on purpose: the Truthwatcher line's own four ledger
+     instances (Bevan Stroud, Marren Wick, Sorrel Wick, Perrine Oswick) and
+     Wynn Ashe's cross-lineage bleed (Finding 3) — that one's an existing
+     PC's established Voice, not something to silently rewrite without the
+     seat owner.
+   - **Mechanical sort — done.** Joris authorized this separately from full
+     Fix 5 close-out. Created `codex/characters/historical/` and sorted all
+     56 entries using Status field first (`Deceased` → moved,
+     `Active` → stayed) and, for the ~17 entries with no Status field at
+     all, the tense of their own prose as the tiebreaker (present tense →
+     stayed, since several — Ivan, Maren Cole, the Sorcerer of the Woods —
+     read as already-closed despite missing the field outright). One
+     deliberate exception under Fix 3's own persistence clause: Tinney
+     Woodborne stays in `characters/` despite `Deceased` status, since their
+     own Status note already establishes ongoing presence through the Old
+     Oak. Result: 35 moved to `historical/`, 21 remain in `characters/`.
+     This is the sort only — Fix 5's fuller close-out (Died year stamps,
+     remembered-by sentences, past-tense conversion throughout) is *not*
+     applied here; that stays each seat's own work at actual leave-legacy
+     time, per Fix 5's own design, now that the folder each entry belongs in
+     is no longer ambiguous.
 
 3. **Done — retrofit sanity check on Perrine.** Read her full Codex entry
    directly rather than reasoning from the earlier-quoted excerpts alone.
@@ -471,3 +498,39 @@ validation, and stays deferred until the fixes above are actually adopted.
    final and gets implemented into the live skill file, since the real skill
    has surrounding steps and context this test didn't reproduce. Not blocking
    — the spread signal is already there.
+
+## 6. Implementation
+
+All five fixes are live as of this pass:
+
+- **Fix 1** (relationship taxonomy + object-level check) — replaces
+  `Oath-Cowork-Bot-Rules.md`'s old single worked example under "Character
+  creation — background flavor and starting social circle." The example
+  itself changed too: the old "spent three winters as a debt-collector's
+  second" line is gone, replaced by the forge/Continuation example so the
+  section no longer models the very word it's warning against.
+  `oath-setup-character` steps 2, 5, and 8 updated to point at it and drop
+  their own "a debt inherited" phrasing.
+- **Fix 2** (elapsed-time register) — new "Elapsed-time register"
+  subsection in Bot-Rules, cross-referenced from "Composure isn't
+  automatic." `oath-setup-character` step 4 updated to note the Year, not
+  just the era's mood.
+- **Fix 3** (current/historical split) — new "Current vs. historical"
+  paragraph in Bot-Rules' "Codex — using it in play," describing the
+  folder split and the persistence exception. The migration itself
+  already ran (Validation item 2, above).
+- **Fix 4** (Year fields, not Round numbers) — new "Dating a Codex entry"
+  paragraph in Bot-Rules; the old "first appeared, Round N" example is
+  gone. `oath-setup-character` steps 8 and 9 now call for a Born year
+  where inferable.
+- **Fix 5** (leave-legacy close-out) — `oath-leave-legacy` rewritten:
+  step 1 now asks the human for elapsed time before anything else, new
+  steps 7-9 close out this seat's own Active Codex entries (Died year,
+  remembered-by sentence, past tense) and move them to `historical/`,
+  and flag any leftover cast for a separate human-coordinated sweep
+  rather than guessing at another seat's own cast.
+
+Not yet checked: a real `oath-setup-character` run under the new rules
+(Validation item 4's fuller version), and a real `oath-leave-legacy` run
+exercising steps 1 and 7-9 end to end. Both are live now; next actual use
+of either skill is the real test.

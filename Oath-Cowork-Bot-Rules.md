@@ -179,14 +179,59 @@ the rest from it.
 
 **Background Flavor.** Before deciding anything else, sketch 2-3 short
 background options — two or three sentences each, specific and sensory,
-implying a particular life rather than stating a trait ("spent three
-winters as a debt-collector's second before buying out their own
-contract" reads as a life; "hardworking and resourceful" doesn't). Draw
+implying a particular life rather than stating a trait ("took up her
+grandfather's forge at fourteen, not because it was expected of her, but
+because banked coals were the only thing that made a bad morning feel
+smaller" reads as a life; "hardworking and resourceful" doesn't). Draw
 these from whatever Legacy, Codex, and Timeline material this seat's own
-Setup already surfaced — an heirloom, a debt, an inherited reputation,
-the world's current era — the same grounding material already in play,
-just made concrete before the trait-level decisions instead of only
-alongside them. Choose one, or blend two, as this character's actual
+Setup already surfaced — an heirloom, a family trade, an inherited
+reputation, the world's current era.
+
+Where a family trade or role is available from that material, it's
+worth using — continuity across generations is realistic and part of
+the point of Legacy — but it needs a stated *relationship* to the
+character, not just an inherited label. Pick one:
+
+- **Continuation, for their own reason** — takes up the trade, but the
+  reason is theirs, not inherited identity on autopilot ("took up her
+  grandfather's forge at fourteen, not because it was expected of her,
+  but because banked coals were the only thing that made a bad morning
+  feel smaller").
+- **Rejection** — grew up close enough to the trade to know it well, and
+  chose away from it on purpose ("watched her mother log every measure
+  of grain twice before trusting it once; joined the border levy at
+  sixteen rather than become a third generation of it").
+- **Rupture** — the line broke before it reached them, and their path is
+  shaped by the break, not the trade itself ("her father's granary
+  ledgers came up short two years running before the town stripped his
+  license; she's balanced accounts that were never her own family's,
+  ever since").
+- **Repurposing** — keeps the underlying instinct but points it
+  somewhere the trade never went ("learned to read a wound the way her
+  mother read a hand of cards — for what it wasn't saying — and turned
+  that same eye on men's faces instead").
+
+Check what relationship the immediately preceding holder of this
+colour, Location, or office already used before defaulting to
+Continuation — it's the obvious choice and will win by default unless
+something asks otherwise. A trait that's shown up the same way three
+times running is a specific reason to pick differently this time, not
+confirmation to keep going.
+
+Separately from the relationship check above: note the specific object,
+trade, or image the material actually surfaced (a ledger, a forge, a
+page) against whatever the immediately preceding holder of this colour,
+Location, or office already featured. Picking a different relationship
+to the same object isn't enough — a rejection story built around a
+ledger is still a ledger story. Where other, unrelated material was
+also available in the same Setup pass (a different family line, a
+different adviser, a different Codex entry entirely) and wasn't used,
+that's the first place to look for a genuinely different object, not a
+forced substitution. This check is about the underlying metaphor, not
+just the literal word — an inherited habit of tracking what's "owed" or
+"unsettled" is the same object as a ledger wearing a different name.
+
+Choose one background, or blend two, as this character's actual
 background. Not stored as its own field — it feeds Physical description,
 Personality description, and the decisions below, and is worth printing
 in Setup's own Response so the human sees where the rest came from.
@@ -232,12 +277,56 @@ Converse, and Diary have somewhere to start from in Round 1, instead of
 waiting for the first Converse to generate any relationship material at
 all.
 
+**Elapsed-time register.** When Legacy, Codex, or Timeline material
+grounds this character's Motivation, Flaw, or Bond, check the Year that
+material is dated to (see "Dating a Codex entry," below) against the
+current Year in `timeline.md`, and let the gap set the register:
+
+- **Recent** (within a few years) — raw, first-hand, personal. The
+  character was there, or close enough to it.
+- **One lifetime back** (a parent's or mentor's own memory — someone
+  this character could plausibly have known and heard it from directly)
+  — remembered, secondhand, but still close.
+- **Multiple generations** (decades or more) — family lore, worn smooth
+  by retelling. The character carries it as inherited conviction or
+  habit, not as a wound of their own. Language should reflect that
+  distance — "the family still tells it this way," not the emotional
+  immediacy of something that happened to them.
+
+An old, mediated grievance shouldn't trigger the same raw
+composure-crack calibrated for a fresh one (see "Composure isn't
+automatic," below) — that reaction is a likely tell of this register
+slipping mid-scene, not just at Setup.
+
 ## Codex — using it in play
 
 The Codex holds in-world detail on buildings, characters, events,
 locations, and relics — most of it inherited from the previous game, not
 invented this session. It's shared, not per-seat, and it's meant to be
 used, not just checked off the "Reference material" list once per turn.
+
+**Current vs. historical.** `codex/characters/` holds only currently-
+relevant figures — anyone plausibly alive and part of the present cast.
+`codex/characters/historical/` holds everyone closed out at a previous
+game's end (see `oath-leave-legacy`). The one deliberate exception: a
+character with a specific in-world reason to persist (long-lived or
+effectively immortal) stays in `characters/` regardless of Status. This
+doesn't bound what gets read for grounding purposes — reading broadly
+across both folders is still correct, and narrowing it would remove
+exactly the kind of varied material that should be available as an
+alternative to whatever the most recent holder of a role already
+featured (see "Character creation," Background Flavor, above). What the
+split does is make it unambiguous which folder a bot is looking at, so
+nothing gets narrated as though it might still be alive decades after it
+wasn't.
+
+**Dating a Codex entry.** Use Year of the Old Oak (per `timeline.md`),
+never a Round number — Round is game-mechanical, not in-world (see
+"In-world, not in-game," below). Where known, record a Born year;
+alongside Status, record a Died year for anyone Deceased. Events,
+institutions, and offices get a Year the same way `timeline.md` dates
+its own entries. This is what lets "Elapsed-time register" (above)
+compute an actual gap instead of parsing it out of prose each time.
 
 **Personifying what you hold — split across two documents, and only
 once it's faceup.** The moment an adviser, denizen, or warband commander
@@ -249,7 +338,8 @@ or Mustered" entry for the fuller cascade):
   person's name, not a repeat of the card's own printed title — "Elner"
   who happens to be the Fire Talkers, not "the Fire Talkers" standing in
   for a person), a Description, a Location, a History (even a
-  one-line "first appeared, Round N" is enough to start one), and a
+  one-line note of the current Year is enough to start one — see
+  "Dating a Codex entry," above, never a Round number), and a
   Voice (see "Voice — staying in character" below) — the same
   Title/Description/History/Location structure as every other entry,
   plus Voice as a fifth field unique to `characters/` entries — this is
@@ -580,7 +670,11 @@ means. When a character's tactic genuinely fails mid-scene, let their
 control crack there — even where it costs some strict adherence to
 their stated Voice. A controlled character's control failing under real
 pressure isn't a contradiction of who they are; it can be the truest
-thing they do all scene.
+thing they do all scene. One exception worth naming: a grievance
+inherited across multiple generations (see "Elapsed-time register,"
+above) shouldn't crack the same way a fresh, first-hand wound would —
+its break, if it comes, should read as inherited conviction reasserting
+itself, not as a raw first-hand loss of composure.
 
 **Action beats are prose, not a bracketed aside.** Write what a
 character does while speaking as an ordinary narrative sentence folded
