@@ -1,6 +1,6 @@
 ---
 name: oath-leave-legacy
-description: Writes this seat's end-of-game legacy note (Game/Story/Legacy/legacy-<colour>.md) for this seat's own colour, giving a future game's bot of the same colour a narrative thread to build from — and closes out this seat's own departing Codex cast (Died year, past tense, moved to codex/characters/historical/). Use once the game has ended and the Chronicle phase has reshaped the board, when the user asks to "leave a legacy", "write the legacy file", "close out this character for next time", or similar. Run once per AI-controlled colour, in that colour's own chat.
+description: Writes this seat's end-of-game legacy note (Game/Story/Legacy/legacy-<colour>.md) for this seat's own colour, giving a future game's bot of the same colour a narrative thread to build from — and resolves this seat's own departing Codex cast, either closing them out (Died year, past tense, moved to codex/characters/historical/) or, if the elapsed time between games leaves them a plausible age, aging them into a living NPC instead. Use once the game has ended and the Chronicle phase has reshaped the board, when the user asks to "leave a legacy", "write the legacy file", "close out this character for next time", or similar. Run once per AI-controlled colour, in that colour's own chat.
 ---
 
 # Oath — Leave legacy
@@ -63,21 +63,32 @@ state mechanical game state from them.
    only reads one if it already exists.
 7. Close out this seat's own player character and its own advisers in
    the Codex — the other half of what step 1's elapsed time enables.
-   For each one still `Active` in `codex/characters/`: decide, briefly,
-   how the elapsed years from step 1 went for them, set Status to
-   Deceased where applicable with a Died year (per Bot-Rules, "Dating a
-   Codex entry"), add a sentence or two on what's remembered of them,
-   and convert Description and History to past tense throughout. The
-   one exception: a character with a specific in-world reason to
-   persist across the boundary (long-lived or effectively immortal)
-   skips this entirely and stays Active, present tense — default is
-   close out, persistence is the deliberate exception, not the other
-   way around.
-8. Move each entry closed out in step 7 into
+   For each one still `Active` in `codex/characters/`, check plausible
+   age first: their age (or a reasonable estimate) at this game's end,
+   plus step 1's elapsed years. Two outcomes, per Bot-Rules, "Codex —
+   using it in play," "Current vs. historical":
+   - **Implausibly old, or a specific reason they wouldn't have
+     survived the years between** — close out. Decide, briefly, how the
+     elapsed years went for them, set Status to Deceased with a Died
+     year (per Bot-Rules, "Dating a Codex entry"), add a sentence or two
+     on what's remembered of them, and convert Description and History
+     to past tense throughout.
+   - **Still a plausible age, or long-lived/effectively immortal
+     regardless of age** — don't close them out. They stay `Active`,
+     present tense, but no longer this seat's own Player Character:
+     update Description and History to reflect the years passed (older,
+     changed circumstances, whatever the elapsed time plausibly did to
+     them) and note in Status that they're now an NPC available to a
+     new character or anyone else, not this colour's own active seat
+     anymore. This is the default whenever the arithmetic supports it,
+     not a rare exception — don't reach for Deceased out of habit just
+     because that's the usual shape of a legacy pass.
+8. Move each entry closed out (the first outcome in step 7) into
    `codex/characters/historical/` (per Bot-Rules, "Codex — using it in
    play," "Current vs. historical") — the folder move and the narrative
    closure happen in the same pass, not as separate steps. A character
-   kept under the persistence exception stays in `characters/`.
+   kept under either exception in step 7 — persistence, or simply still
+   plausibly alive — stays in `characters/`.
 9. Leftover cast not clearly owned by this seat — companions or NPCs
    this character interacted with but didn't personify as its own
    adviser — aren't this skill's job to close out. Flag them in this
@@ -87,7 +98,9 @@ state mechanical game state from them.
 
 ## Response
 
-Print the legacy entry just written (step 6), and a short list of which
-Codex entries this pass closed out and moved to `historical/` (steps
-7-8) — plus any leftover cast flagged in step 9 for a wider sweep — so
-the human can confirm all of it before the next game starts.
+Print the legacy entry just written (step 6), and a short list from
+step 7-8 of what happened to each Codex entry checked — which were
+closed out and moved to `historical/`, and which were kept `Active` as
+living NPCs instead, with why — plus any leftover cast flagged in step
+9 for a wider sweep — so the human can confirm all of it before the
+next game starts.

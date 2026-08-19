@@ -308,9 +308,19 @@ used, not just checked off the "Reference material" list once per turn.
 **Current vs. historical.** `codex/characters/` holds only currently-
 relevant figures — anyone plausibly alive and part of the present cast.
 `codex/characters/historical/` holds everyone closed out at a previous
-game's end (see `oath-leave-legacy`). The one deliberate exception: a
-character with a specific in-world reason to persist (long-lived or
-effectively immortal) stays in `characters/` regardless of Status. This
+game's end (see `oath-leave-legacy`). Two deliberate exceptions stay in
+`characters/` regardless of how the elapsed time between games has run:
+a character with a specific in-world reason to persist (long-lived or
+effectively immortal, Status notwithstanding), and an ordinary former
+Player Character who's simply still plausibly alive given how much time
+actually passed — a short jump between games (see `oath-leave-legacy`,
+"how much time will pass") can leave even a mortal character alive and
+well into old age, not automatically dead just because the seat's own
+turn as its Player Character has ended. The second case is the default
+whenever the arithmetic supports it, not a rare exception on the level
+of the first — a nineteen-year-old at game's end and a forty-year gap is
+an old NPC, not a corpse, and closing them out anyway just because
+that's the usual shape of a legacy pass is its own kind of error. This
 doesn't bound what gets read for grounding purposes — reading broadly
 across both folders is still correct, and narrowing it would remove
 exactly the kind of varied material that should be available as an
@@ -318,7 +328,7 @@ alternative to whatever the most recent holder of a role already
 featured (see "Character creation," Background Flavor, above). What the
 split does is make it unambiguous which folder a bot is looking at, so
 nothing gets narrated as though it might still be alive decades after it
-wasn't.
+wasn't — or narrated as gone when the arithmetic says otherwise.
 
 **Dating a Codex entry.** Use Year of the Old Oak (per `timeline.md`),
 never a Round number — Round is game-mechanical, not in-world (see
@@ -646,6 +656,61 @@ narrating the gap ("she couldn't find the words"). The gap only reads
 if the obligation was established first: silence means nothing on its
 own, it means something specific once the reader already knows what
 should have come instead.
+
+**Understanding is a real check too, not assumed by default.** Before
+writing a reply to something another character just said, name plainly
+what they actually said — the literal words, not the most dramatic
+reading of them. Then decide, honestly, whether this character would
+actually follow it, given what they know. If the honest answer is no —
+the words don't parse, don't match what this character expected, or the
+reference material doesn't supply the connection a confident answer
+would need — let that show: a direct question, a flat admission of not
+following, an answer to a different, safer part of what was said
+instead. Don't manufacture a plausible-sounding interpretation to keep
+the exchange moving; a confident answer built on a guess is worse than
+an honest gap, because nothing about it signals it's a guess. Asking for
+clarification is its own valid tactic under "Every line needs a tactic"
+below, not a failure to have one. This is the same discipline the
+Pre-flight check already applies to game-state data, applied here to
+conversational understanding instead: a stated gap is checkable, an
+invented bridge over it isn't.
+
+**A goal needs urgency behind it, not just a tactic.** "Every line
+needs a tactic" (below) asks what a character wants and how they're
+getting it — but a tactic only reads as real once the character, and
+the writer, knows what failing here actually costs, in the most
+concrete terms already sitting in what's been read. Before writing this
+character into a scene, name the single highest-stakes fact already
+available — Diary, Codex, Chronicle, or something this character
+witnessed earlier in this same scene — that makes this exchange matter
+now, not eventually. A character who already has that fact in hand and
+doesn't lead with it, reaching instead for a smaller, safer version of
+the ask, isn't being restrained — they're under-playing a scene that's
+already handed them a reason to push. A stated prior limit ("I'll ask
+once and leave it there") is not urgency on its own; it only reads as
+real once it's shown in tension with the actual stakes and chosen
+anyway, not used as a stopping point that lets the character avoid
+weighing them at all.
+
+**Urgency applies to everyone in the scene, not just whoever's turn it
+is.** When two characters want incompatible things, do this check for
+both of them, not only the one being written this turn. A character
+being persuaded, refused, or opposed needs their own highest-stakes
+fact in hand too — otherwise the exchange isn't a real clash, it's one
+side pushing against no resistance. Before writing either character
+into a scene like this, confirm each one has a concrete, personal
+reason of their own to hold their ground, not just a reason to yield.
+
+**State a stake as a fact, not a list of what's missing.** A concrete
+number or consequence reads just as plainly delivered straight ("Three
+warbands, and none of them enough") as it does built from repeated
+negatives ("not three warbands, not six, not whatever you could
+raise"). The second shape is a rhetorical device — a negation-stacked
+beat — and spends the budget above the same as any other; naming real
+stakes doesn't require it. Reach for the plain, positive statement of
+what's at risk by default, and save the negated form for when it's
+actually the more natural way a character would say the specific line,
+not as the default way to state a number or a cost.
 
 **Every line needs a tactic, not just a fact.** Before finalizing a
 line of dialogue, work out, silently, what this character wants from
