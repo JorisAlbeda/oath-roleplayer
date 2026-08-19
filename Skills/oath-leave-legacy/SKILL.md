@@ -27,7 +27,7 @@ state mechanical game state from them.
    can be stamped immediately — this seat's own current Year, per
    `timeline.md`, plus the elapsed time given here — rather than left as
    a placeholder to fill in later.
-2. Reread `Game/Story/oath-chronicle.md`'s final beats and this seat's
+2. Reread `Game/Story/oath-chronicle.md` and this seat's
    own `Game/Story/Diaries/oath-diary-<seat>.md` in full,
    especially anything involving this character's most significant
    bond, rivalry, or unresolved thread with another character — and
