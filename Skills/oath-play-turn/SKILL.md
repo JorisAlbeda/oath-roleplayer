@@ -72,14 +72,28 @@ Messengers, or World Briefing.
    Rules/Site Reference per Bot-Rules, "Reference material," don't guess
    from memory. Don't plan a guessed-at Campaign or Search result to keep
    the chain going — stop deciding at that point, for real.
-8. Supply gate — mandatory, before choosing Rest: state the exact
-   Supply number this seat would have left. More than 2? You cannot
-   choose Rest yet — decide one more action, then recheck. Repeat until
-   2 or fewer, unless no further legal action is actually affordable; if
-   so, state that explicitly rather than just choosing Rest. A stated
-   number (and a stated reason, if skipping ahead) is checkable; "adjust
-   if needed" isn't, and this rule has been skipped past enough times
-   that it needs to be one.
+8. Supply gate — mandatory, before choosing Rest: state this seat's own
+   current remaining Supply and its current Warbands in reserve, look
+   up the refresh that reserve count gives per Bot-Rules' "Warband
+   reserve and the Supply refresh table," and add the two. If the sum
+   exceeds 7, Resting now wastes Supply to the cap — decide one more
+   action, then recompute both numbers fresh (not just remaining;
+   Muster and Campaign can change reserve too, and a killed warband
+   returns to reserve rather than leaving the game) and recheck. Repeat
+   until remaining + replenished ≤ 7.
+
+   The "no further legal action is actually affordable" exception isn't
+   free to claim. Before resting on those grounds, check every card
+   this seat actually has access to — own advisers, own site's
+   denizens, any ability with a cost this seat could still pay — for an
+   action that would spend the remaining Supply, not just the base
+   actions recalled from memory. If that check turns up nothing, say so
+   plainly and ask the human to confirm no sensible legal action
+   remains before Resting. Only after the human confirms it may this
+   seat Rest with the sum still over 7. A stated number (and a stated,
+   checked reason, if skipping ahead) is checkable; "adjust if needed"
+   isn't, and this rule has been skipped past enough times that it
+   needs to be one.
 9. If a new adviser, denizen, or warband commander (not a Vision — see
    steps 11-12 below for those) is drawn or recruited this turn, add its
    Adviser row in this seat's own Player state now regardless of facing
