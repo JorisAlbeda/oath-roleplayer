@@ -89,12 +89,13 @@ state mechanical game state from them.
    closure happen in the same pass, not as separate steps. A character
    kept under either exception in step 7 — persistence, or simply still
    plausibly alive — stays in `characters/`.
-9. Leftover cast not clearly owned by this seat — companions or NPCs
-   this character interacted with but didn't personify as its own
-   adviser — aren't this skill's job to close out. Flag them in this
-   skill's own Response for whichever human player is doing the wider
-   sweep across all seats, rather than guessing at cast that isn't this
-   colour's own.
+9. Also check for any leaked game terms in the codex files and fix them: the codex is written by a historian who doesn't know what a Round, an NPC, or a post-game is.
+10. Leftover cast not clearly owned by this seat — companions or NPCs
+    this character interacted with but didn't personify as its own
+    adviser — aren't this skill's job to close out. Flag them in this
+    skill's own Response for whichever human player is doing the wider
+    sweep across all seats, rather than guessing at cast that isn't this
+    colour's own.
 
 ## Response
 
