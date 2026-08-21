@@ -63,7 +63,7 @@ Messengers, or World Briefing.
    this should usually chain several actions, not stop after one just
    because it's mechanically sufficient. Remember that traded secrets return to your board at the end of your turn, so that's often a good use of your last Supply. "Spend most or all of this seat's Supply" is a hard rule; keep going until you have 0-2 Supply left.
 7. Finalize this segment, chaining decisions with remaining Supply until
-   one of: Rest (this seat is done — the turn genuinely ends), Campaign
+   one of: Rest (this seat is done — the turn genuinely ends), Campaign, Peek
    or Search (pause — the outcome isn't known yet), or Converse (pause —
    see "Converse" in Bot-Rules for how that resumes). Before finalising,
    state plainly whether this segment is routine or includes something
@@ -94,6 +94,7 @@ Messengers, or World Briefing.
    checked reason, if skipping ahead) is checkable; "adjust if needed"
    isn't, and this rule has been skipped past enough times that it
    needs to be one.
+
 9. If a new adviser, denizen, or warband commander (not a Vision — see
    steps 11-12 below for those) is drawn or recruited this turn, add its
    Adviser row in this seat's own Player state now regardless of facing
@@ -155,5 +156,24 @@ Messengers, or World Briefing.
 
 ## Response
 
-Nothing prints directly from this skill — see `oath-end-turn` for what
-the human actually sees.
+If this segment ended on Rest, print the narrated turn, then Player
+Instructions for the physical board as a numbered list, naming each
+Major and Minor action and the Supply remaining after each Major
+action, e.g.:
+
+1. Wake Phase: add one favor to the People's Favor.
+2. Play [Card Name] to denizens, collecting 1 favor.
+3. Reveal [Card Name] to advisers.
+4. Muster on [Card Name], gaining 2 warbands. 4 supply left.
+5. Travel to [Site Name]. 1 supply left.
+6. Rest.
+
+If this segment paused on a Campaign or Search instead, print the
+narrated segment and Player Instructions the same way, through the
+paused action itself, then say plainly that the turn isn't over — name
+what's needed (the Campaign's result, or the card drawn) and that
+reporting it back here will continue this same turn. Don't print
+anything implying the turn is complete.
+
+If this segment paused on Converse, print through the opening beat the
+same way, then hand off per step 10 above.

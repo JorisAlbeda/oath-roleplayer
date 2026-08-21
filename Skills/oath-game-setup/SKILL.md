@@ -18,7 +18,11 @@ seat-specific.
    its structure: `Game/Mechanics/`, `Game/Setup/`, `Game/Story/`,
    `Game/Story/Conversation logs/`, `Game/Story/Messengers/`,
    `Game/Story/Diaries/`, and `Game/Story/Legacy/`. This is purely
-   organizational here — see `Oath-Cowork-File-Map.md`.
+   organizational here — see `Oath-Cowork-File-Map.md`. Do not create a
+   Codex folder anywhere as part of this step, or any other — the Codex
+   lives outside this project entirely, at `Catalogue/codex/`, already
+   populated by the human; if it isn't visible from this session, that's
+   a folder-access question for the human, never something to create.
 2. Take as given: the Oath sworn, each player's colour, Role, and
    whether they're Human- or AI-controlled.
 3. Create `Game/Mechanics/oath-board-state.md`: Round 0, Visions Drawn
@@ -96,8 +100,11 @@ seat-specific.
    top (per Bot-Rules, "Live threads — narrative-only tension tracking"),
    nothing under it yet.
 6. For each seat, create an empty
-   `Game/Story/Diaries/oath-diary-<seat>.md`, and
-   `Game/Story/Messengers/oath-messengers-<seat>.md`.
+   `Game/Story/Messengers/oath-messengers-<seat>.md`. For each
+   AI-controlled seat only, also create an empty
+   `Game/Story/Diaries/oath-diary-<seat>.md` — the Human seat gets a
+   Messengers file (their character can still receive messages) but no
+   Diary, since there's no bot of its own to write one.
 7. For each AI-controlled seat, write
    `Game/Setup/oath-world-briefing-<seat>.md` — a paragraph grounding
    that seat's own upcoming Setup decision: named starting-location
