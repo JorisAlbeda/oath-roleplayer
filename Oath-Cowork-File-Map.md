@@ -5,7 +5,8 @@ reads all shared documents plus its own private ones; it never reads
 another seat's private documents. The Human seat has no chat of its
 own and no private documents._
 
-All live game files sit in a `Game/` subfolder of this Oath Roleplayer folder. `oath-game-setup` creates that subfolder and its structure once,
+All live game files sit in a `Game/` subfolder of this Oath Roleplayer
+folder. `oath-game-setup` creates that subfolder and its structure once,
 at the start of a new game — every other skill assumes it already
 exists.
 
@@ -15,8 +16,38 @@ exists.
   per AI seat, written and overwritten by `oath-inspect-board` — not
   append-only, holds only this seat's current thinking).
 - **Setup** — World Briefing.
-- **Story** — Chronicle, Characters, plus five further subfolders:
-  Conversation logs, Messengers, Diaries, Codex, and Legacy.
+- **Story** — Chronicle, Characters, plus four further subfolders:
+  Conversation logs, Messengers, Diaries, and Legacy.
+
+**The Codex is not part of `Game/` at all, and it is not part of this
+project folder either.** It lives at a single fixed location, outside
+every playtest folder: `Catalogue/codex/`, a sibling of the `Oath/`
+folder's various playtest projects (this project's own folder — "Playtest
+6 - The Second Woodland Empire" or whichever one is current — sits
+alongside it, not above or below it). It holds five subfolders —
+`buildings/`, `characters/` (with its own `historical/` subfolder for
+retired characters), `events/`, `locations/`, `relics/` — plus a
+`timeline.md` and a `manifest.json` at its own top level. One Catalogue
+serves every playtest that's ever been run, which is the entire point
+of it: a character, location, or relic from three playtests ago is
+still there to be read and built on.
+
+**No skill ever creates a Codex folder, anywhere, under any
+circumstances — not at Setup, not lazily on first use, not as a
+fallback when one "isn't there yet."** The Catalogue already exists
+and is provided by the human; the only way to see it is a folder-access
+problem, never an existence problem. If a bot can list `Game/` but the
+Catalogue's `codex/` folder doesn't resolve, that means this session
+hasn't been granted access to it yet — the fix is to ask the human to
+connect or grant access to `Catalogue/codex/` at its existing path, the
+same way any other connected folder gets granted, never to create a
+same-named folder somewhere convenient and start writing to that
+instead. (This is a corrected mistake, not a hypothetical: an earlier
+session did exactly that during Playtest 6, inventing a fresh top-level
+`Codex/` folder inside the playtest project and populating it there.
+The stray folder was moved out and its two entries relocated into the
+real Catalogue; this paragraph exists so it doesn't happen a second
+time.)
 
 ## Shared documents (all seats read and append to these)
 
@@ -78,21 +109,28 @@ exists.
   the two characters and the round it started in (e.g.
   `oath-conversation-dorcas-lyn-R2-1.md` for the first conversation
   between them in Round 2)
-- `Game/Story/Codex` — in-world detail on buildings, characters, events,
+- `Catalogue/codex/` — in-world detail on buildings, characters, events,
   locations, and relics, one file per entry in the matching subfolder
   (`buildings/`, `characters/`, `events/`, `locations/`, `relics/`),
-  each following a Title/Description/History/Location structure.
-  `characters/` entries carry a fifth field, Voice, per Bot-Rules
-  "Voice — staying in character"; `locations/` entries may optionally
-  carry Regional voice notes, added the first time a scene actually
-  happens there, and may also optionally carry a Garrison field (a
-  name, a leader as a minor `characters/` NPC, its own character) for
-  that site's own ruling force, added or updated per Bot-Rules,
-  "Warbands — personifying the garrison." Mostly inherited from the
-  previous game, extended during this one — read per Bot-Rules "Codex —
+  each an H1 title followed by `##` sections — Description, History,
+  Location, in that order (see any existing entry, e.g.
+  `characters/tavin-aldren.md` or `relics/grand-scepter.md`, for the
+  exact shape) — not a flat Title/Description/History/Location bullet
+  list. `characters/` entries carry a fifth `## Voice` section, per
+  Bot-Rules "Voice — staying in character," and may also carry an
+  optional `## Status` section (e.g. "Active — Born Year 512");
+  `locations/` entries may optionally carry Regional voice notes, added
+  the first time a scene actually happens there, and may also optionally
+  carry a Garrison field (a name, a leader as a minor `characters/` NPC,
+  its own character) for that site's own ruling force, added or updated
+  per Bot-Rules, "Warbands — personifying the garrison." This is not a
+  subfolder of `Game/`, or of this project folder at all — see the
+  note near the top of this document on where the Codex actually lives
+  and why no skill ever creates it. Mostly inherited from
+  previous games, extended during this one — read per Bot-Rules "Codex —
   using it in play," appended to (new History) or added to (new
   entries) the same way
-- `Game/Story/Codex/timeline.md` — long-form world history across games,
+- `Catalogue/codex/timeline.md` — long-form world history across games,
   dated by era of the Old Oak, occasionally with editorial commentary.
   Human-maintained and read-only for every seat's bot — no skill writes
   to it. Read once, by `oath-setup-character`, to place a new character
@@ -121,9 +159,11 @@ exists.
   previously, checked by the next game's `oath-setup-character` but
   never created or modified by anything in this Skills set.
 
-No Diary, Messengers, Strategy, or World Briefing file is
-created for the Human seat — the human has no bot reading or writing on
-their behalf.
+No Strategy or World Briefing file is created for the Human seat — the
+human has no bot reading or writing on their behalf. A Messengers file
+is still created for the Human seat, since their character can receive
+messages even without a bot; a Diary file is not, since there's no bot
+of its own to write turn-by-turn diary entries.
 
 ## Reference material (read-only, shared)
 

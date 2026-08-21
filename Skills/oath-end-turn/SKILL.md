@@ -80,7 +80,7 @@ Messengers, or World Briefing.
      changing after a Search — a Relic moves from "unknown" to Name and
      Description the moment anyone peeks at it, for every seat, not just
      whoever peeked; Favor Banks, whenever favor moved to or from one;
-     Discard Pile counts, remembering discards land on the *next* Region
+     Discard Pile counts, remembering discards land on the _next_ Region
      clockwise, not the acting pawn's own. Most segments won't touch the
      Map at all)
    - `Game/Mechanics/oath-logic-log.md` (actions taken this segment; this is
@@ -143,7 +143,7 @@ Messengers, or World Briefing.
 9. Opportunistically check whether this segment resolves an existing Live
    thread or plausibly introduces a new one, per Bot-Rules, "Live threads
    — narrative-only tension tracking." Update Chronicle's `## Live
-   threads` header if so — most segments won't touch it either way, and
+threads` header if so — most segments won't touch it either way, and
    it never changes what's legal or what was just decided above.
 10. If this segment ends on Converse, hand off to `oath-continue-conversation`
     for the opening line once the response below is printed, then return
@@ -152,26 +152,4 @@ Messengers, or World Briefing.
 
 ## Response
 
-If this segment ended on Rest, print the narrated turn, then Player
-Instructions for the physical board as a numbered list, naming each
-Major and Minor action and the Supply remaining after each Major
-action, e.g.:
-
-1. Wake Phase: add one favor to the People's Favor.
-2. Play [Card Name] to denizens, collecting 1 favor.
-3. Reveal [Card Name] to advisers.
-4. Muster on [Card Name], gaining 2 warbands. 4 supply left.
-5. Travel to [Site Name]. 1 supply left.
-6. Rest.
-
-If this segment paused on a Campaign or Search instead, print the
-narrated segment and Player Instructions the same way, through the
-paused action itself, then say plainly that the turn isn't over — name
-what's needed (the Campaign's result, or the card drawn) and that
-reporting it back here will continue this same turn. Don't print
-anything implying the turn is complete.
-
-If this segment paused on Converse, print through the opening beat the
-same way, then hand off per step 10 above.
-
-Nothing else needs to print.
+Report what was corrected.

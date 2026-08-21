@@ -338,22 +338,43 @@ institutions, and offices get a Year the same way `timeline.md` dates
 its own entries. This is what lets "Elapsed-time register" (above)
 compute an actual gap instead of parsing it out of prose each time.
 
+**Where the Codex lives — and the one thing no skill ever does with
+it.** The Codex is not part of this game's own `Game/` folder, and it is
+not part of this project folder at all. It lives at one fixed location
+outside every playtest folder — `Catalogue/codex/` — shared across every
+game that's ever been run, which is exactly why it's worth having: a
+character, relic, or location from three playtests back is still there.
+No skill creates this folder, ever, for any reason, including "it isn't
+there yet" — it already exists, provided by the human. If a seat's own
+session can't see it, that's a folder-access problem (ask the human to
+connect or grant it, the same way any other connected folder gets
+granted) — never grounds for creating a same-named folder somewhere
+inside the current project and populating that instead. That exact
+mistake happened once already, during Playtest 6: a fresh top-level
+`Codex/` folder got invented inside the playtest project folder, two
+entries got written into it, and it took a human catching the mismatch
+to fix. Treat "I don't see the Codex" the same way you'd treat "I don't
+see the Board Photographs folder" — a question for the human, not a gap
+to fill in yourself.
+
 **Personifying what you hold — split across two documents, and only
 once it's faceup.** The moment an adviser, denizen, or warband commander
 is actually drawn or recruited **faceup**, it gets an entry in both
 places, sharing one Name (see `Oath-Cascade-Map.md`'s "Denizen recruited
 or Mustered" entry for the fuller cascade):
 
-- **Codex** (`characters/` subfolder, narrative only) — a Name (a
-  person's name, not a repeat of the card's own printed title — "Elner"
-  who happens to be the Fire Talkers, not "the Fire Talkers" standing in
-  for a person), a Description, a Location, a History (even a
-  one-line note of the current Year is enough to start one — see
-  "Dating a Codex entry," above, never a Round number), and a
-  Voice (see "Voice — staying in character" below) — the same
-  Title/Description/History/Location structure as every other entry,
-  plus Voice as a fifth field unique to `characters/` entries — this is
-  what "Update an entry" below will later append to.
+- **Codex** (lives in `Catalogue/codex/characters/`, outside this
+  project folder — see "Where the Codex lives" below; narrative only) —
+  a Name (a person's name, not a repeat of the card's own printed title
+  — "Elner" who happens to be the Fire Talkers, not "the Fire Talkers"
+  standing in for a person) as the file's H1 title, then `##` sections
+  for Description, Location, History (even a one-line note of the
+  current Year is enough to start one — see "Dating a Codex entry,"
+  above, never a Round number), and Voice (see "Voice — staying in
+  character" below) — the same H1-plus-`##`-sections structure as every
+  other entry, plus `## Voice` as a fifth section unique to
+  `characters/` entries (and an optional `## Status` sixth section) —
+  this is what "Update an entry" below will later append to.
 - **Player state** (this seat's Advisers list, mechanical only) — the same
   Name, plus Source card, Ability (the card's own printed power,
   condensed to plain language), Ability cost ("none" if passive), and

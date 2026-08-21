@@ -123,13 +123,24 @@ the same turn._
     - Kept current by `oath-inspect-board`, an eighth, standalone step
       that isn't part of the Play turn/End turn chain
 
-12. Codex (Shared; one file per entry, in a `buildings`/`characters`/
-    `events`/`locations`/`relics` subfolder matching its category)
-    - Title, Description, History, Location
-    - `characters/` entries carry a fifth field, Voice (vocabulary
+12. Codex (Shared; lives in `Catalogue/codex/`, OUTSIDE this project
+    folder entirely, not in any per-game folder — one Catalogue serves
+    every playtest. One file per entry, in a
+    `buildings`/`characters`/`events`/`locations`/`relics` subfolder
+    matching its category)
+    - No skill ever creates this folder, under any circumstance — it
+      already exists, at that fixed location, provided by the human.
+      If it isn't visible, that's a folder-access problem to raise with
+      the human, never a reason to create a same-named folder somewhere
+      else and start writing to that instead
+    - Each entry: an H1 title, then `##` sections for Description,
+      History, Location — not a flat Title/Description/History/Location
+      bullet list
+    - `characters/` entries carry a fifth `## Voice` section (vocabulary
       level, one or two verbal habits, emotional default, speech
       rhythm) — written once at personification, per Bot-Rules,
-      "Voice — staying in character"
+      "Voice — staying in character" — and may also carry an optional
+      `## Status` section
     - `locations/` entries may optionally carry Regional voice notes (a
       proverb or two, a conversational habit) — added the first time a
       scene actually happens there, not upfront
@@ -139,10 +150,10 @@ the same turn._
       when a Muster or Campaign makes it worth naming, not on every
       routine Map change, per Bot-Rules, "Warbands — personifying the
       garrison"
-    - Mostly inherited from the previous game; read and extended during
+    - Mostly inherited from previous games; read and extended during
       this one per Bot-Rules, "Codex — using it in play"
 
-13. Timeline (Shared; one running file, `Game/Story/Codex/timeline.md`;
+13. Timeline (Shared; one running file, `Catalogue/codex/timeline.md`;
     human-maintained across games, not written by any of the eight
     Actions below)
     - Dated entries recording the world's history by era, occasionally
@@ -301,7 +312,9 @@ the same turn._
    - Create empty Characters, Logic log, and Chronicle
    - Do not create Strategy files for anyone — `oath-inspect-board`
      creates one lazily for a seat's own colour on its first run
-   - Do not create Diary or Messengers files for the Human seat
+   - Create a Messengers file for every seat, including the Human seat.
+     Do not create a Diary file for the Human seat — it has no bot of
+     its own to write one
    - Before finishing, run the Required tier of Bot-Rules' pre-flight
      check against what was just created
    - Runs once per game, before any seat's own Setup
