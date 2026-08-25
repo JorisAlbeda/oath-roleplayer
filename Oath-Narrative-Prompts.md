@@ -14,6 +14,15 @@ makes this month's best story, and let these questions shape that one
 description; the rest can stay a clause or go unmentioned. These are
 prompts to think with, not a checklist to fill in line by line.
 
+**Scale.** A warband is 50-100 soldiers, not a single fighter, and a
+Campaign plays out over roughly a week of real fighting, not one clash
+of arms. Keep that scale in mind wherever these prompts talk about
+warbands or Campaigns below — a dice result that reads as a narrow
+mechanical margin (a tie broken by one sacrifice, a defense won by a
+single shield) can still represent a genuinely costly week, and losing
+a handful of warbands is a couple hundred real dead, not a skirmish's
+worth of casualties.
+
 ## Major actions
 
 **Travel.** What does the road, sea route, or path actually look like
@@ -63,10 +72,14 @@ otherwise, to hold something with that name?
 
 **Campaign.** The dice decide the mechanical outcome, but not what the
 battle actually looked like or cost. Was this a skirmish, a siege, a
-naval action, an ambush? What did winning actually gain this character
-beyond the site itself — and what did losing cost them beyond warbands,
-if it went the other way? If the warbands involved have been personified
-per Bot-Rules, "Warbands — personifying the garrison," let their own
+naval action, an ambush? Given the scale above, a Campaign that kills
+several warbands is a real week of real losses on both sides, win or
+lose — narrate it as that, not as a single duel or a bloodless flip of
+a site's ownership, even when the dice made the mechanical margin look
+narrow. What did winning actually gain this character beyond the site
+itself — and what did losing cost them beyond warbands, if it went the
+other way? If the warbands involved have been personified per
+Bot-Rules, "Warbands — personifying the garrison," let their own
 character (loyal, mercenary, terrified, eager) show up in how the
 Campaign reads, not just its result.
 
