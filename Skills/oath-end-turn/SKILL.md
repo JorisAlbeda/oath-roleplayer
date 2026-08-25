@@ -53,7 +53,12 @@ Messengers, or World Briefing.
    and needs the same pass — "Round 0," a card's own printed name, or
    "this seat's starting adviser" are exactly the kind of phrase that
    survives here if it's not re-checked.
-6. Update, each read fresh immediately before appending:
+6. Update, each read fresh immediately before appending. **Before writing
+   to either of the first two files below, re-read Bot-Rules' "Board
+   state and Player state stay clean" — every value goes in bare, with
+   no parenthetical explaining how it got there or citing this turn;
+   that reasoning belongs in the Logic log entry below instead. This is
+   the step where that rule gets skipped most often.**
    - `Game/Mechanics/oath-player-state.md` (mechanical results, including
      Supply actually spent so far; if `oath-play-turn` recruited a new
      adviser this segment, its Adviser row — Name, Source card, Ability,

@@ -36,6 +36,25 @@ on memory alone. "As needed" has quietly become "never" before, once
 narration and Codex upkeep were competing for the same bot's attention;
 a stated yes/no is checkable, "as needed" on its own isn't.
 
+This check is a gate on your own reasoning before you commit to an
+action, not a paragraph you owe the Logic log. Do it, say what you
+checked in your response to the human if it's worth surfacing, then
+write the Logic log entry as if the right call were obvious — a "1.
+Campaign: ... Used Cursed Cauldron as a battle plan (no payout against
+Bandits, 5.5.6)" is enough; a separate "Checked before deciding: 5.5.6
+states..." paragraph explaining the reasoning that produced that one
+clause is the kind of padding Fia's own turns don't carry and Marek's
+shouldn't either. Likewise, a Search or Campaign that pauses mid-turn
+doesn't need "Turn paused here — the outcome is unknown until reported"
+spelled out, or the eventual resolution introduced with "Resolution
+reported by the human" — when the human's report arrives, fold it
+straight into the same numbered step as if it had always been known,
+the way Fia's own Round 3 turn reads as one continuous Act phase with
+no visible seams. A correction works the same way: fix the step in
+place rather than appending a new paragraph narrating that a fix
+happened. See "Board state and Player state stay clean" above — the
+same discipline applies here, one document over.
+
 ## Pre-flight check — required vs recommended
 
 Before deciding anything, check that what you just read is actually
@@ -63,10 +82,35 @@ itself, not just the decision.
   instead of a number of their own).
 - At Game Setup only: Oath, Current Player Turn, and every seat's Role
   and Controlled-by are set.
+- Every file this action's own instructions name as required reading —
+  a Bot-Rules section by name, a Codex entry, the Chronicle, this
+  seat's own Diary, a Converse dialogue file — actually loaded, in
+  full, from that file itself. A skill's own summary or paraphrase of a
+  rule is not a substitute for the rule, even when it's the only thing
+  that loaded successfully.
 
 If any of these is missing, say so plainly and stop — don't infer a
 site's control or an Adviser's standing from narrative memory. A stated
 gap is checkable, a silent assumption isn't.
+
+**A required file that fails to load is a Required gap, not a reason to
+route around it.** If a read or fetch for one of the files above comes
+back empty, errors, or times out, don't quietly substitute a file that
+merely references it (another skill's citation of a Bot-Rules section
+is not the section) and carry on as if the requirement were satisfied —
+that failure is exactly as reportable as a missing Player-state field,
+and silently working around it is how a gap like this stays invisible
+for an entire session. First, check whether the failure is your own
+mistake — a mistyped path, a wrong working directory — by re-deriving
+the path from a listing of its actual parent folder rather than
+re-guessing the same path a second time; a real access boundary and a
+typo produce similar-looking errors, and only checking the surrounding
+directory tells them apart. If a corrected path still fails, state
+plainly which file failed, what was tried, and that you're proceeding
+without it (or stopping, if this action can't legally proceed without
+it) — the same required-gap treatment as anything else on this list,
+not a silent fallback to whatever secondary source happened to be
+available.
 
 **Recommended — proceed, and name the assumption you're making, never
 block on these:**
@@ -962,6 +1006,35 @@ log, which exists precisely to hold it. A name for a personified warband
 company or garrison and its leader is current state, not history, and
 stays; a parenthetical citing where else to find it (a `(Codex)` note, a
 locations-entry cross-reference) is clutter and doesn't.
+
+This has been the single most commonly broken rule in this file. Every
+one of the phrases below is a real example pulled from these two
+documents after it had already drifted — if a sentence you're about to
+write echoes any of them, delete the parenthetical and keep only the
+bare value:
+
+- "(3, minus 1 for Black playing Kindred Warriors to Widowmire this turn)"
+- "(the 1 favor placed on it from Muster returns here at Black's own Rest below)"
+- "(was already empty when White attempted to search it this turn — that Search was undone...)"
+- "(2 previously pending from Purple's own World Deck search this round, plus 1 more from Black's own Search this turn...)"
+- "(formerly Marshes — renamed by Black this turn)"
+- "(flipped by Blue's Travel this turn — found once before by one of Cade's own lineage, per the Codex...)"
+- "(this session's own math makes it 7 — see this turn's Logic log entry...)"
+- "(Round 2, turn open — spent 3 Searching the World Deck; Search's own outcome still pending)"
+
+A rename, a site being flipped, a discard pile's count changing, a
+Search still being mid-resolution — all of that is real, but it's Logic
+log's job to carry the *why* and the *when*. Board state and Player
+state carry only the *what*, as of right now. If you catch yourself
+writing "this turn," "per the human's report," "flagging rather than
+guessing," or a phrase like "still pending" in either document, stop
+and move that clause to the Logic log entry instead, or drop it if it's
+already there.
+
+A genuinely unresolved current fact (an ability not yet read off a
+card, a relic not yet identified) is not commentary and stays — write
+it as a plain "unconfirmed," not as a sentence explaining the history
+of why it's unconfirmed.
 
 ## Bookkeeping discipline
 
