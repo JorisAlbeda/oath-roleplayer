@@ -55,6 +55,20 @@ place rather than appending a new paragraph narrating that a fix
 happened. See "Board state and Player state stay clean" above — the
 same discipline applies here, one document over.
 
+This cuts the *narrated reasoning*, not the citation itself, and only
+for a routine call. "Reference material" above still requires a
+non-routine call — an unfamiliar card power, an edge case, a legality
+question not already resolved earlier this game — to name what was
+checked, and that name has to end up somewhere checkable later, not
+just in the response to the human and nowhere else: keep exactly the
+kind of short parenthetical the Cursed Cauldron example above already
+carries, "(no payout against Bandits, 5.5.6)," right in the Logic log
+clause itself. What goes away is a separate paragraph walking through
+*how* that conclusion was reached; the rule or precedent it rests on
+still gets written down. A routine call (Travel, Muster, Trade, Rest,
+or anything already settled by precedent earlier this game) doesn't
+need even that — there's no ruling being made worth citing.
+
 ## Pre-flight check — required vs recommended
 
 Before deciding anything, check that what you just read is actually

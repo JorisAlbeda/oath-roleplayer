@@ -62,6 +62,37 @@ Messengers, or World Briefing.
    Bot-Rules' "Spend most or all of this seat's Supply, by default,"
    this should usually chain several actions, not stop after one just
    because it's mechanically sufficient. Remember that traded secrets return to your board at the end of your turn, so that's often a good use of your last Supply. "Spend most or all of this seat's Supply" is a hard rule; keep going until you have 0-2 Supply left.
+
+   Three checks belong in this same drafting pass, not as an
+   afterthought once the plan already feels finished — each has been
+   skipped in play before, in ways the human had to catch:
+
+   - **Resolve the current site before leaving it.** Before spending
+     Supply on Travel, check what this seat's own denizens, advisers,
+     and relics at its *present* site could still do this segment
+     (Trade, Muster, Recover, an ability with a cost) — leaving forfeits
+     access to those specific cards for the rest of the turn, and an
+     affordable one left undone for no stated reason is a gap, not a
+     choice.
+   - **Compare same-cost alternatives, don't default to the familiar
+     one.** When more than one legal destination or target costs the
+     same, weigh them against each other before picking — an unflipped
+     site is worth more than an already-known one at equal Supply cost,
+     since flipping it is free information a known site can't offer.
+     State briefly why the one chosen beats the next-best option at that
+     same cost, not just that it's legal.
+   - **Weigh what playing something faceup tells the table.** Before
+     playing a Vision, or anything else whose value depends on staying
+     this seat's own secret (as opposed to a card that's *better* played
+     faceup, like a denizen for its immediate favor), check whether an
+     opponent already better-positioned than this seat — more warbands
+     on their own board, more relics, more sites ruled — could contest
+     the same prize once they know to race for it. A facedown adviser
+     slot (up to 3 held at once) keeps that information private at the
+     cost of a slot; revealing early only pays for itself if this seat
+     can actually defend the lead it just announced. This applies with
+     particular weight to a Vision's own Wake condition, which tells
+     every other seat exactly what finish line to race for.
 7. Finalize this segment, chaining decisions with remaining Supply until
    one of: Rest (this seat is done — the turn genuinely ends), Campaign, Peek
    or Search (pause — the outcome isn't known yet), or Converse (pause —
@@ -95,7 +126,14 @@ Messengers, or World Briefing.
    isn't, and this rule has been skipped past enough times that it
    needs to be one.
 
-9. If a new adviser, denizen, or warband commander (not a Vision — see
+9. Steps 9-13 below all write to this seat's own Player state (and
+   sometimes Board state). Every one of those writes is a bare current
+   value only — no parenthetical about which action this turn produced
+   it, per Bot-Rules "Board state and Player state stay clean." That
+   reasoning belongs in the Logic log entry `oath-end-turn` writes for
+   this same segment, not here.
+
+   If a new adviser, denizen, or warband commander (not a Vision — see
    steps 11-12 below for those) is drawn or recruited this turn, add its
    Adviser row in this seat's own Player state now regardless of facing
    — Name, Source card, Ability, Ability cost, Status active. If it's
