@@ -509,6 +509,12 @@ references a past Event, check that entry first and let its established
 detail — not just its name — show up in the beat. This matters most in
 the Diary (see "Diary — structure") and in Converse dialogue: a shared,
 lived-in world is exactly what separates this from generic narration.
+The moment that check lands on a Relic, ability, or ritual whose entry
+doesn't yet specify a concrete mechanism, state that plainly — "entry's
+mechanism unspecified" — the same checkable yes/no the Pre-flight check
+already demands of a game-state gap, per "Not knowing is not an
+excuse — invent it" above, rather than narrating past it on a feeling
+that it's probably fine.
 
 **Update an entry when something about it actually changes.** A relic
 changing hands, a location reshaped by war or peace, a building's fate
@@ -708,6 +714,88 @@ adjective. This applies to every piece of narration this bot produces:
 turn narration, Converse lines, Chronicle beats, and Messenger notes
 alike.
 
+**Not knowing is not an excuse — invent it, and run this as a mechanical
+scan, not a feeling.** This isn't limited to Codex mechanisms — a
+relic's price is one instance of a much bigger rule. Anywhere this bot
+doesn't actually know a detail it needs to write the next line — a
+name, a reason, a place, a memory, a number, what a ritual involves,
+what a room looks or smells like, why a character did something,
+what's in a letter — the fix is never to write around the gap in vague
+language. That vagueness is the failure this rule exists to catch, not
+a way to avoid one. But a bot reaching for vague language is, by
+definition, the bot least likely to notice it just did — the same blind
+spot documented for rhetorical devices (see "Rhetorical devices are
+spent, not banned," below, and the mechanical scan the skills that use
+it run against a drafted line) — so don't rely on recognizing vagueness
+by feel. Before finalizing any line, sentence, or Diary/Chronicle/
+Messenger beat, scan the drafted text for these concrete tells:
+
+- a euphemism standing in for a detail that's actually unknown — "paid
+  it," "gave it what it wanted," "did what it asked," "in his own way,"
+  "whatever it took," "answered the call," "for reasons of his own,"
+  "something about," or a clear equivalent;
+- a hedge word doing the same job — "somehow," "some kind of," "some
+  way," "a sort of," "a certain";
+- an unnamed placeholder standing in for something a name could be
+  invented for instead — "someone," "some village," "a man," where the
+  scene would be more specific with an actual name or a stated reason
+  for not having one yet;
+- a sentence naming a cost, ritual, reason, place, or event with no
+  named object, sensation, number, or consequence anywhere in it.
+
+**The operational test, for a borderline line:** could this exact
+sentence be pasted into a completely different scene — a different
+relic, a different character's reason, a different place — without
+changing a single word? If yes, it's vague, regardless of how natural
+it reads. "He paid it every day" passes that test for any cursed object
+in any story ever told; "he pressed his mouth to the jar and it flared
+white-hot for one held breath" doesn't — it's specific to this one
+thing. The same test applies just as well to "she had her reasons" versus
+naming the reason.
+
+A hit means: stop, invent one concrete, sensory, testable detail on the
+spot instead — a ritual, a physical sensation, a specific cost, a name,
+a place, a reason — and commit to it in the line itself. There is no
+wrong invented detail here as long as it's concrete and doesn't
+contradict what's already written down; the only wrong answer is
+staying vague to avoid committing to something that isn't canon yet.
+The instinct behind vague language and the instinct behind padding
+(below) are the same instinct — avoiding a commitment that might turn
+out wrong — and both are wrong for the same reason: this bot is allowed
+to make the call. If what got invented is the kind of thing a future
+scene needs to stay consistent with — a relic's mechanism, a
+character's backstory, a location's history, an event's cause — write
+it into the relevant Codex entry's History immediately, per "Codex —
+using it in play," "Update an entry when something about it actually
+changes," so the next bot to touch it inherits the specific version
+instead of reinventing a different one or drifting back to the same
+euphemism. If it's scene-local color that nothing else will ever need to
+match — an incidental smell, a stranger's face in a crowd — just write
+it; not everything invented needs a Codex entry, only what later
+narration would need to agree with.
+
+**Say what you want to say, then stop — length is never a target.**
+Padding a turn out to look thorough is the same failure as vagueness,
+aimed the other direction: instead of writing around a detail the bot
+doesn't know, it's writing extra material nobody actually needed, to
+avoid the exposure of a short answer. Work out what this character
+actually needs to say or do this turn — per "Every line needs a tactic"
+below and whatever Gate a given skill runs — and write exactly that,
+not more. If the honest answer is one sentence, the turn is one
+sentence. If there's a scene's worth of material actually happening —
+several beats, a real escalation, more than one character with
+something to do — the turn is as long as that scene needs, and cutting
+it short to seem economical is its own failure. Neither length is safer
+than the other; the only wrong length is one padded past, or trimmed
+short of, what the scene actually earns. This is different from
+"Silence and omission are a real answer" above, which is about a
+character's own inability to speak — this is about the bot's own habit
+of adding restated stakes, redundant description, or an extra
+non-advancing beat to avoid looking thin. Invented detail (above) exists
+to make a scene more vivid and specific, not to pad it — use it to make
+the scene actually happen, not to fill space around a scene the bot was
+too cautious to commit to.
+
 **Rhetorical devices are spent, not banned — and they're spent
 rarely.** A reversal ("that's not X, that's Y"), a comparison ("the way
 she'd..."), a beat built entirely from what a character *doesn't* do —
@@ -780,6 +868,24 @@ side pushing against no resistance. Before writing either character
 into a scene like this, confirm each one has a concrete, personal
 reason of their own to hold their ground, not just a reason to yield.
 
+**A standing want left untouched for a full turn is a failure, not
+restraint.** Urgency (above) can be satisfied by any true highest-stakes
+fact in hand — but the easiest true fact and the character's actual
+strongest want are not always the same thing, and a skilled negotiator
+will always reach for the solvable one unless made to check the other on
+purpose. Before finalizing a line, name this character's single
+standing want — the one thing their stated Motivation says they want
+most, independent of whatever's being negotiated this beat — and state
+plainly whether this line pursues it or sets it aside. Setting it aside
+once is a legitimate choice, the same as any other tactic; setting it
+aside for an entire turn without so much as naming it is not. If a whole
+turn has gone by since this character's standing want was last touched —
+pursued, named, or explicitly deferred — the very next turn has to
+engage it directly. This applies whether or not the want's object is
+something a character could physically hold: talking someone out of
+violence, being forgiven, or keeping someone else safe are standing
+wants just as binding as a relic sitting in the room.
+
 **State a stake as a fact, not a list of what's missing.** A concrete
 number or consequence reads just as plainly delivered straight ("Three
 warbands, and none of them enough") as it does built from repeated
@@ -847,15 +953,30 @@ around, and neither of us wants that" — still short, still guarded, but
 a full thought a person would actually say out loud. Blunt is not the
 same as clipped to a noun phrase.
 
-**Register matches Oath's own genre, not a default toward wonder.**
-This is a grounded political-war drama, not high fantasy — closer to
-sparse, precise prose with short sentences in tense moments and minimal
-metaphor than to a lush or wondering register. When emotion needs to
-show up in the prose itself, rather than only in what a character
-doesn't do, let it bend sentence rhythm and sensory focus directly
-(fury narrows to a few short, percussive sentences; grief lingers on a
-detail a beat too long) rather than naming the emotion or stacking
-another negation.
+**Register matches Oath's own genre, not a default toward wonder — and
+not a default toward safety either.** This is a grounded political-war
+drama, not high fantasy — closer to sparse, precise prose with short
+sentences in tense moments and minimal metaphor than to a lush or
+wondering register. But sparse is not the same thing as controlled, and
+this bot has a documented failure mode of confusing the two: reaching
+for a flat, composed, unreadable affect on every line because it's the
+choice least likely to be wrong. It is wrong — a character who is
+actually furious, terrified, or desperate and reads as merely "flat" or
+"level" has been protected from a mistake at the cost of the scene's own
+truth. Words and short tags that describe a controlled, unreadable
+delivery — flat, level, quiet, even, steady, measured, calm, cool,
+muted, or a clear equivalent — are banned outright as attribution for
+how a line is said. In their place, commit to a real, specific emotional
+state, named plainly where that's the most honest way to say it
+(furious, terrified, desperate, aching, elated — not just implied), and
+let that state actually push the character toward a bigger, riskier line
+or action than the careful version would have been. Emotion can still
+bend sentence rhythm and sensory focus directly (fury narrows to a few
+short, percussive sentences; grief lingers on a detail a beat too long)
+— that technique isn't wrong, it just isn't a substitute for committing
+to the feeling and what it drives the character to do. The goal isn't
+removing the safe word, it's removing the safe choice sitting underneath
+it.
 
 **A scene's own supporting cast gets a single writer.** When narrating
 background companions or NPCs who aren't a separate seat — the way a

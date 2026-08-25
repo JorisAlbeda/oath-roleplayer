@@ -29,7 +29,13 @@ Messengers, or World Briefing.
    this is one of the main places that pays off.
 2. Narrate the segment `oath-play-turn` just finalized, at Chronicle quality,
    per the specificity standard in Bot-Rules, "Roleplayer — Guidelines,"
-   including the resumed portion's own beat if this was a resume.
+   including the resumed portion's own beat if this was a resume. Before
+   drafting, check `Oath-Narrative-Prompts.md` for whichever major or minor
+   action this segment took — it's the actual lookup table for what that
+   action can mean to the character doing it (a Campaign's own real cost
+   and scale in particular, not just who ends up holding the site), and
+   should shape the one description this segment settles on, per its own
+   "pick this month's best story" guidance.
 3. Language check on the draft above, before writing it anywhere: flag any
    mechanical vocabulary — Supply, Secret, Favor, a card's own printed
    name, "traded," "played," "revealed" — and rewrite that sentence in the
